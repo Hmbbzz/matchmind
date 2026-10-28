@@ -80,11 +80,11 @@ Optional model configuration is documented in `backend/.env.example`. Credential
 
 ## Data and current scope
 
-The bundled sample uses historical event and tracking records with fictional team display names. It is a simulated replay; renaming the teams does not make the underlying records synthetic. Provenance and distribution details are retained in [the data notice](public/DATA_NOTICE.md).
+The sample replays a historical match with fictional team names. Answers stay tied to their match time and evidence; movement observations and estimates are labelled accordingly. See [data and technical notes](docs/data-and-scope.md).
 
-Eligible movement is a bounded observation. It does not establish a player's intent, prove that no touch occurred, or demonstrate a tactical cause. Estimates remain estimates. Sample assets are bundled with the client, so viewing-cutoff presentation is not raw future-data isolation.
+## Credits
 
-This public checkout preserves the application and necessary assets while excluding private development receipts, identity records, budget ledgers, historical Git data and internal evidence archives. Current local reproduction, an Azure model response, and hosted judge access are separate checks; no live model request is needed for the default local walkthrough.
+Our 3D replay builds on [soccerviewer](https://github.com/andrewRowlinson/soccerviewer) by Andrew Rowlinson. Matchmind adds contextual AI explanations, answer-linked evidence, personal player stories and personalised catch-up. The customised viewer source is included in `vendor/soccerviewer/`.
 
 ## Licences
 
