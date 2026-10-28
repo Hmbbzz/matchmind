@@ -4,7 +4,7 @@
 
 Matchmind is a football companion that connects a 3D match replay, contextual questions, replayable evidence, and personal player stories. Choose a player, explore how an attack unfolded, inspect the supporting sequence, and catch up on the interval you missed.
 
-[Inside the Game project](https://innovationstudio.microsoft.com/hackathons/insidethegamedeveloperhackathon/project/127234)
+[Open Matchmind](https://inside-game-ai-viewer-bobhe.fresh-tulip-9185.chatgpt.site/) · [Inside the Game project](https://innovationstudio.microsoft.com/hackathons/insidethegamedeveloperhackathon/project/127234)
 
 ## Experience
 
