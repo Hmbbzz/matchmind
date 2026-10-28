@@ -8,8 +8,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 163715,
-      "sha256": "e04f49521fe5c691bb9a4440705ac11ae99d1fb911f2cd426419fbed28879d9a"
+      "bytes": 165214,
+      "sha256": "657cd2a029ccd20d9fa14fa2ed632b00e102221d881ae6106e886c7cc80b0157"
     },
     {
       "path": "assistant-api.js",
@@ -183,8 +183,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 25621,
-      "sha256": "319789f69467ce630aee0dae6bbc24e17bd042ac6d84419bc34219f0fccaeeb1"
+      "bytes": 25824,
+      "sha256": "a08b5041f6ff00d4acc96c3c5111725738fdb635a71399a83e53699cf49af02a"
     },
     {
       "path": "licenses/SkillCorner-LICENSE",
@@ -213,8 +213,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 92999,
-      "sha256": "93e16e9be7e0baf54cb9b4509df08509bb4678d09a4691f29585867f972351a2"
+      "bytes": 93774,
+      "sha256": "08f237b34c0dc907884bd9d8f6dc36ab7f30fb49b61d8384766a4d65f6bed7c8"
     },
     {
       "path": "team-identities.js",

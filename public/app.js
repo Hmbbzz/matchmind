@@ -7,7 +7,7 @@ observeVisibleCopy(document.body);
 
 // Keep this release key aligned with app.js/styles.css URLs in index.html.
 // Only the changed application assets and manifest bypass older cached copies.
-const RELEASE_VERSION = "2026-10-27-W1";
+const RELEASE_VERSION = "2026-10-28-MODAL1";
 const LOCAL_TEST_START_SECONDS = location.hostname === "localhost" ? Number(new URLSearchParams(location.search).get("at") || 0) : 0;
 const STREAM_START = Number.isFinite(LOCAL_TEST_START_SECONDS) ? Math.max(0, LOCAL_TEST_START_SECONDS * 1000) : 0;
 const REGULATION_END = 90 * 60 * 1000;
@@ -119,7 +119,7 @@ let chatScrollEpoch = 0;
 
 function cacheElements() {
   [
-    "assistant-home", "assistant-column", "chat-host", "chat-dialog", "history-dialog", "moment-dialog", "player-dialog", "suggestions-dialog", "history-open", "suggestions-open", "player-details-open", "app", "loading", "match-viewer", "attack-replay-bar", "attack-replay-title", "attack-replay-range", "attack-replay-status", "attack-replay-toggle", "attack-replay-again", "attack-replay-return", "attack-replay-next", "player-story-dialog", "home-code", "home-name", "home-crest", "away-code", "away-name", "away-crest",
+    "assistant-home", "assistant-column", "chat-host", "chat-dialog", "history-dialog", "moment-dialog", "player-dialog", "suggestions-dialog", "history-open", "suggestions-open", "player-details-open", "app", "loading", "playback-backdrop", "evidence-toggle", "match-viewer", "attack-replay-bar", "attack-replay-title", "attack-replay-range", "attack-replay-status", "attack-replay-toggle", "attack-replay-again", "attack-replay-return", "attack-replay-next", "player-story-dialog", "home-code", "home-name", "home-crest", "away-code", "away-name", "away-crest",
     "home-score", "away-score", "match-clock", "control-clock", "period-label", "scope-time", "legend-home",
     "legend-away", "play-toggle", "play-icon", "live-lag", "live-button", "live-state-label", "players-layer",
     "ball-layer", "event-layer", "pitch-wrap", "player-tooltip", "replay-panel", "replay-title", "replay-clock", "replay-evidence", "replay-players",
@@ -383,7 +383,17 @@ function setAttackLayout(active) {
   byId["match-viewer"].classList.toggle("is-attack-replay", active);
   document.body.classList.toggle("attack-replay-open", active);
   byId["attack-replay-bar"].hidden = !active;
-  $$(".assistant-column, .timeline-card, .site-footer").forEach((node) => { node.inert = active; });
+  const viewer = byId["match-viewer"];
+  if (active) { viewer.setAttribute("role", "dialog"); viewer.setAttribute("aria-modal", "true"); viewer.setAttribute("aria-labelledby", "attack-replay-title"); }
+  else { viewer.removeAttribute("role"); viewer.removeAttribute("aria-modal"); viewer.removeAttribute("aria-labelledby"); }
+  setPlaybackModal(active);
+}
+
+function setPlaybackModal(active) {
+  byId["playback-backdrop"].hidden = !active;
+  document.body.classList.toggle("playback-modal-open", active);
+  $$(".assistant-column, .timeline-card, .workspace-toolbar, .site-footer").forEach((node) => { node.inert = active; });
+  $$(".match-frame-header, .player-controls, .match-render-surface").forEach((node) => { node.inert = active && !state.attackReplay; });
 }
 
 function nextViewerRequest() { return `matchmind-${++viewerRequestSequence}`; }
@@ -425,25 +435,13 @@ function beginBoundedReplay(receipt, segments = null, story = null) {
   byId["stream-cut-badge"].hidden = true;
   state.attackReplay = { receipt: frozenCopy(receipt), segments: segments ? frozenCopy(segments) : null, segmentIndex: 0, restore, restoreFocus, start: receipt.start, end: receipt.end, cutoffMs: receipt.cutoffMs,
     kind: story ? "story" : segments ? "comparison" : "attack", story, authorizing: Boolean(story?.resolveClip), authorizationFailed: false, time: receipt.start, playing: !story?.resolveClip && receipt.end > receipt.start, ended: false, awaiting: true, buffering: true,
-    hasPresented: false, budget: 0, presentation: byId["match-viewer"].requestFullscreen ? "requesting" : "page", requestId: nextViewerRequest(), requestedAt: performance.now() };
+    hasPresented: false, budget: 0, presentation: "modal", requestId: nextViewerRequest(), requestedAt: performance.now() };
   setAttackLayout(true);
   setViewMode("3d");
   setViewerMask(true, "Loading attack replay", "Preparing this moment. You can return to the match.");
   if (!state.attackReplay.authorizing) queueAttackFrame(receipt.start, true);
   renderScoreAndClock();
   renderAttackControls();
-  // Keep the browser fullscreen request in the trusted button click chain.
-  const active = state.attackReplay;
-  const viewer = byId["match-viewer"];
-  if (document.fullscreenElement === viewer) active.presentation = "native";
-  else if (viewer.requestFullscreen) {
-    try {
-      Promise.resolve(viewer.requestFullscreen({ navigationUI: "hide" })).then(() => {
-        if (state.attackReplay === active) { active.presentation = document.fullscreenElement === viewer ? "native" : "page"; renderAttackControls(); }
-        else if (!state.attackReplay && document.fullscreenElement === viewer) document.exitFullscreen?.().catch(() => {});
-      }).catch(() => { if (state.attackReplay === active) { active.presentation = "page"; renderAttackControls(); } });
-    } catch { active.presentation = "page"; }
-  }
   byId["attack-replay-return"].focus({ preventScroll: true });
 }
 
@@ -457,7 +455,7 @@ function startPlayerStoryPlaylist(snapshot, resolveClip = null, chapterId = null
     const chapters = snapshot.chapters.filter((chapter) => chapterIds.includes(chapter.chapter_id));
     return frozenCopy({ start: clip.start_ms, end: clip.end_ms, cutoffMs: clip.cutoff_ms, eventId: clip.anchor_event_id, event: event(clip.anchor_event_id), chain: null, teamId: snapshot.player.team_id, phase: "chapter", storyTitle: snapshot.player.name, chapterIds, chapterNumbers: chapters.map((chapter) => snapshot.chapters.indexOf(chapter) + 1), chapterCount: snapshot.chapters.length, chapterTitle: chapters.map((chapter) => chapter.title).join(" · ") });
   });
-  // Enter fullscreen synchronously from Replay. Stored/shared clips remain masked until authorized.
+  // Reuse the same viewer in the replay window. Stored/shared clips stay masked until authorized.
   beginBoundedReplay(segments[0], segments, { snapshot: frozenCopy(snapshot), resolveClip, chapterId });
   const active = state.attackReplay;
   if (resolveClip) void (async () => {
@@ -513,7 +511,6 @@ function returnToMatch() {
     sync3DViewer(true);
   } else { state.viewerReturn = null; setViewMode(saved.viewMode); }
   byId["play-icon"].textContent = saved.playing ? "❚❚" : "▶";
-  if (document.fullscreenElement === byId["match-viewer"]) document.exitFullscreen?.().catch(() => {});
   renderAll(true);
   requestAnimationFrame(() => {
     window.scrollTo(saved.scrollX, saved.scrollY);
@@ -523,10 +520,17 @@ function returnToMatch() {
 }
 
 function handleReplayKey(event) {
-  if (!state.attackReplay) return;
-  if (event.key === "Escape") { event.preventDefault(); event.stopImmediatePropagation(); returnToMatch(); }
-  else if (event.code === "Space" && !/INPUT|TEXTAREA|BUTTON/.test(event.target?.tagName || "")) {
-    event.preventDefault(); event.stopImmediatePropagation(); toggleAttackReplay();
+  if (!state.attackReplay && !state.replay) return;
+  if (event.key === "Escape") { event.preventDefault(); event.stopImmediatePropagation(); state.attackReplay ? returnToMatch() : closeEvidenceReplay(); }
+  else if (event.code === "Space" && !/INPUT|TEXTAREA|BUTTON|SELECT/.test(event.target?.tagName || "")) {
+    event.preventDefault(); event.stopImmediatePropagation(); state.attackReplay ? toggleAttackReplay() : toggleEvidenceReplay();
+  } else if (event.key === "Tab") {
+    const panel = state.attackReplay ? byId["match-viewer"] : byId["replay-panel"];
+    const items = [...panel.querySelectorAll("button, select, iframe, [tabindex='0']")].filter(node => !node.disabled && node.getClientRects().length && !node.closest("[inert]"));
+    const first = items[0], last = items.at(-1);
+    if (!first) return;
+    if (event.shiftKey && (document.activeElement === first || !panel.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && (document.activeElement === last || !panel.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
   }
 }
 
@@ -590,7 +594,7 @@ function renderAttackControls() {
   byId["attack-replay-phase"].textContent = replay.kind === "story" ? `CHAPTER ${replay.receipt.chapterNumbers.join("–")} / ${replay.receipt.chapterCount} · Clip ${replay.segmentIndex + 1} / ${replay.segments.length}` : replay.segments ? `${replay.receipt.phase === "before" ? "BEFORE" : "AFTER"} · ${replay.segmentIndex + 1} / ${replay.segments.length}` : "";
   byId["attack-replay-title"].textContent = replay.kind === "story" ? `${replay.receipt.storyTitle} · ${replay.receipt.chapterTitle}` : `${team(replay.receipt.chain?.teamId || replay.receipt.teamId).name} · ${replay.segments ? "Observed change" : "Attack replay"}`;
   byId["attack-replay-range"].textContent = `${formatClock(replay.start)}–${formatClock(replay.end)} · frozen through ${formatClock(replay.cutoffMs)}`;
-  const mode = replay.presentation === "native" ? "Fullscreen" : replay.presentation === "requesting" ? "Entering fullscreen" : "Page screen · browser fullscreen unavailable";
+  const mode = "Replay window";
   const delayed = replay.awaiting && performance.now() - replay.requestedAt > 10000;
   const status = `${formatClock(replay.time)} · ${replay.authorizing ? "Checking saved story clips" : replay.authorizationFailed ? "Story unavailable — return to match" : replay.ended ? "Replay complete — play again or return to match" : delayed ? "3D loading is taking longer — you can return to match" : replay.buffering ? "Loading 3D tracking" : replay.hasFrameGap ? "Tracking gap — last available position held" : replay.playing ? "Playing" : "Paused"} · ${mode}`;
   if (byId["attack-replay-status"].textContent !== status) byId["attack-replay-status"].textContent = status;
@@ -1309,7 +1313,9 @@ function openReplay(eventId, { preserveTimeline = false, receipt = null, trigger
   const publishedAttack = publishedInsights("attacks", cutoffMs).find((item) => item.chainId === linkedChain?.id);
   const observationIds = new Set(publishedAttack?.offBallIds || []);
   const observations = publishedInsights("offBall", cutoffMs).filter((item) => (observationIds.has(item.id) || item.eventId === row.id) && item.startMs >= start && item.endMs <= end && item.endMs <= cutoffMs && item.quality.rawVerified === true && item.quality.cameraCoverage === 1 && item.quality.heldSamples === 0 && item.quality.extrapolatedSamples === 0 && item.quality.cameraDetectedSamples === item.quality.totalSamples && item.quality.maxGapMs <= 100);
-  state.replay = { eventId, receipt: frozenReceipt, observations: frozenCopy(observations), observationId: observations[0]?.id || null, start, end, time: start, playing: end > start, lastAt: performance.now() };
+  const restore = state.replay?.restore || { time: state.time, playing: state.playing, followingLive: state.followingLive, autoStartPending: state.autoStartPending, selectedEventId: state.selectedEventId, selectedChainId: state.selectedChainId };
+  state.playing = false; state.autoStartPending = false;
+  state.replay = { eventId, receipt: frozenReceipt, observations: frozenCopy(observations), observationId: observations[0]?.id || null, start, end, time: start, playing: end > start, lastAt: performance.now(), restore };
   state.selectedEventId = eventId;
   state.selectedChainId = linkedChain?.id || null;
   const displayScope = frozenReceipt.displayScope;
@@ -1323,13 +1329,33 @@ function openReplay(eventId, { preserveTimeline = false, receipt = null, trigger
   byId["replay-panel"].dataset.cutoffMs = cutoffMs;
   byId["replay-panel"].dataset.endMs = end;
   byId["replay-panel"].hidden = false;
+  setPlaybackModal(true);
   byId["offball-toggle"].hidden = observations.length === 0;
   byId["offball-toggle"].setAttribute("aria-pressed", String(state.offBallVisible));
   byId["offball-observation"].hidden = observations.length === 0;
   byId["offball-observation"].innerHTML = observations.map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(player(item.playerId)?.name || "Player")} · ${formatClock(item.startMs)}–${formatClock(item.endMs)}</option>`).join("");
-  requestAnimationFrame(clampReplayPanel);
+  requestAnimationFrame(() => { clampReplayPanel(true); byId["close-replay"].focus({ preventScroll: true }); });
   if (!preserveTimeline) selectTimelineEvent(eventId, false, cutoffMs);
   renderReplay();
+}
+
+function closeEvidenceReplay() {
+  const restore = state.replay?.restore;
+  byId["replay-panel"].hidden = true; state.replay = null;
+  setPlaybackModal(false);
+  if (restore) Object.assign(state, { ...restore, followingLive: restore.followingLive && state.liveEdge - restore.time < 120, lastFrameAt: performance.now() });
+  byId["play-icon"].textContent = state.playing ? "❚❚" : "▶";
+  renderAll(true);
+  if (replayDialogReturn) { restoreDialogReturn(replayDialogReturn); replayDialogReturn = null; }
+  else if (replayTriggerFocus?.isConnected) replayTriggerFocus.focus({ preventScroll: true });
+  replayTriggerFocus = null;
+}
+
+function toggleEvidenceReplay() {
+  if (!state.replay) return;
+  state.replay.playing = !state.replay.playing;
+  if (state.replay.playing && state.replay.time >= state.replay.end) state.replay.time = state.replay.start;
+  state.replay.lastAt = performance.now(); renderReplay();
 }
 
 function captureDialogReturn(focus = document.activeElement) {
@@ -1441,18 +1467,17 @@ function setupWorkspaceDialogs() {
   updateMode(); updateViewport();
 }
 function replayBounds() {
-  const pitch = byId["pitch-wrap"].getBoundingClientRect();
-  const floating = pitch.height < 280;
-  byId["replay-panel"].classList.toggle("viewport-replay", floating);
-  return floating ? { left: 0, top: 0, width: window.innerWidth, height: window.visualViewport?.height || window.innerHeight } : pitch;
+  byId["replay-panel"].classList.add("viewport-replay");
+  return { left: 0, top: 0, width: window.innerWidth, height: window.visualViewport?.height || window.innerHeight };
 }
 
-function clampReplayPanel() {
+function clampReplayPanel(recenter = false) {
   const panel = byId["replay-panel"];
   if (panel.hidden) return;
   const wrap = replayBounds();
-  const availableWidth = Math.max(0, wrap.width - 16);
-  const availableHeight = Math.max(0, wrap.height - 16);
+  const availableWidth = Math.max(0, Math.min(wrap.width * .92, 1200, wrap.width - 24));
+  const availableHeight = Math.max(0, Math.min(wrap.height * .86, 900, wrap.height - 24));
+  panel.style.width = `${availableWidth}px`;
   panel.style.setProperty("--replay-max-width", `${availableWidth}px`);
   panel.style.setProperty("--replay-max-height", `${availableHeight}px`);
   const style = getComputedStyle(panel);
@@ -1467,8 +1492,8 @@ function clampReplayPanel() {
   pitch.style.height = `${Math.min(naturalPitchHeight, Math.max(0, availableHeight - chromeHeight))}px`;
   const box = panel.getBoundingClientRect();
   panel.style.right = "auto";
-  panel.style.left = `${clamp(box.left - wrap.left, 8, Math.max(8, wrap.width - box.width - 8))}px`;
-  panel.style.top = `${clamp(box.top - wrap.top, 8, Math.max(8, wrap.height - box.height - 8))}px`;
+  panel.style.left = `${recenter === true ? (wrap.width - box.width) / 2 : clamp(box.left - wrap.left, 12, Math.max(12, wrap.width - box.width - 12))}px`;
+  panel.style.top = `${recenter === true ? (wrap.height - box.height) / 2 : clamp(box.top - wrap.top, 12, Math.max(12, wrap.height - box.height - 12))}px`;
 }
 
 function setupReplayDragging() {
@@ -1516,6 +1541,7 @@ function renderReplay(now = performance.now()) {
   const replayAgainHidden = !(state.replay.observations?.length && !state.replay.playing);
   if (byId["evidence-play-again"].hidden !== replayAgainHidden) { byId["evidence-play-again"].hidden = replayAgainHidden; requestAnimationFrame(clampReplayPanel); }
   state.replay.lastAt = now;
+  byId["evidence-toggle"].textContent = state.replay.playing ? "Pause" : "Play";
   const frame = frameAt(state.replay.time, state.replay.receipt.cutoffMs);
   byId["replay-players"].innerHTML = frame.p.map(([index, x, y, , , , speed, , facing]) => {
     const person = state.data.players[index];
@@ -2191,6 +2217,8 @@ function bindControls() {
   byId["offball-toggle"].addEventListener("click", () => { state.offBallVisible = !state.offBallVisible; byId["offball-toggle"].setAttribute("aria-pressed", String(state.offBallVisible)); renderOffBallEvidence(); });
   byId["offball-observation"].addEventListener("change", () => { if (state.replay) { state.replay.observationId = byId["offball-observation"].value; renderOffBallEvidence(); } });
   byId["evidence-play-again"].addEventListener("click", () => { if (state.replay) { Object.assign(state.replay, { time: state.replay.start, playing: true, lastAt: performance.now() }); renderReplay(); } });
+  byId["evidence-toggle"].addEventListener("click", toggleEvidenceReplay);
+  byId["playback-backdrop"].addEventListener("click", () => state.attackReplay ? returnToMatch() : closeEvidenceReplay());
   byId["away-toggle"].addEventListener("click", () => { if (state.away) completeAway(); else markAway(); });
   document.addEventListener("visibilitychange", () => { if (document.hidden) markAway("visibility"); else if (state.away?.source === "visibility") completeAway(); });
   byId["demo-open"].addEventListener("click", () => { refreshInsightPresentation(); openAppDialog("demo-dialog"); });
@@ -2215,11 +2243,6 @@ function bindControls() {
   });
   window.addEventListener("message", handle3DViewerMessage);
   window.addEventListener("keydown", handleReplayKey, true);
-  document.addEventListener("fullscreenchange", () => {
-    if (!state.attackReplay) return;
-    if (document.fullscreenElement === byId["match-viewer"]) { state.attackReplay.presentation = "native"; renderAttackControls(); }
-    else if (state.attackReplay.presentation === "native") returnToMatch();
-  });
   byId["attack-replay-return"].addEventListener("click", returnToMatch);
   byId["attack-replay-toggle"].addEventListener("click", toggleAttackReplay);
   byId["attack-replay-again"].addEventListener("click", replayAgain);
@@ -2245,12 +2268,7 @@ function bindControls() {
     byId["play-icon"].textContent = "❚❚";
     renderAll(true);
   });
-  byId["close-replay"].addEventListener("click", () => {
-    byId["replay-panel"].hidden = true; state.replay = null;
-    if (replayDialogReturn) { restoreDialogReturn(replayDialogReturn); replayDialogReturn = null; }
-    else if (replayTriggerFocus?.isConnected) replayTriggerFocus.focus({ preventScroll: true });
-    replayTriggerFocus = null;
-  });
+  byId["close-replay"].addEventListener("click", closeEvidenceReplay);
   byId["timeline-replay"].addEventListener("click", () => state.selectedEventId && openReplay(state.selectedEventId));
   byId["follow-button"].addEventListener("click", () => {
     state.followed = !state.followed;

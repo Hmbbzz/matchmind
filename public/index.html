@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f7f1" />
     <meta name="description" content="Watch the match replay, ask about key moments and follow the evidence." />
     <title>Matchmind — Evidence beside the game</title>
-    <link rel="stylesheet" href="./styles.css?v=2026-10-28-HOTUI1" />
+    <link rel="stylesheet" href="./styles.css?v=2026-10-28-MODAL1" />
   </head>
   <body>
     <div id="loading" class="loading-screen" role="status" aria-live="polite">
@@ -15,6 +15,7 @@
     </div>
     <div class="app-shell" id="app" hidden>
       <header class="workspace-toolbar"><div class="workspace-brand" role="img" aria-label="Matchmind"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span class="brand-name" aria-hidden="true">Matchmind</span></div><div class="workspace-actions"><button id="demo-open">Help</button><button id="history-open">Previous matches</button></div></header>
+      <div id="playback-backdrop" class="playback-backdrop" aria-hidden="true" hidden></div>
       <main>
         <div class="workspace-grid">
           <section class="viewer-column" aria-label="Historical match viewer">
@@ -82,7 +83,7 @@
 
                 <div id="player-tooltip" class="player-tooltip" hidden></div>
 
-                <aside id="replay-panel" class="replay-panel" hidden>
+                <aside id="replay-panel" class="replay-panel" role="dialog" aria-modal="true" aria-labelledby="replay-title" hidden>
                   <header id="replay-drag-handle" aria-label="Drag the evidence replay window">
                     <div><span class="eyebrow">EVIDENCE REPLAY</span><strong id="replay-title">Evidence clip</strong></div>
                     <button id="offball-toggle" class="offball-toggle" aria-pressed="true" hidden>Observed movement</button><button id="close-replay" class="icon-button" aria-label="Close evidence replay">×</button>
@@ -98,7 +99,7 @@
                     </g>
                     <defs><marker id="offball-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#dcff70" /></marker></defs><g id="replay-offball"></g><g id="replay-players"></g><g id="replay-ball"></g>
                   </svg>
-                  <footer><span id="replay-clock">0:00</span><span id="replay-evidence">Evidence · EVT</span><button id="evidence-play-again" hidden>Replay clip</button><select id="offball-observation" aria-label="Observed movement interval" hidden></select><span id="offball-note" class="offball-note" hidden></span></footer>
+                  <footer><span id="replay-clock">0:00</span><button id="evidence-toggle">Pause</button><span id="replay-evidence">Evidence · EVT</span><button id="evidence-play-again" hidden>Replay clip</button><select id="offball-observation" aria-label="Observed movement interval" hidden></select><span id="offball-note" class="offball-note" hidden></span></footer>
                 </aside>
               </div>
 
@@ -182,6 +183,6 @@
         <section id="player-story-library" hidden aria-label="Saved player stories"><p>Private saved stories. Opening one keeps its original player, style and match time.</p><div id="player-story-list"></div><button id="player-story-more" hidden>Load more</button><button id="player-story-refresh">Refresh saved stories</button></section>
       </div>
     </dialog>
-    <script type="module" src="./app.js?v=2026-10-27-W1"></script>
+    <script type="module" src="./app.js?v=2026-10-28-MODAL1"></script>
   </body>
 </html>

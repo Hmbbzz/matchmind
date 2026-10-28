@@ -755,30 +755,28 @@ main { padding-top: 0; }
   .pitch-card { margin-top: 24px; }
 }
 
-/* D1: the main 3D surface owns bounded attack playback in both screen modes. */
+/* Bounded playback reuses the main viewer inside a large replay window. */
 body.attack-replay-open { overflow: hidden; }
-.attack-replay-open .assistant-column,
-.attack-replay-open .timeline-card,
-.attack-replay-open .site-footer { visibility: hidden; pointer-events: none; }
+.playback-backdrop { position: fixed; inset: 0; z-index: 900; background: #091b14b8; backdrop-filter: blur(3px); }
 #match-viewer.is-attack-replay {
   position: fixed;
-  inset: 0;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100dvh;
+  width: min(92vw, 1440px);
+  height: min(86dvh, 960px);
   min-width: 0;
-  max-width: none;
-  max-height: none;
+  max-width: calc(100vw - 24px);
+  max-height: calc(var(--workspace-height) - 24px);
   margin: 0;
   padding: 0;
-  border: 0;
-  border-radius: 0;
+  border: 1px solid #72937b;
+  border-radius: 16px;
   background: #0e1913;
-  box-shadow: none;
+  box-shadow: 0 28px 100px #07150dcc;
 }
-#match-viewer.is-attack-replay:fullscreen { width: 100vw; height: 100dvh; margin: 0; }
 .attack-replay-bar { flex: 0 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: max(12px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 12px max(16px, env(safe-area-inset-left)); background: #173f2b; color: white; }
 .attack-replay-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .attack-replay-copy strong { font-size: 15px; line-height: 1.35; }
@@ -789,10 +787,10 @@ body.attack-replay-open { overflow: hidden; }
 .attack-replay-actions button:disabled { opacity: .5; cursor: default; }
 #attack-replay-return { color: #19341c; background: var(--acid); border-color: var(--acid); }
 #match-viewer.is-attack-replay > .scoreboard { flex: 0 0 auto; min-height: 72px; }
-#match-viewer.is-attack-replay > .pitch-wrap { flex: 1 1 auto; min-width: 0; min-height: 0; padding: 8px; background: #0e1913; }
+#match-viewer.is-attack-replay > .pitch-wrap { flex: 1 1 auto; min-width: 0; min-height: 0; padding: 8px; container-type: size; background: #0e1913; }
 #match-viewer.is-attack-replay .pitch-2d { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
 #match-viewer.is-attack-replay .viewer3d-frame,
-#match-viewer.is-attack-replay .viewer3d-loading { inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
+#match-viewer.is-attack-replay .viewer3d-loading { inset: auto; left: 50%; top: 50%; width: min(calc(100cqw - 16px), calc((100cqh - 16px) * 16 / 9)); height: min(calc(100cqh - 16px), calc((100cqw - 16px) * 9 / 16)); transform: translate(-50%, -50%); }
 #match-viewer.is-attack-replay .player-controls,
 #match-viewer.is-attack-replay .moment-card,
 #match-viewer.is-attack-replay .stream-cut-badge,
@@ -951,7 +949,13 @@ main { flex: 1 1 auto; min-height: 0; padding: 0; }
 .chat-on-demand .assistant-home { display: none; }
 .chat-on-demand .viewer-column { padding-top: 0; }
 .chat-on-demand .chat-shortcut { display: inline-flex; align-items: center; justify-content: center; min-height: 32px; }
-.replay-panel.viewport-replay { position: fixed; z-index: 40; width: min(480px, calc(100vw - 16px)); }
+.replay-panel.viewport-replay { position: fixed; z-index: 1000; width: min(92vw, 1200px); min-width: 0; overflow: auto; overscroll-behavior: contain; }
+.replay-panel.viewport-replay header { flex-wrap: wrap; gap: 8px; }
+.replay-panel.viewport-replay header > div { flex: 1 1 180px; }
+.replay-panel.viewport-replay header strong { font-size: 14px; }
+.replay-panel.viewport-replay footer { font-size: 12px; line-height: 1.45; }
+.replay-panel.viewport-replay footer button { min-height: 34px; padding: 6px 12px; border: 1px solid #92b27e; border-radius: 7px; background: #e8f5c8; color: #294323; cursor: pointer; }
+.replay-panel.viewport-replay #close-replay { min-width: 36px; min-height: 36px; }
 @media (max-width: 760px) {
   .app-shell { padding: 7px 8px; gap: 6px; }
   .workspace-toolbar { font-size: 10px; flex-basis: 32px; }
