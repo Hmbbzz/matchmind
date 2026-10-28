@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "tactical-state-offline-evaluation/1.0",
+  "generatedAt": "2026-10-23T21:46:07.785Z",
+  "matchId": "skillcorner_2017461",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "provider labels are evaluation-only",
+      "passed": true,
+      "detail": "online state policy excludes provider labels"
+    },
+    {
+      "name": "enough evaluated windows",
+      "passed": true,
+      "detail": "895 windows"
+    },
+    {
+      "name": "both teams evaluated",
+      "passed": true,
+      "detail": "sk_team_868, sk_team_4177"
+    },
+    {
+      "name": "family agreement clears naive floor",
+      "passed": true,
+      "detail": "51.4%"
+    },
+    {
+      "name": "high-purity family agreement clears floor",
+      "passed": true,
+      "detail": "55.9%"
+    },
+    {
+      "name": "compatible-label agreement is measurable",
+      "passed": true,
+      "detail": "34.3%"
+    }
+  ],
+  "metrics": {
+    "evaluatedWindows": 895,
+    "compatibleAccuracy": 0.343,
+    "familyAccuracy": 0.514,
+    "highPurityWindows": 238,
+    "highPurityCompatibleAccuracy": 0.4538,
+    "highPurityFamilyAccuracy": 0.5588
+  },
+  "mappingNote": "Provider create/finish and transition labels map to sets of compatible product states. This is an offline sanity check, not training and not ground-truth equivalence.",
+  "confusion": {
+    "attack:finish": {
+      "attacking_third_siege": 68,
+      "controlled_progression": 10,
+      "low_block": 4,
+      "build_up": 22,
+      "high_press": 2,
+      "recover_shape": 2,
+      "direct_play": 3
+    },
+    "defense:low_block": {
+      "low_block": 37,
+      "recover_shape": 42,
+      "counter_press": 10,
+      "attacking_third_siege": 4,
+      "build_up": 13,
+      "mid_block": 5
+    },
+    "attack:create": {
+      "attacking_third_siege": 23,
+      "build_up": 74,
+      "counter_press": 7,
+      "high_press": 14,
+      "recover_shape": 10,
+      "controlled_progression": 73,
+      "mid_block": 15,
+      "low_block": 23,
+      "direct_play": 2,
+      "counter_attack": 1
+    },
+    "defense:medium_block": {
+      "low_block": 24,
+      "counter_press": 43,
+      "build_up": 45,
+      "recover_shape": 53,
+      "attacking_third_siege": 25,
+      "counter_attack": 6,
+      "mid_block": 37,
+      "high_press": 3,
+      "controlled_progression": 6
+    },
+    "defense:defending_transition": {
+      "attacking_third_siege": 3,
+      "high_press": 3,
+      "mid_block": 4,
+      "controlled_progression": 1,
+      "counter_press": 5,
+      "build_up": 4
+    },
+    "attack:transition": {
+      "counter_press": 10,
+      "build_up": 5,
+      "attacking_third_siege": 3,
+      "mid_block": 2
+    },
+    "attack:set_play": {
+      "controlled_progression": 3,
+      "mid_block": 3,
+      "attacking_third_siege": 5
+    },
+    "defense:defending_set_play": {
+      "recover_shape": 4,
+      "build_up": 4,
+      "low_block": 2,
+      "counter_press": 2
+    },
+    "defense:defending_direct": {
+      "mid_block": 3,
+      "recover_shape": 1
+    },
+    "attack:direct": {
+      "mid_block": 3
+    },
+    "attack:build_up": {
+      "recover_shape": 2,
+      "build_up": 19,
+      "low_block": 6,
+      "counter_attack": 2,
+      "attacking_third_siege": 2,
+      "mid_block": 7
+    },
+    "defense:high_block": {
+      "mid_block": 10,
+      "high_press": 11,
+      "counter_attack": 1,
+      "recover_shape": 2,
+      "attacking_third_siege": 2,
+      "controlled_progression": 6,
+      "low_block": 2,
+      "build_up": 4
+    },
+    "defense:defending_quick_break": {
+      "build_up": 3,
+      "low_block": 1
+    },
+    "attack:quick_break": {
+      "attacking_third_siege": 4
+    },
+    "attack:chaotic": {
+      "build_up": 7,
+      "recover_shape": 5,
+      "controlled_progression": 4,
+      "attacking_third_siege": 2
+    },
+    "defense:chaotic": {
+      "build_up": 5,
+      "mid_block": 3,
+      "recover_shape": 4,
+      "attacking_third_siege": 2,
+      "low_block": 3
+    }
+  }
+}

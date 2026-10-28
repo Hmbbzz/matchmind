@@ -1,0 +1,528 @@
+[
+  {
+    "matchId": "1959846",
+    "kickoff": "2025-01-10T08:35:00Z",
+    "team": {
+      "id": "868",
+      "name": "Lumen Vale FC"
+    },
+    "opponent": {
+      "id": "1803",
+      "name": "Western United"
+    },
+    "venue": "home",
+    "durationMinutes": 97.55,
+    "goalsFor": 3,
+    "goalsAgainst": 4,
+    "result": "loss",
+    "points": 0,
+    "event": {
+      "passesAttempted": 421,
+      "passesCompleted": 357,
+      "passCompletion": 0.848,
+      "forwardPassShare": 0.2233,
+      "longPassShare": 0.0594,
+      "lineBreakPasses": 84,
+      "successfulLineBreakPasses": 68,
+      "finalThirdEntries": 6,
+      "penaltyAreaEntries": 23,
+      "crosses": 7,
+      "completedCrosses": 4,
+      "crossCompletion": 0.5714,
+      "shots": 16,
+      "eventTaggedGoals": 3,
+      "pressureActions": 305,
+      "counterPresses": 30,
+      "regains": 67,
+      "highRegains": 17,
+      "offBallRuns": 266,
+      "overlapRuns": 5,
+      "underlapRuns": 3,
+      "runAheadOfBall": 83,
+      "passEpvTotal": 2.187,
+      "attackingChannelCounts": {
+        "wide_left": 19,
+        "half_space_left": 11,
+        "center": 14,
+        "half_space_right": 11,
+        "wide_right": 16
+      },
+      "per90": {
+        "passesAttempted": 388.4162,
+        "lineBreakPasses": 77.4987,
+        "finalThirdEntries": 5.5356,
+        "penaltyAreaEntries": 21.2199,
+        "crosses": 6.4582,
+        "shots": 14.7617,
+        "pressureActions": 281.3942,
+        "counterPresses": 27.6781,
+        "highRegains": 15.6843,
+        "offBallRuns": 245.4126
+      }
+    },
+    "phase": {
+      "inPossessionSeconds": 1489.3,
+      "outOfPossessionSeconds": 1491.4,
+      "possessionShareOfPhases": 0.4996,
+      "attackingPhaseShare": {
+        "build_up": 0.1805,
+        "chaotic": 0.0905,
+        "direct": 0.0291,
+        "finish": 0.2323,
+        "create": 0.3842,
+        "quick_break": 0.0287,
+        "set_play": 0.0027,
+        "transition": 0.052
+      },
+      "defendingPhaseShare": {
+        "medium_block": 0.3222,
+        "chaotic": 0.0921,
+        "low_block": 0.2857,
+        "high_block": 0.1744,
+        "defending_direct": 0.0144,
+        "defending_quick_break": 0.0114,
+        "defending_set_play": 0.0327,
+        "defending_transition": 0.0671
+      }
+    },
+    "featureVersion": "skillcorner-history/1.0"
+  },
+  {
+    "matchId": "2006363",
+    "kickoff": "2025-03-08T08:35:00Z",
+    "team": {
+      "id": "868",
+      "name": "Lumen Vale FC"
+    },
+    "opponent": {
+      "id": "870",
+      "name": "Central Coast Mariners Football Club"
+    },
+    "venue": "home",
+    "durationMinutes": 98.45,
+    "goalsFor": 3,
+    "goalsAgainst": 0,
+    "result": "win",
+    "points": 3,
+    "event": {
+      "passesAttempted": 498,
+      "passesCompleted": 440,
+      "passCompletion": 0.8835,
+      "forwardPassShare": 0.2329,
+      "longPassShare": 0.0502,
+      "lineBreakPasses": 76,
+      "successfulLineBreakPasses": 60,
+      "finalThirdEntries": 11,
+      "penaltyAreaEntries": 18,
+      "crosses": 13,
+      "completedCrosses": 7,
+      "crossCompletion": 0.5385,
+      "shots": 23,
+      "eventTaggedGoals": 3,
+      "pressureActions": 313,
+      "counterPresses": 30,
+      "regains": 100,
+      "highRegains": 33,
+      "offBallRuns": 317,
+      "overlapRuns": 9,
+      "underlapRuns": 11,
+      "runAheadOfBall": 87,
+      "passEpvTotal": 2.1734,
+      "attackingChannelCounts": {
+        "center": 14,
+        "wide_left": 36,
+        "half_space_right": 17,
+        "wide_right": 43,
+        "half_space_left": 19
+      },
+      "per90": {
+        "passesAttempted": 455.2565,
+        "lineBreakPasses": 69.4769,
+        "finalThirdEntries": 10.0559,
+        "penaltyAreaEntries": 16.4551,
+        "crosses": 11.8842,
+        "shots": 21.0259,
+        "pressureActions": 286.1351,
+        "counterPresses": 27.4251,
+        "highRegains": 30.1676,
+        "offBallRuns": 289.7918
+      }
+    },
+    "phase": {
+      "inPossessionSeconds": 1785.5,
+      "outOfPossessionSeconds": 1474.6,
+      "possessionShareOfPhases": 0.5477,
+      "attackingPhaseShare": {
+        "create": 0.353,
+        "direct": 0.0195,
+        "finish": 0.3201,
+        "chaotic": 0.0484,
+        "build_up": 0.125,
+        "transition": 0.0506,
+        "set_play": 0.0608,
+        "quick_break": 0.0226
+      },
+      "defendingPhaseShare": {
+        "medium_block": 0.3653,
+        "high_block": 0.2871,
+        "defending_direct": 0.034,
+        "low_block": 0.1797,
+        "chaotic": 0.084,
+        "defending_set_play": 0.015,
+        "defending_transition": 0.0349
+      }
+    },
+    "featureVersion": "skillcorner-history/1.0"
+  },
+  {
+    "matchId": "2011166",
+    "kickoff": "2025-04-12T05:00:00Z",
+    "team": {
+      "id": "868",
+      "name": "Lumen Vale FC"
+    },
+    "opponent": {
+      "id": "867",
+      "name": "Wellington Phoenix FC"
+    },
+    "venue": "away",
+    "durationMinutes": 98.82,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "result": "win",
+    "points": 3,
+    "event": {
+      "passesAttempted": 341,
+      "passesCompleted": 278,
+      "passCompletion": 0.8152,
+      "forwardPassShare": 0.2346,
+      "longPassShare": 0.0645,
+      "lineBreakPasses": 31,
+      "successfulLineBreakPasses": 24,
+      "finalThirdEntries": 8,
+      "penaltyAreaEntries": 18,
+      "crosses": 8,
+      "completedCrosses": 7,
+      "crossCompletion": 0.875,
+      "shots": 22,
+      "eventTaggedGoals": 3,
+      "pressureActions": 297,
+      "counterPresses": 57,
+      "regains": 73,
+      "highRegains": 18,
+      "offBallRuns": 242,
+      "overlapRuns": 10,
+      "underlapRuns": 6,
+      "runAheadOfBall": 90,
+      "passEpvTotal": 1.2399,
+      "attackingChannelCounts": {
+        "wide_right": 22,
+        "half_space_right": 13,
+        "half_space_left": 17,
+        "wide_left": 20,
+        "center": 9
+      },
+      "per90": {
+        "passesAttempted": 310.5647,
+        "lineBreakPasses": 28.2332,
+        "finalThirdEntries": 7.286,
+        "penaltyAreaEntries": 16.3934,
+        "crosses": 7.286,
+        "shots": 20.0364,
+        "pressureActions": 270.4918,
+        "counterPresses": 51.9126,
+        "highRegains": 16.3934,
+        "offBallRuns": 220.4007
+      }
+    },
+    "phase": {
+      "inPossessionSeconds": 1528.9,
+      "outOfPossessionSeconds": 1183.8,
+      "possessionShareOfPhases": 0.5636,
+      "attackingPhaseShare": {
+        "create": 0.3368,
+        "build_up": 0.1063,
+        "direct": 0.0389,
+        "finish": 0.2862,
+        "set_play": 0.0657,
+        "transition": 0.0539,
+        "chaotic": 0.0942,
+        "quick_break": 0.0181
+      },
+      "defendingPhaseShare": {
+        "chaotic": 0.1678,
+        "low_block": 0.1918,
+        "medium_block": 0.2974,
+        "high_block": 0.1941,
+        "defending_direct": 0.044,
+        "defending_quick_break": 0.0394,
+        "defending_set_play": 0.0405,
+        "defending_transition": 0.0249
+      }
+    },
+    "featureVersion": "skillcorner-history/1.0"
+  },
+  {
+    "matchId": "1996436",
+    "kickoff": "2025-02-01T04:00:00Z",
+    "team": {
+      "id": "4177",
+      "name": "Ember Coast United"
+    },
+    "opponent": {
+      "id": "1804",
+      "name": "Macarthur FC"
+    },
+    "venue": "home",
+    "durationMinutes": 100.44,
+    "goalsFor": 2,
+    "goalsAgainst": 1,
+    "result": "win",
+    "points": 3,
+    "event": {
+      "passesAttempted": 341,
+      "passesCompleted": 287,
+      "passCompletion": 0.8416,
+      "forwardPassShare": 0.2346,
+      "longPassShare": 0.0587,
+      "lineBreakPasses": 43,
+      "successfulLineBreakPasses": 36,
+      "finalThirdEntries": 6,
+      "penaltyAreaEntries": 16,
+      "crosses": 16,
+      "completedCrosses": 9,
+      "crossCompletion": 0.5625,
+      "shots": 20,
+      "eventTaggedGoals": 2,
+      "pressureActions": 291,
+      "counterPresses": 41,
+      "regains": 78,
+      "highRegains": 25,
+      "offBallRuns": 235,
+      "overlapRuns": 6,
+      "underlapRuns": 4,
+      "runAheadOfBall": 64,
+      "passEpvTotal": 0.9246,
+      "attackingChannelCounts": {
+        "half_space_left": 11,
+        "wide_left": 24,
+        "half_space_right": 7,
+        "center": 7,
+        "wide_right": 13
+      },
+      "per90": {
+        "passesAttempted": 305.5556,
+        "lineBreakPasses": 38.5305,
+        "finalThirdEntries": 5.3763,
+        "penaltyAreaEntries": 14.3369,
+        "crosses": 14.3369,
+        "shots": 17.9211,
+        "pressureActions": 260.7527,
+        "counterPresses": 36.7384,
+        "highRegains": 22.4014,
+        "offBallRuns": 210.5735
+      }
+    },
+    "phase": {
+      "inPossessionSeconds": 1460.7,
+      "outOfPossessionSeconds": 1245.2,
+      "possessionShareOfPhases": 0.5398,
+      "attackingPhaseShare": {
+        "chaotic": 0.0874,
+        "build_up": 0.0667,
+        "set_play": 0.0857,
+        "finish": 0.2521,
+        "create": 0.429,
+        "direct": 0.0407,
+        "transition": 0.0306,
+        "quick_break": 0.0079
+      },
+      "defendingPhaseShare": {
+        "medium_block": 0.386,
+        "low_block": 0.1792,
+        "defending_set_play": 0.0732,
+        "chaotic": 0.142,
+        "high_block": 0.1277,
+        "defending_direct": 0.0422,
+        "defending_transition": 0.0456,
+        "defending_quick_break": 0.0041
+      }
+    },
+    "featureVersion": "skillcorner-history/1.0"
+  },
+  {
+    "matchId": "2007721",
+    "kickoff": "2025-03-16T04:00:00Z",
+    "team": {
+      "id": "4177",
+      "name": "Ember Coast United"
+    },
+    "opponent": {
+      "id": "870",
+      "name": "Central Coast Mariners Football Club"
+    },
+    "venue": "home",
+    "durationMinutes": 95.9,
+    "goalsFor": 2,
+    "goalsAgainst": 2,
+    "result": "draw",
+    "points": 1,
+    "event": {
+      "passesAttempted": 419,
+      "passesCompleted": 350,
+      "passCompletion": 0.8353,
+      "forwardPassShare": 0.2315,
+      "longPassShare": 0.0549,
+      "lineBreakPasses": 74,
+      "successfulLineBreakPasses": 51,
+      "finalThirdEntries": 7,
+      "penaltyAreaEntries": 13,
+      "crosses": 16,
+      "completedCrosses": 10,
+      "crossCompletion": 0.625,
+      "shots": 12,
+      "eventTaggedGoals": 2,
+      "pressureActions": 373,
+      "counterPresses": 37,
+      "regains": 75,
+      "highRegains": 24,
+      "offBallRuns": 277,
+      "overlapRuns": 8,
+      "underlapRuns": 3,
+      "runAheadOfBall": 62,
+      "passEpvTotal": 0.9686,
+      "attackingChannelCounts": {
+        "half_space_left": 9,
+        "center": 8,
+        "half_space_right": 3,
+        "wide_right": 7,
+        "wide_left": 27
+      },
+      "per90": {
+        "passesAttempted": 393.2221,
+        "lineBreakPasses": 69.4473,
+        "finalThirdEntries": 6.5693,
+        "penaltyAreaEntries": 12.2002,
+        "crosses": 15.0156,
+        "shots": 11.2617,
+        "pressureActions": 350.0521,
+        "counterPresses": 34.7237,
+        "highRegains": 22.5235,
+        "offBallRuns": 259.9583
+      }
+    },
+    "phase": {
+      "inPossessionSeconds": 1631.5,
+      "outOfPossessionSeconds": 1713.1,
+      "possessionShareOfPhases": 0.4878,
+      "attackingPhaseShare": {
+        "create": 0.489,
+        "direct": 0.0482,
+        "build_up": 0.0807,
+        "chaotic": 0.0818,
+        "finish": 0.1974,
+        "quick_break": 0.0123,
+        "set_play": 0.0397,
+        "transition": 0.0509
+      },
+      "defendingPhaseShare": {
+        "medium_block": 0.3908,
+        "chaotic": 0.0885,
+        "low_block": 0.2628,
+        "high_block": 0.1358,
+        "defending_direct": 0.0412,
+        "defending_set_play": 0.0054,
+        "defending_transition": 0.0756
+      }
+    },
+    "featureVersion": "skillcorner-history/1.0"
+  },
+  {
+    "matchId": "2015213",
+    "kickoff": "2025-05-03T08:00:00Z",
+    "team": {
+      "id": "4177",
+      "name": "Ember Coast United"
+    },
+    "opponent": {
+      "id": "1803",
+      "name": "Western United"
+    },
+    "venue": "away",
+    "durationMinutes": 99.83,
+    "goalsFor": 2,
+    "goalsAgainst": 4,
+    "result": "loss",
+    "points": 0,
+    "event": {
+      "passesAttempted": 421,
+      "passesCompleted": 350,
+      "passCompletion": 0.8314,
+      "forwardPassShare": 0.2138,
+      "longPassShare": 0.0641,
+      "lineBreakPasses": 74,
+      "successfulLineBreakPasses": 52,
+      "finalThirdEntries": 6,
+      "penaltyAreaEntries": 5,
+      "crosses": 3,
+      "completedCrosses": 0,
+      "crossCompletion": 0,
+      "shots": 12,
+      "eventTaggedGoals": 2,
+      "pressureActions": 313,
+      "counterPresses": 41,
+      "regains": 89,
+      "highRegains": 23,
+      "offBallRuns": 327,
+      "overlapRuns": 8,
+      "underlapRuns": 7,
+      "runAheadOfBall": 99,
+      "passEpvTotal": 0.692,
+      "attackingChannelCounts": {
+        "wide_left": 7,
+        "wide_right": 7,
+        "half_space_right": 5,
+        "half_space_left": 6,
+        "center": 3
+      },
+      "per90": {
+        "passesAttempted": 379.5452,
+        "lineBreakPasses": 66.7134,
+        "finalThirdEntries": 5.4092,
+        "penaltyAreaEntries": 4.5077,
+        "crosses": 2.7046,
+        "shots": 10.8184,
+        "pressureActions": 282.1797,
+        "counterPresses": 36.9628,
+        "highRegains": 20.7352,
+        "offBallRuns": 294.8012
+      }
+    },
+    "phase": {
+      "inPossessionSeconds": 1719.2,
+      "outOfPossessionSeconds": 1320.4,
+      "possessionShareOfPhases": 0.5656,
+      "attackingPhaseShare": {
+        "create": 0.4432,
+        "direct": 0.0454,
+        "chaotic": 0.119,
+        "build_up": 0.2125,
+        "finish": 0.1247,
+        "transition": 0.0208,
+        "set_play": 0.0212,
+        "quick_break": 0.0131
+      },
+      "defendingPhaseShare": {
+        "high_block": 0.2851,
+        "defending_direct": 0.0428,
+        "chaotic": 0.1562,
+        "medium_block": 0.2895,
+        "low_block": 0.1144,
+        "defending_quick_break": 0.0357,
+        "defending_set_play": 0.0264,
+        "defending_transition": 0.0498
+      }
+    },
+    "featureVersion": "skillcorner-history/1.0"
+  }
+]

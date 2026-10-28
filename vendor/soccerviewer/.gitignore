@@ -1,0 +1,31 @@
+# dependencies — restored by `npm install` (postinstall also refetches the
+# DuckDB extensions into public/duckdb-ext)
+node_modules/
+public/duckdb-ext/
+public/duckdb-core/
+
+# local match data (users drop raw files into the interface; the repo
+# bundles none). match/assets/*.glb ARE committed — finished release
+# artifacts; the asset pipeline that rebuilds them lives outside this repo.
+matches/
+
+# local clone of the SkillCorner open-data repo (sample matches for testing)
+opendata/
+
+# build output
+dist/
+
+# misc
+.DS_Store
+
+# editing backups. Not build inputs, so they would not ship — but a stray
+# copy of a served file sitting next to the real one is how things get
+# published by accident. NOTE: public/ is copied VERBATIM into dist/ and
+# served from the origin, so nothing but duckdb-ext/ belongs in there;
+# scripts/deploy-pages.sh refuses to publish if anything else turns up.
+*.pre-possession
+*.bak
+*.orig
+
+# claude-code session config
+.claude/

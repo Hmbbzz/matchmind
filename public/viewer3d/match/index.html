@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Content-Security-Policy as a meta tag, since GitHub Pages can't send
+     headers. 'wasm-unsafe-eval', blob: and 'unsafe-inline' are all required:
+     without them DuckDB won't load and the page stays blank. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' blob:; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Match replay</title>
+<style>
+  body { margin: 0; background: #e9f1e8; color: #17231c; font: 14px/1.4 system-ui; overflow: hidden; }
+  #hud { position: fixed; top: 12px; left: 14px; padding: 8px 11px; border: 1px solid #d5dfd6;
+         border-radius: 10px; background: #ffffffdc; box-shadow: 0 8px 24px #2133261c; }
+  #clock { font-size: 22px; font-weight: 700; }
+  #status { color: #617067; }
+  #bar { position: fixed; bottom: 0; left: 0; right: 0; display: flex; gap: 10px;
+         align-items: center; padding: 10px 14px; background: #ffffffea;
+         border-top: 1px solid #d7e1d8; box-shadow: 0 -8px 26px #21332618; }
+  #scrub { flex: 1; }
+  #rawlbl, #nameslbl, #camlbl { color: #617067; white-space: nowrap; cursor: pointer; user-select: none; }
+  button, select { font: inherit; background: #fff; color: #18251d;
+                   border: 1px solid #c9d5cb; border-radius: 7px; padding: 4px 12px; cursor: pointer; }
+  button:hover, select:hover { border-color: #82a66f; background: #f4faef; }
+  #views button.active { color: #123216; border-color: #83bf50; background: #b9f63e; font-weight: 800; }
+  #jump { max-width: 13em; }
+  #views { position: fixed; top: 10px; right: 12px; display: flex;
+           flex-direction: column; gap: 6px; }
+  #views button { width: 36px; padding: 4px 0; text-align: center; }
+  #views button[data-view="heli"] { filter: grayscale(1); }
+  /* in the top left there is the score and the background is the kit colour. */
+  .tm { position: relative; display: inline-block; padding: 1px 8px;
+        border-radius: 3px; font-weight: 800; letter-spacing: .4px;
+        vertical-align: 1px; text-shadow: none; cursor: pointer;
+        box-shadow: 0 0 0 1px var(--ring, transparent); }
+  .tm input { position: absolute; inset: 0; opacity: 0; width: 100%;
+              height: 100%; padding: 0; border: 0; cursor: pointer; }
+  #teams .sc { font-weight: 800; padding: 0 6px; }
+  .swatch { width: 16px; height: 16px; padding: 0; border: 1px solid #4a5260;
+            border-radius: 4px; background: none; cursor: pointer; vertical-align: -3px; }
+  /* player name chip: whoever is in possession */
+  #chip { position: fixed; bottom: 54px; left: 50%; transform: translateX(-50%);
+          background: #000a; border-left: 3px solid #fff; padding: 4px 14px;
+          border-radius: 4px; color: #fff; font-weight: 600; opacity: 0;
+          transition: opacity .25s; pointer-events: none; }
+  #chip.on { opacity: 1; }
+  #tip { position: fixed; background: #000c; padding: 3px 9px; border-radius: 4px;
+         font-size: 13px; pointer-events: none; display: none; z-index: 5; }
+  #help { position: fixed; inset: 0; background: #0009; display: none;
+          place-items: center; z-index: 10; }
+  #help.on { display: grid; }
+  #helpBox { background: #f9fcf8; border: 1px solid #cbd8cd; border-radius: 12px;
+             padding: 20px 26px; max-width: 30em; line-height: 1.75; }
+  #helpBox h2 { margin: 0 0 8px; font-size: 16px; }
+  #helpBox kbd { background: #2e3540; border: 1px solid #4a5260; border-radius: 4px;
+                 padding: 0 6px; font: 12px/1.6 system-ui; }
+  #helpBox .k { color: #8ab; }
+  body.embed #hud, body.embed #bar, body.embed #views, body.embed #cut { display: none; }
+  body.embed #chip { bottom: 16px; }
+</style>
+  <script type="module" crossorigin src="../assets/match-BWoOtlME.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/convert-DgOl-ZFM.js">
+</head>
+<body>
+<div id="hud"><span id="teams">Preparing the match…</span><br>
+  <span id="clock"></span> <span id="status"></span></div>
+<div id="chip"></div>
+<div id="tip"></div>
+<div id="help"><div id="helpBox">
+  <h2>Replay controls</h2>
+  <div><kbd>space</kbd> <span class="k">play / pause</span> ·
+       <kbd>drag</kbd> <span class="k">orbit</span> ·
+       <kbd>scroll</kbd> <span class="k">zoom</span> ·
+       <kbd>right-drag</kbd> <span class="k">pan</span></div>
+  <div><kbd>W A S D</kbd> / <kbd>arrows</kbd> <span class="k">glide across the pitch</span></div>
+  <div><span style="filter:grayscale(1)">🚁</span> <span class="k">overhead plan that scrolls to follow the play, leading the way the broadcast looked — click again to swap ends; zoom freely, pan to let go</span> ·
+       <b>tv</b> <span class="k">broadcast angle</span></div>
+  <div><b>moments</b> <span class="k">jump to goals, shots &amp; set pieces</span></div>
+  <div><b>recorded paths</b> <span class="k">show tracked paths without animation adjustments</span></div>
+  <div><b>names</b> <span class="k">label every player; hovering a player names them too</span></div>
+  <div><span style="color:#00F5D4">▼</span> <span class="k">camera saw them</span> ·
+       <span style="color:#FF7043">×</span> <span class="k">estimated position</span></div>
+  <div><span class="k">colour swatches by the team names recolour the kits</span></div>
+  <div class="k" style="margin-top:8px">Data stays on this device — nothing you load leaves your browser.</div>
+</div></div>
+<div id="cut" style="position:fixed; top:14px; left:50%; transform:translateX(-50%);
+  background:#000a; padding:4px 14px; border-radius:6px; font-weight:700;
+  opacity:0; transition:opacity .2s; pointer-events:none">⏩ stoppage skipped</div>
+<div id="bar">
+  <button id="play">▶</button>
+  <select id="speed"><option>0.5</option><option selected>1</option><option>2</option><option>4</option></select>
+  <select id="jump" hidden><option value="">moments…</option></select>
+  <input id="scrub" type="range" min="0" value="0" step="1">
+  <label id="rawlbl" title="Show tracked paths without animation adjustments">
+    <input id="raw" type="checkbox"> recorded paths</label>
+  <label id="nameslbl" title="name labels above every player">
+    <input id="names" type="checkbox"> names</label>
+  <label id="camlbl" title="Highlight observed positions; estimated positions appear dimmed">
+    <input id="cam" type="checkbox"> camera</label>
+</div>
+<div id="views">
+  <button id="homeBtn" title="all matches — back to the landing page">⌂</button>
+  <button data-view="heli" title="helicopter view, follows the ball — click again to swap ends">🚁</button>
+  <button data-view="tv" title="broadcast angle">tv</button>
+  <button id="helpBtn" title="controls & what things mean">?</button>
+</div>
+</body>
+</html>

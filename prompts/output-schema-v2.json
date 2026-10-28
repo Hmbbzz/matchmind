@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scope", "topic", "summary", "fact_claims", "receipt_ids"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["matchmind-answer/2.0"] },
+    "scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["match_id", "player_id", "cutoff_ms"],
+      "properties": { "match_id": { "type": "string" }, "player_id": { "type": "string" }, "cutoff_ms": { "type": "integer" } }
+    },
+    "topic": { "type": "string", "enum": ["passing", "crossing", "shooting", "player_summary"] },
+    "summary": { "type": "string", "enum": ["Only recorded actions in the frozen snapshot are described.", "This is a descriptive sample, not a judgment of ability.", "No recorded actions for this topic are available at the frozen cutoff.", "The available snapshot cannot establish the broader claim in the question.", "Some required observations are unavailable."] },
+    "fact_claims": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["key", "value"],
+        "properties": {
+          "key": { "type": "string", "enum": ["passes_attempted", "passes_completed", "pass_outcomes_known", "pass_completion", "crosses_attempted", "crosses_completed", "cross_outcomes_known", "cross_completion", "shots", "xg_estimate", "xg_samples", "xg_missing"] },
+          "value": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "receipt_ids": { "type": "array", "items": { "type": "string" } }
+  }
+}

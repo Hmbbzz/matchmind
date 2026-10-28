@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "tactical-state-quality/1.1",
+  "generatedAt": "2026-10-23T21:46:03.193Z",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "one state row per team and analysis time",
+      "passed": true,
+      "detail": "1168"
+    },
+    {
+      "name": "low coverage is rejected",
+      "passed": true,
+      "detail": "coverage < 0.55"
+    },
+    {
+      "name": "available rows meet coverage threshold",
+      "passed": true,
+      "detail": "925 available rows"
+    },
+    {
+      "name": "provider phase labels absent",
+      "passed": true,
+      "detail": "no provider phase field"
+    },
+    {
+      "name": "at least four tactical states observed",
+      "passed": true,
+      "detail": "attacking_third_siege, low_block, counter_press, build_up, recover_shape, high_press, controlled_progression, mid_block, counter_attack, direct_play"
+    },
+    {
+      "name": "changes are delayed confirmations",
+      "passed": true,
+      "detail": "14 changes"
+    },
+    {
+      "name": "confirmed changes meet confidence floor",
+      "passed": true,
+      "detail": "confidence >= 0.38"
+    },
+    {
+      "name": "change times are causal",
+      "passed": true,
+      "detail": "effective <= detected"
+    },
+    {
+      "name": "control index bounded",
+      "passed": true,
+      "detail": "-100..100"
+    },
+    {
+      "name": "control index is symmetric",
+      "passed": true,
+      "detail": "team values sum to zero"
+    }
+  ],
+  "stats": {
+    "rows": 1168,
+    "availableRows": 925,
+    "changes": 14,
+    "states": [
+      "attacking_third_siege",
+      "low_block",
+      "counter_press",
+      "build_up",
+      "recover_shape",
+      "high_press",
+      "controlled_progression",
+      "mid_block",
+      "counter_attack",
+      "direct_play"
+    ],
+    "distribution": {
+      "attacking_third_siege": 154,
+      "low_block": 113,
+      "counter_press": 77,
+      "build_up": 208,
+      "recover_shape": 128,
+      "high_press": 33,
+      "controlled_progression": 103,
+      "mid_block": 93,
+      "counter_attack": 10,
+      "direct_play": 6
+    }
+  },
+  "caveat": "This is a transparent rules baseline over tracking and causal events. SkillCorner phase labels are reserved for later offline evaluation."
+}

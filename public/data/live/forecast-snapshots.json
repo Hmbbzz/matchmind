@@ -1,0 +1,4873 @@
+{
+  "schemaVersion": "transparent-forecast-baseline/1.1",
+  "generatedAt": "2026-10-23T21:49:37.951Z",
+  "matchId": "skillcorner_2017461",
+  "policy": {
+    "immutable": true,
+    "horizons": [
+      120000,
+      300000,
+      600000
+    ],
+    "cutoffStepMs": 300000,
+    "providerPhaseLabelsUsed": false,
+    "analysisContractVersion": "skillcorner-analysis-contract/1.1",
+    "rebuild": "Offline version 1.1 rebuild; does not revise a previously issued online ledger.",
+    "pressEscapeMeaning": "Future completed-pass channel proxy, not verified pressure escape.",
+    "zoneRiskMeaning": "Future completed-pass zone proxy, not verified territorial risk.",
+    "outcomeSample": "Completed passes with endpoint-matched attacking-third and channel labels (targeted reception when selected by converter, else source end); unknown labels excluded; action end in (cutoff,horizon end] and available by horizon end."
+  },
+  "snapshots": [
+    {
+      "forecastId": "fc_v1_1_300000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 300000,
+      "cutoffMs": 300000,
+      "horizonMs": 120000,
+      "validUntilMs": 420000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8543,
+        "currentDefensiveState": "attacking_third_siege",
+        "currentStateConfidence": 0.4801,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "attacking_third_siege",
+          "probabilities": {
+            "persist": 0.6912,
+            "change": 0.3088
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6944,
+            "center": 0.0487,
+            "right": 0.0919,
+            "long": 0.165
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5375,
+            "half_space_left": 0.268,
+            "center": 0.0597,
+            "half_space_right": 0.0521,
+            "wide_right": 0.0827
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "8ca2165f1591811fb4bfe0e788ddef44e3bf981b5d892b440e947a2c3581cf48"
+    },
+    {
+      "forecastId": "fc_v1_1_300000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 300000,
+      "cutoffMs": 300000,
+      "horizonMs": 300000,
+      "validUntilMs": 600000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8543,
+        "currentDefensiveState": "attacking_third_siege",
+        "currentStateConfidence": 0.4801,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "attacking_third_siege",
+          "probabilities": {
+            "persist": 0.4812,
+            "change": 0.5188
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6259,
+            "center": 0.0572,
+            "right": 0.1163,
+            "long": 0.2006
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5056,
+            "half_space_left": 0.2484,
+            "center": 0.075,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1064
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f94e9e796a12ebd5a9c8f8093b077b79525bd8fb1c2fa14f01b680e549b4a478"
+    },
+    {
+      "forecastId": "fc_v1_1_300000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 300000,
+      "cutoffMs": 300000,
+      "horizonMs": 600000,
+      "validUntilMs": 900000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8543,
+        "currentDefensiveState": "attacking_third_siege",
+        "currentStateConfidence": 0.4801,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "attacking_third_siege",
+          "probabilities": {
+            "persist": 0.3012,
+            "change": 0.6988
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5574,
+            "center": 0.0657,
+            "right": 0.1407,
+            "long": 0.2362
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4736,
+            "half_space_left": 0.2288,
+            "center": 0.0903,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1302
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "985ab8b5b11a830b6b3dc94767dfb45c12528ab6c94ac2722e92b1254dab6515"
+    },
+    {
+      "forecastId": "fc_v1_1_300000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 300000,
+      "cutoffMs": 300000,
+      "horizonMs": 120000,
+      "validUntilMs": 420000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8543,
+        "currentDefensiveState": "low_block",
+        "currentStateConfidence": 0.4651,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "low_block",
+          "probabilities": {
+            "persist": 0.7947,
+            "change": 0.2053
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6832,
+            "center": 0.0563,
+            "right": 0.1473,
+            "long": 0.1132
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.394,
+            "half_space_left": 0.3568,
+            "center": 0.0618,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "21d6211a22bacad41c93455e7f47f9d28ff433d51b9ad3c0a2dbb7ff755aa9f6"
+    },
+    {
+      "forecastId": "fc_v1_1_300000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 300000,
+      "cutoffMs": 300000,
+      "horizonMs": 300000,
+      "validUntilMs": 600000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8543,
+        "currentDefensiveState": "low_block",
+        "currentStateConfidence": 0.4651,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "low_block",
+          "probabilities": {
+            "persist": 0.5847,
+            "change": 0.4153
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6069,
+            "center": 0.0675,
+            "right": 0.1921,
+            "long": 0.1335
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3651,
+            "half_space_left": 0.3142,
+            "center": 0.0778,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "0a42e4a9de1c2aa32db4c25ba225f8a2bb000ea8fa8bea610c45a11887c56524"
+    },
+    {
+      "forecastId": "fc_v1_1_300000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 300000,
+      "cutoffMs": 300000,
+      "horizonMs": 600000,
+      "validUntilMs": 900000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8543,
+        "currentDefensiveState": "low_block",
+        "currentStateConfidence": 0.4651,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "low_block",
+          "probabilities": {
+            "persist": 0.4047,
+            "change": 0.5953
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5307,
+            "center": 0.0786,
+            "right": 0.2368,
+            "long": 0.1539
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3361,
+            "half_space_left": 0.2715,
+            "center": 0.0939,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "e4b860c92d54151bf8cf162ac08c4ff592f464c80b02b05e3c113614164a22f8"
+    },
+    {
+      "forecastId": "fc_v1_1_600000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 600000,
+      "cutoffMs": 600000,
+      "horizonMs": 120000,
+      "validUntilMs": 720000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.719,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3948,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.6561,
+            "change": 0.3439
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6243,
+            "center": 0.0467,
+            "right": 0.0899,
+            "long": 0.2391
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.7254,
+            "half_space_left": 0.0801,
+            "center": 0.0597,
+            "half_space_right": 0.0521,
+            "wide_right": 0.0827
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f49a6fced36031f88db0f94cf87ac3b3652928c72988eb2d8a9b14cb063708c8"
+    },
+    {
+      "forecastId": "fc_v1_1_600000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 600000,
+      "cutoffMs": 600000,
+      "horizonMs": 300000,
+      "validUntilMs": 900000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.719,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3948,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.4681,
+            "change": 0.5319
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5716,
+            "center": 0.0557,
+            "right": 0.1147,
+            "long": 0.258
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.651,
+            "half_space_left": 0.103,
+            "center": 0.075,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1064
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "5aa0dbacd86480de198902cf6aa40b036334d2ec9d1c0647b4af80bbfc49d9fc"
+    },
+    {
+      "forecastId": "fc_v1_1_600000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 600000,
+      "cutoffMs": 600000,
+      "horizonMs": 600000,
+      "validUntilMs": 1200000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.719,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3948,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.3188,
+            "change": 0.6812
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5189,
+            "center": 0.0646,
+            "right": 0.1396,
+            "long": 0.2769
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5766,
+            "half_space_left": 0.1258,
+            "center": 0.0903,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1302
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "0eee05c3bae929a71619e84081088f33c73d92145a8736b0cff8ac5e6dbe3d22"
+    },
+    {
+      "forecastId": "fc_v1_1_600000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 600000,
+      "cutoffMs": 600000,
+      "horizonMs": 120000,
+      "validUntilMs": 720000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.719,
+        "currentDefensiveState": "counter_press",
+        "currentStateConfidence": 0.4659,
+        "currentStateAgeMs": 210000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "counter_press",
+          "probabilities": {
+            "persist": 0.7608,
+            "change": 0.2392
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6261,
+            "center": 0.0759,
+            "right": 0.1369,
+            "long": 0.161
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4965,
+            "half_space_left": 0.2287,
+            "center": 0.0874,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "39eb16900a102d81347d6912e8a30d114e8efc9f01c727eeab02d3aa5c694a64"
+    },
+    {
+      "forecastId": "fc_v1_1_600000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 600000,
+      "cutoffMs": 600000,
+      "horizonMs": 300000,
+      "validUntilMs": 900000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.719,
+        "currentDefensiveState": "counter_press",
+        "currentStateConfidence": 0.4659,
+        "currentStateAgeMs": 210000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "counter_press",
+          "probabilities": {
+            "persist": 0.5268,
+            "change": 0.4732
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.557,
+            "center": 0.0809,
+            "right": 0.1782,
+            "long": 0.1839
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4444,
+            "half_space_left": 0.215,
+            "center": 0.0977,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "5970d5e00fe4cc511e3e5bfe2db8bc18d045f93ed7591a2cefe5b63daf65d334"
+    },
+    {
+      "forecastId": "fc_v1_1_600000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 600000,
+      "cutoffMs": 600000,
+      "horizonMs": 600000,
+      "validUntilMs": 1200000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.719,
+        "currentDefensiveState": "counter_press",
+        "currentStateConfidence": 0.4659,
+        "currentStateAgeMs": 210000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "counter_press",
+          "probabilities": {
+            "persist": 0.3588,
+            "change": 0.6412
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4878,
+            "center": 0.0859,
+            "right": 0.2195,
+            "long": 0.2067
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3923,
+            "half_space_left": 0.2012,
+            "center": 0.1079,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "9d1ec2bacfb7d4550d7e60f2906dad7a15fafc9cb2f81146e20bc7acd2d615d5"
+    },
+    {
+      "forecastId": "fc_v1_1_900000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 900000,
+      "cutoffMs": 900000,
+      "horizonMs": 120000,
+      "validUntilMs": 1020000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.866,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.5084,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.7332,
+            "change": 0.2668
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6793,
+            "center": 0.0483,
+            "right": 0.0914,
+            "long": 0.181
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.7254,
+            "half_space_left": 0.0801,
+            "center": 0.0597,
+            "half_space_right": 0.0521,
+            "wide_right": 0.0827
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "c2b365baf189076d949f6fd4526eec84320a488cd7dabafe6508f4d7c25057be"
+    },
+    {
+      "forecastId": "fc_v1_1_900000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 900000,
+      "cutoffMs": 900000,
+      "horizonMs": 300000,
+      "validUntilMs": 1200000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.866,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.5084,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.5572,
+            "change": 0.4428
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6141,
+            "center": 0.0569,
+            "right": 0.116,
+            "long": 0.213
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.651,
+            "half_space_left": 0.103,
+            "center": 0.075,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1064
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "a9fb8dbaa2940b9735ed995c2c7a791a180bd87ac379e962cdbeae110fb281bc"
+    },
+    {
+      "forecastId": "fc_v1_1_900000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 900000,
+      "cutoffMs": 900000,
+      "horizonMs": 600000,
+      "validUntilMs": 1500000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.866,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.5084,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.4119,
+            "change": 0.5881
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.549,
+            "center": 0.0655,
+            "right": 0.1405,
+            "long": 0.245
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5766,
+            "half_space_left": 0.1258,
+            "center": 0.0903,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1302
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "fe899bf67eecc15a389752a302f2bdbec9f6892c8f85ac157ca3f093887ad4b5"
+    },
+    {
+      "forecastId": "fc_v1_1_900000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 900000,
+      "cutoffMs": 900000,
+      "horizonMs": 120000,
+      "validUntilMs": 1020000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.866,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4558,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7914,
+            "change": 0.2086
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5068,
+            "center": 0.0564,
+            "right": 0.3271,
+            "long": 0.1097
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1122,
+            "half_space_left": 0.4508,
+            "center": 0.0618,
+            "half_space_right": 0.255,
+            "wide_right": 0.1202
+          },
+          "topScenario": "half_space_left"
+        }
+      },
+      "immutableHash": "f8c6ca59bce5cad46ac9921e099495f0edf04ae746165b1a9ca04bdf9a4c593d"
+    },
+    {
+      "forecastId": "fc_v1_1_900000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 900000,
+      "cutoffMs": 900000,
+      "horizonMs": 300000,
+      "validUntilMs": 1200000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.866,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4558,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.6034,
+            "change": 0.3966
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4704,
+            "center": 0.0675,
+            "right": 0.3312,
+            "long": 0.1309
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1469,
+            "half_space_left": 0.3869,
+            "center": 0.0778,
+            "half_space_right": 0.2306,
+            "wide_right": 0.1578
+          },
+          "topScenario": "half_space_left"
+        }
+      },
+      "immutableHash": "5e67575f1c8efb85ff44307fc6e414df4e346ddfba125498126bbe13979b2524"
+    },
+    {
+      "forecastId": "fc_v1_1_900000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 900000,
+      "cutoffMs": 900000,
+      "horizonMs": 600000,
+      "validUntilMs": 1500000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.866,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4558,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.4541,
+            "change": 0.5459
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4339,
+            "center": 0.0787,
+            "right": 0.3354,
+            "long": 0.152
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1815,
+            "half_space_left": 0.323,
+            "center": 0.0939,
+            "half_space_right": 0.2062,
+            "wide_right": 0.1954
+          },
+          "topScenario": "half_space_left"
+        }
+      },
+      "immutableHash": "76742938780d3523322d90318aa36e8c234853d9e9e1763505c202a9eb0b2b79"
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1200000,
+      "cutoffMs": 1200000,
+      "horizonMs": 120000,
+      "validUntilMs": 1320000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.711,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3932,
+        "currentStateAgeMs": 220000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7978,
+            "change": 0.2022
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3035,
+            "center": 0.1878,
+            "right": 0.231,
+            "long": 0.2776
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2745,
+            "half_space_left": 0.1929,
+            "center": 0.1724,
+            "half_space_right": 0.1648,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "cb195536841037f8775cabeefad3eb871fe41a7ac10d4ef44e38c268b7f98e29"
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1200000,
+      "cutoffMs": 1200000,
+      "horizonMs": 300000,
+      "validUntilMs": 1500000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.711,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3932,
+        "currentStateAgeMs": 220000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5664,
+            "change": 0.4336
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3233,
+            "center": 0.1649,
+            "right": 0.224,
+            "long": 0.2878
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3019,
+            "half_space_left": 0.1902,
+            "center": 0.1623,
+            "half_space_right": 0.1518,
+            "wide_right": 0.1937
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f25047c419d6366cdd33d67cadb3044be2a44882d8ff2adfb02160c59f3c5e2e"
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1200000,
+      "cutoffMs": 1200000,
+      "horizonMs": 600000,
+      "validUntilMs": 1800000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.711,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3932,
+        "currentStateAgeMs": 220000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.3971,
+            "change": 0.6029
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.343,
+            "center": 0.142,
+            "right": 0.217,
+            "long": 0.298
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3294,
+            "half_space_left": 0.1876,
+            "center": 0.1522,
+            "half_space_right": 0.1389,
+            "wide_right": 0.192
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "27960e2aaea8176566081353501a321edf1b6901840d0d764f2f1cacdca0f485"
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1200000,
+      "cutoffMs": 1200000,
+      "horizonMs": 120000,
+      "validUntilMs": 1320000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.711,
+        "currentDefensiveState": "recover_shape",
+        "currentStateConfidence": 0.3877,
+        "currentStateAgeMs": 120000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "recover_shape",
+          "probabilities": {
+            "persist": 0.7461,
+            "change": 0.2539
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5612,
+            "center": 0.1594,
+            "right": 0.1468,
+            "long": 0.1326
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4504,
+            "half_space_left": 0.1878,
+            "center": 0.1745,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f2ba4203bdba2b794982e74452c91e3a3fce85dbccaec7af6d52f2f5c0c398bc"
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1200000,
+      "cutoffMs": 1200000,
+      "horizonMs": 300000,
+      "validUntilMs": 1500000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.711,
+        "currentDefensiveState": "recover_shape",
+        "currentStateConfidence": 0.3877,
+        "currentStateAgeMs": 120000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "recover_shape",
+          "probabilities": {
+            "persist": 0.5381,
+            "change": 0.4619
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5124,
+            "center": 0.1473,
+            "right": 0.1917,
+            "long": 0.1486
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4087,
+            "half_space_left": 0.1833,
+            "center": 0.1651,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "e0191310e712592a58b1b32683fd08b3aa28376d2ed3249b483bd672ab465342"
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1200000,
+      "cutoffMs": 1200000,
+      "horizonMs": 600000,
+      "validUntilMs": 1800000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.711,
+        "currentDefensiveState": "recover_shape",
+        "currentStateConfidence": 0.3877,
+        "currentStateAgeMs": 120000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "recover_shape",
+          "probabilities": {
+            "persist": 0.3821,
+            "change": 0.6179
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4638,
+            "center": 0.1352,
+            "right": 0.2365,
+            "long": 0.1645
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.367,
+            "half_space_left": 0.1787,
+            "center": 0.1557,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f7ba7507add3ff45bbf3a1d40f52bc72fb0feaadbed2e914404f87d33cb6bf04"
+    },
+    {
+      "forecastId": "fc_v1_1_1500000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1500000,
+      "cutoffMs": 1500000,
+      "horizonMs": 120000,
+      "validUntilMs": 1620000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.627,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3496,
+        "currentStateAgeMs": 520000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7539,
+            "change": 0.2461
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6672,
+            "center": 0.048,
+            "right": 0.0911,
+            "long": 0.1937
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4436,
+            "half_space_left": 0.3619,
+            "center": 0.0597,
+            "half_space_right": 0.0521,
+            "wide_right": 0.0827
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "fdc2368cb98bbdcf1df91dbccda16414d698e08e841e05299fc00ce58e5f53db"
+    },
+    {
+      "forecastId": "fc_v1_1_1500000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1500000,
+      "cutoffMs": 1500000,
+      "horizonMs": 300000,
+      "validUntilMs": 1800000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.627,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3496,
+        "currentStateAgeMs": 520000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5939,
+            "change": 0.4061
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6049,
+            "center": 0.0566,
+            "right": 0.1157,
+            "long": 0.2228
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4328,
+            "half_space_left": 0.3211,
+            "center": 0.075,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1064
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "603cb0eb40c3b168fc67c9a9af436fde91f2191e8e6ee6829b16a40285e94779"
+    },
+    {
+      "forecastId": "fc_v1_1_1500000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1500000,
+      "cutoffMs": 1500000,
+      "horizonMs": 600000,
+      "validUntilMs": 2100000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.627,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3496,
+        "currentStateAgeMs": 520000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.3932,
+            "change": 0.6068
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5425,
+            "center": 0.0653,
+            "right": 0.1403,
+            "long": 0.2519
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4221,
+            "half_space_left": 0.2803,
+            "center": 0.0903,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1302
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "c75f8eb1fc9bfba4b923300cb8bd0692a2defe34e76fdd5238a34c8674493efb"
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1800000,
+      "cutoffMs": 1800000,
+      "horizonMs": 120000,
+      "validUntilMs": 1920000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7933,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.5032,
+        "currentStateAgeMs": 820000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7516,
+            "change": 0.2484
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4973,
+            "center": 0.1048,
+            "right": 0.2587,
+            "long": 0.1392
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3308,
+            "half_space_left": 0.2492,
+            "center": 0.1161,
+            "half_space_right": 0.0521,
+            "wide_right": 0.2518
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "3fcfda6336b0d55a4cf5d3dd27e2feb700c346d6b04f6351286dda5f1b5033db"
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1800000,
+      "cutoffMs": 1800000,
+      "horizonMs": 300000,
+      "validUntilMs": 2100000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7933,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.5032,
+        "currentStateAgeMs": 820000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5916,
+            "change": 0.4084
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4733,
+            "center": 0.1007,
+            "right": 0.2454,
+            "long": 0.1807
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3456,
+            "half_space_left": 0.2339,
+            "center": 0.1187,
+            "half_space_right": 0.0646,
+            "wide_right": 0.2373
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "a4ae944ce52b61ebca005a125e4a0bf8dde291a669382bbf12fc6e3c9f9a7740"
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1800000,
+      "cutoffMs": 1800000,
+      "horizonMs": 600000,
+      "validUntilMs": 2400000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7933,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.5032,
+        "currentStateAgeMs": 820000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.4309,
+            "change": 0.5691
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4492,
+            "center": 0.0965,
+            "right": 0.2322,
+            "long": 0.2221
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3603,
+            "half_space_left": 0.2185,
+            "center": 0.1212,
+            "half_space_right": 0.0771,
+            "wide_right": 0.2229
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "84308a06138ba2030c5a5326857aa099fe97b67616f422360395a499c4e6d783"
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1800000,
+      "cutoffMs": 1800000,
+      "horizonMs": 120000,
+      "validUntilMs": 1920000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7933,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4256,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7823,
+            "change": 0.2177
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.202,
+            "center": 0.111,
+            "right": 0.202,
+            "long": 0.485
+          },
+          "topScenario": "long"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.225,
+            "half_space_left": 0.1878,
+            "center": 0.1745,
+            "half_space_right": 0.1798,
+            "wide_right": 0.2329
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "0f9a0efeb8696637222119519555962668986fbe29da4bfb3426050c245c74ca"
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1800000,
+      "cutoffMs": 1800000,
+      "horizonMs": 300000,
+      "validUntilMs": 2100000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7933,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4256,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.5723,
+            "change": 0.4277
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2344,
+            "center": 0.1098,
+            "right": 0.2344,
+            "long": 0.4214
+          },
+          "topScenario": "long"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2342,
+            "half_space_left": 0.1833,
+            "center": 0.1651,
+            "half_space_right": 0.1724,
+            "wide_right": 0.2451
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "24dad453864e647a422ddf5a394d7c5ad734a02c4eb2d5a3d0825ac3ea339541"
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 1800000,
+      "cutoffMs": 1800000,
+      "horizonMs": 600000,
+      "validUntilMs": 2400000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7933,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4256,
+        "currentStateAgeMs": 300000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.3923,
+            "change": 0.6077
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2668,
+            "center": 0.1086,
+            "right": 0.2668,
+            "long": 0.3578
+          },
+          "topScenario": "long"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2434,
+            "half_space_left": 0.1787,
+            "center": 0.1557,
+            "half_space_right": 0.165,
+            "wide_right": 0.2572
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "f17bcefa55f253fa28d5c417e7fa116e492fd2683f9ba9dbac37f30141ce6c6f"
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2100000,
+      "cutoffMs": 2100000,
+      "horizonMs": 120000,
+      "validUntilMs": 2220000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7147,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4544,
+        "currentStateAgeMs": 250000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.7803,
+            "change": 0.2197
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1644,
+            "center": 0.0486,
+            "right": 0.6192,
+            "long": 0.1678
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1618,
+            "half_space_left": 0.0801,
+            "center": 0.0597,
+            "half_space_right": 0.0521,
+            "wide_right": 0.6463
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "5735f6ca065d553038f6eb59c75a1eb5961845755059376db82fec2e5717d7f4"
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2100000,
+      "cutoffMs": 2100000,
+      "horizonMs": 300000,
+      "validUntilMs": 2400000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7147,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4544,
+        "currentStateAgeMs": 250000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.557,
+            "change": 0.443
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2155,
+            "center": 0.0572,
+            "right": 0.5245,
+            "long": 0.2028
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2146,
+            "half_space_left": 0.103,
+            "center": 0.075,
+            "half_space_right": 0.0646,
+            "wide_right": 0.5428
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "a8441ea7438d9967ebb9785240ee5dcc4e8750f9108c8688cf642b8573d94677"
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2100000,
+      "cutoffMs": 2100000,
+      "horizonMs": 600000,
+      "validUntilMs": 2700000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7147,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4544,
+        "currentStateAgeMs": 250000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.3837,
+            "change": 0.6163
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2667,
+            "center": 0.0657,
+            "right": 0.4299,
+            "long": 0.2377
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2675,
+            "half_space_left": 0.1258,
+            "center": 0.0903,
+            "half_space_right": 0.0771,
+            "wide_right": 0.4393
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "83470616c39d40e0b09f74b057e4f9b9f78a20bd44544166521665132aae4f40"
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2100000,
+      "cutoffMs": 2100000,
+      "horizonMs": 120000,
+      "validUntilMs": 2220000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7147,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.372,
+        "currentStateAgeMs": 600000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.8096,
+            "change": 0.1904
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.147,
+            "center": 0.056,
+            "right": 0.673,
+            "long": 0.124
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1122,
+            "half_space_left": 0.075,
+            "center": 0.0618,
+            "half_space_right": 0.0671,
+            "wide_right": 0.6838
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "135cb78bc3e052509021402e7d66d0bac353f6104877d71d157e90f6d50dc0c1"
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2100000,
+      "cutoffMs": 2100000,
+      "horizonMs": 300000,
+      "validUntilMs": 2400000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7147,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.372,
+        "currentStateAgeMs": 600000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.6496,
+            "change": 0.3504
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1918,
+            "center": 0.0672,
+            "right": 0.5991,
+            "long": 0.1419
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1469,
+            "half_space_left": 0.096,
+            "center": 0.0778,
+            "half_space_right": 0.0851,
+            "wide_right": 0.5942
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "f93e5976c38bec2cbbc00ea4ed1f6c060ea18be8195779162fb8f3557da47f98"
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2100000,
+      "cutoffMs": 2100000,
+      "horizonMs": 600000,
+      "validUntilMs": 2700000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7147,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.372,
+        "currentStateAgeMs": 600000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.4596,
+            "change": 0.5404
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2366,
+            "center": 0.0785,
+            "right": 0.5251,
+            "long": 0.1598
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1815,
+            "half_space_left": 0.1169,
+            "center": 0.0939,
+            "half_space_right": 0.1031,
+            "wide_right": 0.5045
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "d68a9bb6dd85d27180af08bfe1a4048ebf9893f6c37a25dafb242fcdb50517ec"
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2400000,
+      "cutoffMs": 2400000,
+      "horizonMs": 120000,
+      "validUntilMs": 2520000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7433,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.3915,
+        "currentStateAgeMs": 550000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.7881,
+            "change": 0.2119
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2574,
+            "center": 0.234,
+            "right": 0.3694,
+            "long": 0.1392
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2557,
+            "half_space_left": 0.0801,
+            "center": 0.2476,
+            "half_space_right": 0.0521,
+            "wide_right": 0.3645
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "00cd94741c2f0f2ed18217baef0e31a80ce6751cd09db697f00b46e88473e9e8"
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2400000,
+      "cutoffMs": 2400000,
+      "horizonMs": 300000,
+      "validUntilMs": 2700000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7433,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.3915,
+        "currentStateAgeMs": 550000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.6281,
+            "change": 0.3719
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2876,
+            "center": 0.2006,
+            "right": 0.3311,
+            "long": 0.1807
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2874,
+            "half_space_left": 0.103,
+            "center": 0.2205,
+            "half_space_right": 0.0646,
+            "wide_right": 0.3246
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "2826890b9c2ac215cd9b5f69315ee60912fe79c1b459d4874c2a2f2ffb9d212a"
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2400000,
+      "cutoffMs": 2400000,
+      "horizonMs": 600000,
+      "validUntilMs": 3000000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7433,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.3915,
+        "currentStateAgeMs": 550000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.4314,
+            "change": 0.5686
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3177,
+            "center": 0.1673,
+            "right": 0.2929,
+            "long": 0.2221
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3191,
+            "half_space_left": 0.1258,
+            "center": 0.1934,
+            "half_space_right": 0.0771,
+            "wide_right": 0.2847
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "bac6e2176d26b895be968873595477b0ca700b4462213f59bb2ddf1330fb65cf"
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2400000,
+      "cutoffMs": 2400000,
+      "horizonMs": 120000,
+      "validUntilMs": 2520000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7433,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.4154,
+        "currentStateAgeMs": 110000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7746,
+            "change": 0.2254
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2863,
+            "center": 0.1952,
+            "right": 0.2863,
+            "long": 0.2323
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.225,
+            "half_space_left": 0.1878,
+            "center": 0.1745,
+            "half_space_right": 0.1798,
+            "wide_right": 0.2329
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "c513e1aa816474a5b437bf59cdeca2897a7465d474f2accafc2c2076cb826eae"
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2400000,
+      "cutoffMs": 2400000,
+      "horizonMs": 300000,
+      "validUntilMs": 2700000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7433,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.4154,
+        "currentStateAgeMs": 110000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5706,
+            "change": 0.4294
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2996,
+            "center": 0.175,
+            "right": 0.2996,
+            "long": 0.2257
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2342,
+            "half_space_left": 0.1833,
+            "center": 0.1651,
+            "half_space_right": 0.1724,
+            "wide_right": 0.2451
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "0ce388481d7d4f6e94ea58005a35d1f7bb3c490560602cd123214ef86f181fd1"
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2400000,
+      "cutoffMs": 2400000,
+      "horizonMs": 600000,
+      "validUntilMs": 3000000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7433,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.4154,
+        "currentStateAgeMs": 110000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.4159,
+            "change": 0.5841
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.313,
+            "center": 0.1548,
+            "right": 0.313,
+            "long": 0.2192
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2434,
+            "half_space_left": 0.1787,
+            "center": 0.1557,
+            "half_space_right": 0.165,
+            "wide_right": 0.2572
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "0572c54e2f3e461eb11ecd4a10f23aad5d20c77ce7a5e460bac43d2e7338e62e"
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2700000,
+      "cutoffMs": 2700000,
+      "horizonMs": 120000,
+      "validUntilMs": 2820000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6637,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4016,
+        "currentStateAgeMs": 850000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.8077,
+            "change": 0.1923
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4419,
+            "center": 0.0494,
+            "right": 0.3694,
+            "long": 0.1392
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4436,
+            "half_space_left": 0.0801,
+            "center": 0.0597,
+            "half_space_right": 0.0521,
+            "wide_right": 0.3645
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "bc5892ae7121a439c2a36196d9ae08eab8dcd45459816d1814f5ce4fd6bcdf56"
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2700000,
+      "cutoffMs": 2700000,
+      "horizonMs": 300000,
+      "validUntilMs": 3000000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6637,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4016,
+        "currentStateAgeMs": 850000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.6477,
+            "change": 0.3523
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4304,
+            "center": 0.0578,
+            "right": 0.3311,
+            "long": 0.1807
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4328,
+            "half_space_left": 0.103,
+            "center": 0.075,
+            "half_space_right": 0.0646,
+            "wide_right": 0.3246
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "6436034167a5f3ebf2bab91765c3fe75ead376f043e3924c887030b1851caef5"
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2700000,
+      "cutoffMs": 2700000,
+      "horizonMs": 600000,
+      "validUntilMs": 3300000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6637,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4016,
+        "currentStateAgeMs": 850000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.491,
+            "change": 0.509
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4189,
+            "center": 0.0661,
+            "right": 0.2929,
+            "long": 0.2221
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4221,
+            "half_space_left": 0.1258,
+            "center": 0.0903,
+            "half_space_right": 0.0771,
+            "wide_right": 0.2847
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "11aee1e7977d1012b3617266421f5bfd5d8c1fe5a662efbe7d5d42e38aa5bc80"
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2700000,
+      "cutoffMs": 2700000,
+      "horizonMs": 120000,
+      "validUntilMs": 2820000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6637,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4421,
+        "currentStateAgeMs": 10000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.6965,
+            "change": 0.3035
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.7014,
+            "center": 0.0568,
+            "right": 0.1479,
+            "long": 0.0939
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.6759,
+            "half_space_left": 0.075,
+            "center": 0.0618,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f0a2c64711ca55be59cdd5aaa4376f869e7e9d124a47fe3d3d658f4d3a5bdc8a"
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2700000,
+      "cutoffMs": 2700000,
+      "horizonMs": 300000,
+      "validUntilMs": 3000000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6637,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4421,
+        "currentStateAgeMs": 10000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.5325,
+            "change": 0.4675
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.621,
+            "center": 0.0679,
+            "right": 0.1925,
+            "long": 0.1186
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5832,
+            "half_space_left": 0.096,
+            "center": 0.0778,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "42a9600568409cbdb62879571f141fcbc6e0f5ba504e07edb49fd1ce96689364"
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 2700000,
+      "cutoffMs": 2700000,
+      "horizonMs": 600000,
+      "validUntilMs": 3300000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6637,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4421,
+        "currentStateAgeMs": 10000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.3912,
+            "change": 0.6088
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5407,
+            "center": 0.0789,
+            "right": 0.2371,
+            "long": 0.1433
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4906,
+            "half_space_left": 0.1169,
+            "center": 0.0939,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "8b1543b4f012c7bdb86aff863db914920db6dca9ea9803566635fbd5ea57ed44"
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3000000,
+      "cutoffMs": 3000000,
+      "horizonMs": 120000,
+      "validUntilMs": 3120000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8767,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.5468,
+        "currentStateAgeMs": 1150000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.747,
+            "change": 0.253
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4039,
+            "center": 0.2882,
+            "right": 0.0904,
+            "long": 0.2174
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4436,
+            "half_space_left": 0.0801,
+            "center": 0.3415,
+            "half_space_right": 0.0521,
+            "wide_right": 0.0827
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "2cee586ea32a1c14eb799e86447d223578b8b7e3ad435843f7be1146043bef39"
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3000000,
+      "cutoffMs": 3000000,
+      "horizonMs": 300000,
+      "validUntilMs": 3300000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8767,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.5468,
+        "currentStateAgeMs": 1150000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.587,
+            "change": 0.413
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.401,
+            "center": 0.2426,
+            "right": 0.1152,
+            "long": 0.2412
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4328,
+            "half_space_left": 0.103,
+            "center": 0.2932,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1064
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "6930585b83499ecbabae10ca5fb0a5232845cd098f906aef882fed3b4cf176f9"
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3000000,
+      "cutoffMs": 3000000,
+      "horizonMs": 600000,
+      "validUntilMs": 3600000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8767,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.5468,
+        "currentStateAgeMs": 1150000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.447,
+            "change": 0.553
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.398,
+            "center": 0.1971,
+            "right": 0.1399,
+            "long": 0.265
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4221,
+            "half_space_left": 0.1258,
+            "center": 0.2449,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1302
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "c4c174dcecf94c3ced7da410e98d7f8070222b72f099b498f7ced1fb4ed5b1e3"
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3000000,
+      "cutoffMs": 3000000,
+      "horizonMs": 120000,
+      "validUntilMs": 3120000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8767,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4403,
+        "currentStateAgeMs": 310000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.8231,
+            "change": 0.1769
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6533,
+            "center": 0.0554,
+            "right": 0.1465,
+            "long": 0.1448
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.6132,
+            "half_space_left": 0.1377,
+            "center": 0.0618,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "79ff318ce3d7fda09018e12b40979728cde0965722881fd4689ea416c9d6e5ad"
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3000000,
+      "cutoffMs": 3000000,
+      "horizonMs": 300000,
+      "validUntilMs": 3300000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8767,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4403,
+        "currentStateAgeMs": 310000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.6158,
+            "change": 0.3842
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5837,
+            "center": 0.0668,
+            "right": 0.1914,
+            "long": 0.1581
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5348,
+            "half_space_left": 0.1445,
+            "center": 0.0778,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "a609b57479cc09ef28cabe233d72f80b6ae9d9f47b992e303ee506e32f1dd674"
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3000000,
+      "cutoffMs": 3000000,
+      "horizonMs": 600000,
+      "validUntilMs": 3600000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8767,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4403,
+        "currentStateAgeMs": 310000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.4344,
+            "change": 0.5656
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5142,
+            "center": 0.0782,
+            "right": 0.2363,
+            "long": 0.1713
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4563,
+            "half_space_left": 0.1513,
+            "center": 0.0939,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "43de01c9c66b295f581da47fd277b31387957e36fe9d180837802f1ea8df84bb"
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3300000,
+      "cutoffMs": 3300000,
+      "horizonMs": 120000,
+      "validUntilMs": 3420000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6483,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3846,
+        "currentStateAgeMs": 250000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.8306,
+            "change": 0.1694
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1637,
+            "center": 0.048,
+            "right": 0.5946,
+            "long": 0.1937
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1618,
+            "half_space_left": 0.0801,
+            "center": 0.0597,
+            "half_space_right": 0.6157,
+            "wide_right": 0.0827
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "33cd8682f6d114810d5807c5e1e8f819aa424aef53722c786009da0dced50f52"
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3300000,
+      "cutoffMs": 3300000,
+      "horizonMs": 300000,
+      "validUntilMs": 3600000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6483,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3846,
+        "currentStateAgeMs": 250000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.6072,
+            "change": 0.3928
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.215,
+            "center": 0.0566,
+            "right": 0.5056,
+            "long": 0.2228
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2146,
+            "half_space_left": 0.103,
+            "center": 0.075,
+            "half_space_right": 0.5009,
+            "wide_right": 0.1064
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "20494d87afb7cdf9f5ea4551d1c13b9a2f9adea8ee5541b2f8d4a12c840fcaa1"
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3300000,
+      "cutoffMs": 3300000,
+      "horizonMs": 600000,
+      "validUntilMs": 3900000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6483,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3846,
+        "currentStateAgeMs": 250000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.4339,
+            "change": 0.5661
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2663,
+            "center": 0.0653,
+            "right": 0.4165,
+            "long": 0.2519
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2675,
+            "half_space_left": 0.1258,
+            "center": 0.0903,
+            "half_space_right": 0.3862,
+            "wide_right": 0.1302
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "03008142d905ee967a051d88f67fda8f4a555f141c3d0917c9ee9d22b95cd657"
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3300000,
+      "cutoffMs": 3300000,
+      "horizonMs": 120000,
+      "validUntilMs": 3420000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6483,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4384,
+        "currentStateAgeMs": 610000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.85,
+            "change": 0.15
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3001,
+            "center": 0.209,
+            "right": 0.3001,
+            "long": 0.1908
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1123,
+            "half_space_left": 0.2629,
+            "center": 0.2496,
+            "half_space_right": 0.0671,
+            "wide_right": 0.3081
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "855422aabd37595da03e65e16501b95941fcfbf7294f0a3bf0ce107ce21f1e31"
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3300000,
+      "cutoffMs": 3300000,
+      "horizonMs": 300000,
+      "validUntilMs": 3600000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6483,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4384,
+        "currentStateAgeMs": 610000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7047,
+            "change": 0.2953
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3103,
+            "center": 0.1857,
+            "right": 0.3103,
+            "long": 0.1936
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1469,
+            "half_space_left": 0.2414,
+            "center": 0.2233,
+            "half_space_right": 0.0851,
+            "wide_right": 0.3033
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "692d6499aebac1df3e5f44e6f18bdb7b6090c256aa26768578d7334706a864b9"
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3300000,
+      "cutoffMs": 3300000,
+      "horizonMs": 600000,
+      "validUntilMs": 3900000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6483,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4384,
+        "currentStateAgeMs": 610000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.516,
+            "change": 0.484
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3206,
+            "center": 0.1624,
+            "right": 0.3206,
+            "long": 0.1964
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1815,
+            "half_space_left": 0.22,
+            "center": 0.1969,
+            "half_space_right": 0.1031,
+            "wide_right": 0.2984
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "2c436452efb84185458a9bdeb1164cc1f68cfd7caa8fd3555f6fd157867d9ae4"
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3900000,
+      "cutoffMs": 3900000,
+      "horizonMs": 120000,
+      "validUntilMs": 4020000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.5683,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.286,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7191,
+            "change": 0.2809
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1635,
+            "center": 0.5458,
+            "right": 0.0909,
+            "long": 0.1998
+          },
+          "topScenario": "center"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1618,
+            "half_space_left": 0.0801,
+            "center": 0.6233,
+            "half_space_right": 0.0521,
+            "wide_right": 0.0827
+          },
+          "topScenario": "center"
+        }
+      },
+      "immutableHash": "69c571b56eaed3d9345104f707f0a46e8f47bb26e5a0ab362c591dcc1f8de720"
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3900000,
+      "cutoffMs": 3900000,
+      "horizonMs": 300000,
+      "validUntilMs": 4200000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.5683,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.286,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5311,
+            "change": 0.4689
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2148,
+            "center": 0.442,
+            "right": 0.1156,
+            "long": 0.2276
+          },
+          "topScenario": "center"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2146,
+            "half_space_left": 0.103,
+            "center": 0.5114,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1064
+          },
+          "topScenario": "center"
+        }
+      },
+      "immutableHash": "58e227cbb4b138eb8ec000014d74f667fa126baaff98019dc0e02ace87e8c977"
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3900000,
+      "cutoffMs": 3900000,
+      "horizonMs": 600000,
+      "validUntilMs": 4500000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.5683,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.286,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.3817,
+            "change": 0.6183
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2662,
+            "center": 0.3383,
+            "right": 0.1402,
+            "long": 0.2553
+          },
+          "topScenario": "center"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2675,
+            "half_space_left": 0.1258,
+            "center": 0.3994,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1302
+          },
+          "topScenario": "center"
+        }
+      },
+      "immutableHash": "403e16bfe354f714a46597029a204360bdca6d0522af7134ab5939f378e9d05a"
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3900000,
+      "cutoffMs": 3900000,
+      "horizonMs": 120000,
+      "validUntilMs": 4020000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.5683,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4795,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7771,
+            "change": 0.2229
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.7014,
+            "center": 0.0568,
+            "right": 0.1479,
+            "long": 0.0939
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4504,
+            "half_space_left": 0.3005,
+            "center": 0.0618,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "9e0fdca05b10e7b6262f6c07bd1e8833de9507bd3557b708ebc11a65af872c7b"
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3900000,
+      "cutoffMs": 3900000,
+      "horizonMs": 300000,
+      "validUntilMs": 4200000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.5683,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4795,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.5891,
+            "change": 0.4109
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.621,
+            "center": 0.0679,
+            "right": 0.1925,
+            "long": 0.1186
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4087,
+            "half_space_left": 0.2705,
+            "center": 0.0778,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "f4c42b80f701f9c8a19033bd02d4621b75ac399a5c2ede1c904e636777fec228"
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 3900000,
+      "cutoffMs": 3900000,
+      "horizonMs": 600000,
+      "validUntilMs": 4500000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.5683,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4795,
+        "currentStateAgeMs": 70000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.4398,
+            "change": 0.5602
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5407,
+            "center": 0.0789,
+            "right": 0.2371,
+            "long": 0.1433
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.367,
+            "half_space_left": 0.2406,
+            "center": 0.0939,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "7b45d3fa1f9c69ad501b72ef8b8088aa4225e967e56bcaefd6ed96909829b5ea"
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4500000,
+      "cutoffMs": 4500000,
+      "horizonMs": 120000,
+      "validUntilMs": 4620000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.582,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.4041,
+        "currentStateAgeMs": 270000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7822,
+            "change": 0.2178
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1652,
+            "center": 0.0494,
+            "right": 0.6462,
+            "long": 0.1392
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1618,
+            "half_space_left": 0.0801,
+            "center": 0.0597,
+            "half_space_right": 0.6157,
+            "wide_right": 0.0827
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "3c5c4c0104aeed72a0f658b4ac633371f2944cd478f3351653599d4d9da9c5cd"
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4500000,
+      "cutoffMs": 4500000,
+      "horizonMs": 300000,
+      "validUntilMs": 4800000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.582,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.4041,
+        "currentStateAgeMs": 270000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5642,
+            "change": 0.4358
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2161,
+            "center": 0.0578,
+            "right": 0.5454,
+            "long": 0.1807
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2146,
+            "half_space_left": 0.103,
+            "center": 0.075,
+            "half_space_right": 0.5009,
+            "wide_right": 0.1064
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "a406f119756674adf9056c92044ab985477dde0a946a57db768216ece9a2a552"
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4500000,
+      "cutoffMs": 4500000,
+      "horizonMs": 600000,
+      "validUntilMs": 5100000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.582,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.4041,
+        "currentStateAgeMs": 270000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.3882,
+            "change": 0.6118
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2671,
+            "center": 0.0661,
+            "right": 0.4447,
+            "long": 0.2221
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2675,
+            "half_space_left": 0.1258,
+            "center": 0.0903,
+            "half_space_right": 0.3862,
+            "wide_right": 0.1302
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "ac2fb0d73dac7247b451683e2dab814e8a071c5f4490b3e002a32eb582a2a23d"
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4500000,
+      "cutoffMs": 4500000,
+      "horizonMs": 120000,
+      "validUntilMs": 4620000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.582,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3004,
+        "currentStateAgeMs": 270000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7511,
+            "change": 0.2489
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6771,
+            "center": 0.0561,
+            "right": 0.1471,
+            "long": 0.1197
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.5349,
+            "half_space_left": 0.216,
+            "center": 0.0618,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "aa63ee782499ebaa9fdb8eebe937b94e464441a25024154d1f46f4e0e3565bb1"
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4500000,
+      "cutoffMs": 4500000,
+      "horizonMs": 300000,
+      "validUntilMs": 4800000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.582,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3004,
+        "currentStateAgeMs": 270000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.5331,
+            "change": 0.4669
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.6022,
+            "center": 0.0673,
+            "right": 0.1919,
+            "long": 0.1386
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4741,
+            "half_space_left": 0.2051,
+            "center": 0.0778,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "b0caed5cee2fa6156d2e2bd86d04dc6df568b83debf1f372fdaf755314a5962e"
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4500000,
+      "cutoffMs": 4500000,
+      "horizonMs": 600000,
+      "validUntilMs": 5100000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.582,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3004,
+        "currentStateAgeMs": 270000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.3571,
+            "change": 0.6429
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5274,
+            "center": 0.0785,
+            "right": 0.2367,
+            "long": 0.1574
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4133,
+            "half_space_left": 0.1942,
+            "center": 0.0939,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "0e3d9b4d335c174516883f18b6b688b49feb1d7bfef0e159150918df8b6439d5"
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4800000,
+      "cutoffMs": 4800000,
+      "horizonMs": 120000,
+      "validUntilMs": 4920000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.674,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3474,
+        "currentStateAgeMs": 570000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.7386,
+            "change": 0.2614
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3035,
+            "center": 0.1878,
+            "right": 0.231,
+            "long": 0.2776
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2745,
+            "half_space_left": 0.1929,
+            "center": 0.1724,
+            "half_space_right": 0.1648,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "3d7d54b81f7f9aea6c44c0c21b3987bb45d57ea394ffa9ffb01be7bba08ace6d"
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4800000,
+      "cutoffMs": 4800000,
+      "horizonMs": 300000,
+      "validUntilMs": 5100000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.674,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3474,
+        "currentStateAgeMs": 570000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.5786,
+            "change": 0.4214
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3233,
+            "center": 0.1649,
+            "right": 0.224,
+            "long": 0.2878
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3019,
+            "half_space_left": 0.1902,
+            "center": 0.1623,
+            "half_space_right": 0.1518,
+            "wide_right": 0.1937
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "b1add3c3d5013772115b105c17b0ed118ad460db736c0b57843b48c662ffa7ac"
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4800000,
+      "cutoffMs": 4800000,
+      "horizonMs": 600000,
+      "validUntilMs": 5400000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.674,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.3474,
+        "currentStateAgeMs": 570000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.3846,
+            "change": 0.6154
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.343,
+            "center": 0.142,
+            "right": 0.217,
+            "long": 0.298
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3294,
+            "half_space_left": 0.1876,
+            "center": 0.1522,
+            "half_space_right": 0.1389,
+            "wide_right": 0.192
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "0beaf061fc357479305b49ce611526d219d9ebc41d0bb4c08e93f97ffff6d36b"
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4800000,
+      "cutoffMs": 4800000,
+      "horizonMs": 120000,
+      "validUntilMs": 4920000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.674,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3399,
+        "currentStateAgeMs": 570000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7364,
+            "change": 0.2636
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1461,
+            "center": 0.0551,
+            "right": 0.642,
+            "long": 0.1568
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1122,
+            "half_space_left": 0.075,
+            "center": 0.0618,
+            "half_space_right": 0.1923,
+            "wide_right": 0.5586
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "3d77a98183b18f4141d90215fc73bc1fce0f456464e77f950d2f10604d514b55"
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4800000,
+      "cutoffMs": 4800000,
+      "horizonMs": 300000,
+      "validUntilMs": 5100000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.674,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3399,
+        "currentStateAgeMs": 570000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.5764,
+            "change": 0.4236
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.1911,
+            "center": 0.0665,
+            "right": 0.5751,
+            "long": 0.1673
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1469,
+            "half_space_left": 0.096,
+            "center": 0.0778,
+            "half_space_right": 0.1821,
+            "wide_right": 0.4972
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "289faf7b75966b70e353a9efa4399836c70196360c2651cedf1bd9ba98d022c0"
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 4800000,
+      "cutoffMs": 4800000,
+      "horizonMs": 600000,
+      "validUntilMs": 5400000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.674,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3399,
+        "currentStateAgeMs": 570000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.3824,
+            "change": 0.6176
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2361,
+            "center": 0.078,
+            "right": 0.5081,
+            "long": 0.1778
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1815,
+            "half_space_left": 0.1169,
+            "center": 0.0939,
+            "half_space_right": 0.1718,
+            "wide_right": 0.4358
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "244786edb7238e0257ec3d1f6185ccc09254d6c497388ae90bd7495fe80d5dc8"
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5100000,
+      "cutoffMs": 5100000,
+      "horizonMs": 120000,
+      "validUntilMs": 5220000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6043,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.399,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.6474,
+            "change": 0.3526
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3035,
+            "center": 0.1878,
+            "right": 0.231,
+            "long": 0.2776
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2745,
+            "half_space_left": 0.1929,
+            "center": 0.1724,
+            "half_space_right": 0.1648,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "aa5f8232eb2476d26ee8a43487774cb96033d8201edfc1363a63d48162ae1983"
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5100000,
+      "cutoffMs": 5100000,
+      "horizonMs": 300000,
+      "validUntilMs": 5400000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6043,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.399,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.4714,
+            "change": 0.5286
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3233,
+            "center": 0.1649,
+            "right": 0.224,
+            "long": 0.2878
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3019,
+            "half_space_left": 0.1902,
+            "center": 0.1623,
+            "half_space_right": 0.1518,
+            "wide_right": 0.1937
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "25df13ccf832d76a7af83b5332e747ab3fe24b211403d7cd3cf4a97cdae7618c"
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5100000,
+      "cutoffMs": 5100000,
+      "horizonMs": 600000,
+      "validUntilMs": 5700000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6043,
+        "currentDefensiveState": "controlled_progression",
+        "currentStateConfidence": 0.399,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "controlled_progression",
+          "probabilities": {
+            "persist": 0.326,
+            "change": 0.674
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.343,
+            "center": 0.142,
+            "right": 0.217,
+            "long": 0.298
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3294,
+            "half_space_left": 0.1876,
+            "center": 0.1522,
+            "half_space_right": 0.1389,
+            "wide_right": 0.192
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "7b2c83069ca8afb58c08bd04c866a12203b4302bd0a16b3ac97ff0655c4cea1e"
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5100000,
+      "cutoffMs": 5100000,
+      "horizonMs": 120000,
+      "validUntilMs": 5220000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6043,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3326,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.6635,
+            "change": 0.3365
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5996,
+            "center": 0.1384,
+            "right": 0.1473,
+            "long": 0.1147
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4591,
+            "half_space_left": 0.2051,
+            "center": 0.1485,
+            "half_space_right": 0.0671,
+            "wide_right": 0.1202
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "9f26f72266dacc10c29e9595490ea52cf4f23d7f99acac21fbf92c12ba2871d0"
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5100000,
+      "cutoffMs": 5100000,
+      "horizonMs": 300000,
+      "validUntilMs": 5400000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6043,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3326,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.4875,
+            "change": 0.5125
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.5421,
+            "center": 0.1311,
+            "right": 0.1921,
+            "long": 0.1347
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4154,
+            "half_space_left": 0.1967,
+            "center": 0.1449,
+            "half_space_right": 0.0851,
+            "wide_right": 0.1578
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "d196f8626c1e4ae8d23385b3cb14280c25d7c99bbced1bd9d7bff42d2bd581d6"
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5100000,
+      "cutoffMs": 5100000,
+      "horizonMs": 600000,
+      "validUntilMs": 5700000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.6043,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.3326,
+        "currentStateAgeMs": 40000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.3421,
+            "change": 0.6579
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4848,
+            "center": 0.1237,
+            "right": 0.2368,
+            "long": 0.1547
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3717,
+            "half_space_left": 0.1883,
+            "center": 0.1414,
+            "half_space_right": 0.1031,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "a19f531512211a73a2a3d4677258425f2a773db8f405ad2d5399cac8b0a116ba"
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5400000,
+      "cutoffMs": 5400000,
+      "horizonMs": 120000,
+      "validUntilMs": 5520000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7103,
+        "currentDefensiveState": "attacking_third_siege",
+        "currentStateConfidence": 0.3978,
+        "currentStateAgeMs": 210000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "attacking_third_siege",
+          "probabilities": {
+            "persist": 0.7931,
+            "change": 0.2069
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3035,
+            "center": 0.1878,
+            "right": 0.231,
+            "long": 0.2776
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2745,
+            "half_space_left": 0.1929,
+            "center": 0.1724,
+            "half_space_right": 0.1648,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "087c617de1a615837c3b81f1766a35c3a0a37a565b407b273cdb06e3a37c2fcb"
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5400000,
+      "cutoffMs": 5400000,
+      "horizonMs": 300000,
+      "validUntilMs": 5700000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7103,
+        "currentDefensiveState": "attacking_third_siege",
+        "currentStateConfidence": 0.3978,
+        "currentStateAgeMs": 210000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "attacking_third_siege",
+          "probabilities": {
+            "persist": 0.5591,
+            "change": 0.4409
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3233,
+            "center": 0.1649,
+            "right": 0.224,
+            "long": 0.2878
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3019,
+            "half_space_left": 0.1902,
+            "center": 0.1623,
+            "half_space_right": 0.1518,
+            "wide_right": 0.1937
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "da60beb0cca9ef0db4efd2e130569403274ce712dfc10d7b1a8e81095de4bb8c"
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5400000,
+      "cutoffMs": 5400000,
+      "horizonMs": 600000,
+      "validUntilMs": 6000000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7103,
+        "currentDefensiveState": "attacking_third_siege",
+        "currentStateConfidence": 0.3978,
+        "currentStateAgeMs": 210000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "attacking_third_siege",
+          "probabilities": {
+            "persist": 0.3911,
+            "change": 0.6089
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.343,
+            "center": 0.142,
+            "right": 0.217,
+            "long": 0.298
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.3294,
+            "half_space_left": 0.1876,
+            "center": 0.1522,
+            "half_space_right": 0.1389,
+            "wide_right": 0.192
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "2035945f4a71f7a4f80d73df9cf42795b62eac37aeff39d9db19100cdee1c0f3"
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5400000,
+      "cutoffMs": 5400000,
+      "horizonMs": 120000,
+      "validUntilMs": 5520000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7103,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4271,
+        "currentStateAgeMs": 340000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.8199,
+            "change": 0.1801
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3637,
+            "center": 0.0554,
+            "right": 0.4361,
+            "long": 0.1448
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.1928,
+            "half_space_left": 0.2361,
+            "center": 0.0618,
+            "half_space_right": 0.2281,
+            "wide_right": 0.2812
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "770ac5d05c117344bb488a0f490869028342e6803fdd33b0d8b1c578a3ba05f3"
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5400000,
+      "cutoffMs": 5400000,
+      "horizonMs": 300000,
+      "validUntilMs": 5700000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7103,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4271,
+        "currentStateAgeMs": 340000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.6206,
+            "change": 0.3794
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3596,
+            "center": 0.0668,
+            "right": 0.4156,
+            "long": 0.158
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2093,
+            "half_space_left": 0.2206,
+            "center": 0.0778,
+            "half_space_right": 0.2098,
+            "wide_right": 0.2825
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "43b09fb2dca70cf2e8a887d6ae4adf1219a7a017f63be9e78167d7e8b2b19b4c"
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5400000,
+      "cutoffMs": 5400000,
+      "horizonMs": 600000,
+      "validUntilMs": 6000000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.7103,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.4271,
+        "currentStateAgeMs": 340000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.4353,
+            "change": 0.5647
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3555,
+            "center": 0.0782,
+            "right": 0.3951,
+            "long": 0.1712
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2257,
+            "half_space_left": 0.2052,
+            "center": 0.0939,
+            "half_space_right": 0.1914,
+            "wide_right": 0.2837
+          },
+          "topScenario": "wide_right"
+        }
+      },
+      "immutableHash": "8bd5d4c8242eab6610c258bb9136698dba6ccd8a12442cec7b718e7f408b09ce"
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_120000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5700000,
+      "cutoffMs": 5700000,
+      "horizonMs": 120000,
+      "validUntilMs": 5820000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8257,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4933,
+        "currentStateAgeMs": 160000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.7407,
+            "change": 0.2593
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4815,
+            "center": 0.2076,
+            "right": 0.1717,
+            "long": 0.1392
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4838,
+            "half_space_left": 0.0801,
+            "center": 0.2207,
+            "half_space_right": 0.0521,
+            "wide_right": 0.1632
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "cef126d3aaeb56d68e582ebe1a2ae76172f70194a3725156e35ce30904f85b26"
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_300000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5700000,
+      "cutoffMs": 5700000,
+      "horizonMs": 300000,
+      "validUntilMs": 6000000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8257,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4933,
+        "currentStateAgeMs": 160000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.5167,
+            "change": 0.4833
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.461,
+            "center": 0.1802,
+            "right": 0.1781,
+            "long": 0.1807
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.464,
+            "half_space_left": 0.103,
+            "center": 0.1997,
+            "half_space_right": 0.0646,
+            "wide_right": 0.1688
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "10952b4e954811fc98afc363b10b656a8f53d45388c7844137a3cb073e776033"
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_600000_sk_team_868",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5700000,
+      "cutoffMs": 5700000,
+      "horizonMs": 600000,
+      "validUntilMs": 6300000,
+      "defendingTeamId": "sk_team_868",
+      "attackingTeamId": "sk_team_4177",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8257,
+        "currentDefensiveState": "build_up",
+        "currentStateConfidence": 0.4933,
+        "currentStateAgeMs": 160000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "build_up",
+          "probabilities": {
+            "persist": 0.3553,
+            "change": 0.6447
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.4406,
+            "center": 0.1529,
+            "right": 0.1845,
+            "long": 0.2221
+          },
+          "topScenario": "left"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.4441,
+            "half_space_left": 0.1258,
+            "center": 0.1786,
+            "half_space_right": 0.0771,
+            "wide_right": 0.1744
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "2c61ddecef37ace5272fe6149e2288a65d232c6866eab3703e11c13907640a5b"
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_120000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5700000,
+      "cutoffMs": 5700000,
+      "horizonMs": 120000,
+      "validUntilMs": 5820000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8257,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.5346,
+        "currentStateAgeMs": 640000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.85,
+            "change": 0.15
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2807,
+            "center": 0.1896,
+            "right": 0.4141,
+            "long": 0.1155
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2532,
+            "half_space_left": 0.075,
+            "center": 0.2027,
+            "half_space_right": 0.3489,
+            "wide_right": 0.1202
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "5ad08d49a0d457ffa7cb5cb2787310ea936d2c9b0c230f7d8d43282cc59d3e15"
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_300000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5700000,
+      "cutoffMs": 5700000,
+      "horizonMs": 300000,
+      "validUntilMs": 6000000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8257,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.5346,
+        "currentStateAgeMs": 640000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.7244,
+            "change": 0.2756
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.2953,
+            "center": 0.1707,
+            "right": 0.3986,
+            "long": 0.1353
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.256,
+            "half_space_left": 0.096,
+            "center": 0.1869,
+            "half_space_right": 0.3033,
+            "wide_right": 0.1578
+          },
+          "topScenario": "half_space_right"
+        }
+      },
+      "immutableHash": "14eeccaddc62a8285e18a277030dadf9ddfbe213f7ea211cacac498248978869"
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_600000_sk_team_4177",
+      "matchId": "skillcorner_2017461",
+      "createdAtMs": 5700000,
+      "cutoffMs": 5700000,
+      "horizonMs": 600000,
+      "validUntilMs": 6300000,
+      "defendingTeamId": "sk_team_4177",
+      "attackingTeamId": "sk_team_868",
+      "inputFeatureVersion": "skillcorner-live-features/1.1",
+      "modelVersion": "transparent-forecast-baseline/1.1",
+      "support": {
+        "historyMatches": 3,
+        "currentCoverage": 0.8257,
+        "currentDefensiveState": "mid_block",
+        "currentStateConfidence": 0.5346,
+        "currentStateAgeMs": 640000,
+        "fallbackLevel": "three_match_prior_plus_current_window"
+      },
+      "tasks": {
+        "regimePersistence": {
+          "targetState": "mid_block",
+          "probabilities": {
+            "persist": 0.5397,
+            "change": 0.4603
+          }
+        },
+        "pressEscape": {
+          "probabilities": {
+            "left": 0.3099,
+            "center": 0.1518,
+            "right": 0.3831,
+            "long": 0.1552
+          },
+          "topScenario": "right"
+        },
+        "zoneRisk": {
+          "probabilities": {
+            "wide_left": 0.2588,
+            "half_space_left": 0.1169,
+            "center": 0.1712,
+            "half_space_right": 0.2577,
+            "wide_right": 0.1954
+          },
+          "topScenario": "wide_left"
+        }
+      },
+      "immutableHash": "6a434c9a8c632c6ad0665438ee4e9dfa61e3a5f78bf37817664f292bb633d712"
+    }
+  ]
+}

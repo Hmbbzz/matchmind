@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' blob:; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Match replay</title>
+<style>
+  body { margin: 0; background: #14181f; color: #eee; font: 15px/1.55 system-ui; }
+  main { max-width: 44em; margin: 0 auto; padding: 2.5em 1.5em 4em; }
+  h1 { font-size: 24px; margin-bottom: 0.2em; }
+  h2 { font-size: 16px; color: #cdd6e0; margin: 2.2em 0 0.6em; }
+  a { color: #58a6ff; }
+  .muted { color: #8ab; }
+  .privacy { color: #7fc79b; }
+
+  #drop { border: 2px dashed #3a4454; border-radius: 12px; padding: 1.4em;
+          text-align: center; cursor: pointer; transition: border-color .15s, background .15s; }
+  #drop.hover { border-color: #58a6ff; background: #1a2029; }
+  #drop p { margin: 0.3em 0; }
+
+  #slots { display: flex; gap: 10px; margin-top: 12px; }
+  .slot { flex: 1; background: #1c222b; border: 1px solid #2c3440; border-radius: 8px;
+          padding: 10px 12px; min-height: 3.2em; }
+  .slot b { display: block; font-size: 13px; color: #cdd6e0; }
+  .slot .state { font-size: 12.5px; color: #8ab; }
+  .slot.ok { border-color: #2f6b45; }
+  .slot.ok .state { color: #7fc79b; }
+  .slot.err { border-color: #7a3a3a; }
+  .slot.err .state { color: #ff9b8a; }
+
+  button { font: inherit; background: #2e3540; color: #eee; border: 1px solid #4a5260;
+           border-radius: 6px; padding: 6px 16px; cursor: pointer; }
+  button:disabled { opacity: 0.45; cursor: default; }
+  button.primary { background: #1f4f7a; border-color: #2d6da6; }
+  #convertRow { display: flex; gap: 12px; align-items: center; margin-top: 12px; }
+  #convStatus { color: #8ab; font-size: 13.5px; }
+  #convStatus.err { color: #ff9b8a; }
+
+  ul.matches { list-style: none; padding: 0; margin: 0; }
+  ul.matches li { display: flex; gap: 10px; align-items: baseline; padding: 7px 4px;
+                  border-bottom: 1px solid #232a34; }
+  ul.matches .score { font-weight: 700; min-width: 3em; text-align: center; }
+  ul.matches .date { color: #8ab; font-size: 12.5px; min-width: 6.5em; }
+  ul.matches .teams { flex: 1; }
+  ul.matches .act { font-size: 13px; white-space: nowrap; }
+  ul.matches .prog { color: #8ab; font-size: 12.5px; }
+  .cachedBadge { color: #7fc79b; font-size: 12px; }
+  .x { color: #8ab; cursor: pointer; text-decoration: none; }
+  footer { margin-top: 3em; color: #8ab; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Match replay</h1>
+  <p>Watch a football match replay and inspect player movements.</p>
+
+  <h2>Use your own match</h2>
+  <p><span class="privacy">Files are converted and cached on your device.</span></p>
+  <div id="drop">
+    <p><b>Drop files or a folder here</b> <span class="muted">(or click to browse)</span></p>
+    <p class="muted">match .json + tracking .jsonl + events .csv needed. Filenames are identified from the content</p>
+    <input id="pick" type="file" multiple hidden>
+  </div>
+  <div id="slots">
+    <div class="slot" id="slot-match"><b>match</b><span class="state">waiting…</span></div>
+    <div class="slot" id="slot-tracking"><b>tracking</b><span class="state">waiting…</span></div>
+    <div class="slot" id="slot-events"><b>events</b><span class="state">waiting…</span></div>
+  </div>
+  <div id="convertRow">
+    <button id="convert" class="primary" disabled>Convert &amp; watch</button>
+    <span id="convStatus"></span>
+  </div>
+
+<!-- cached first: hidden when the cache is empty -->
+  <section id="cachedSec" hidden>
+    <h2>On this device</h2>
+    <ul class="matches" id="cachedList"></ul>
+  </section>
+
+  <h2>Match files</h2><p class="muted">Choose the match, positions and events files to open a replay. Files stay on this device.</p>
+
+
+  <footer>
+    Player & pitch models from
+    <a href="https://github.com/BazkieBumpercar/GameplayFootball">GameplayFootball</a> /
+    <a href="https://github.com/google-research/football">Google Research Football</a>
+    (public domain) &middot; <a href="THIRD_PARTY_NOTICES.md">third-party licenses</a> &middot;
+    <a href="LICENSE.txt">MIT</a>.
+  </footer>
+</main>
+<script type="module">
+import { identify, convertMatch, cachedMatches, deleteCached,
+         readCached } from './match/convert.js';
+
+const $ = id => document.getElementById(id);
+const fmtMB = n => (n / 1048576).toFixed(0) + ' MB';
+
+const slots = { match: null, tracking: null, events: null };
+const slotState = (kind, cls, msg) => {
+  const el = $('slot-' + kind);
+  el.className = 'slot' + (cls ? ' ' + cls : '');
+  el.querySelector('.state').textContent = msg;
+};
+
+function updateConvert() {
+  $('convert').disabled = !(slots.match && slots.tracking && slots.events);
+}
+
+async function takeFile(file) {
+  if (file.size > 900e6) {
+    status(`${file.name}: ${fmtMB(file.size)} is larger than expected`, true);
+    return;
+  }
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  const id = identify(bytes);
+  if (!id.kind) {
+    status(`${file.name}: not a supported match file (identified by content) — ignored`, true);
+    return;
+  }
+  slots[id.kind] = bytes;
+  slotState(id.kind, 'ok', id.kind === 'match'
+    ? `✓ ${id.json.home_team?.short_name} v ${id.json.away_team?.short_name}`
+    : `✓ ${file.name} (${fmtMB(file.size)})`);
+  updateConvert();
+}
+
+function status(msg, isErr) {
+  const el = $('convStatus');
+  el.textContent = msg;
+  el.className = isErr ? 'err' : '';
+}
+
+const drop = $('drop');
+drop.onclick = () => $('pick').click();
+$('pick').onchange = e => [...e.target.files].forEach(takeFile);
+drop.ondragover = e => { e.preventDefault(); drop.classList.add('hover'); };
+drop.ondragleave = () => drop.classList.remove('hover');
+drop.ondrop = async e => {
+  e.preventDefault();
+  drop.classList.remove('hover');
+  status('');
+  for (const item of e.dataTransfer.items) {
+    const entry = item.webkitGetAsEntry?.();
+    if (entry?.isDirectory) await walkDir(entry);
+    else {
+      const f = item.getAsFile();
+      if (f) await takeFile(f);
+    }
+  }
+};
+async function walkDir(dirEntry) {
+  const reader = dirEntry.createReader();
+  for (;;) {
+    const entries = await new Promise((res, rej) => reader.readEntries(res, rej));
+    if (!entries.length) break;
+    for (const en of entries) {
+      if (en.isDirectory) await walkDir(en);
+      else await takeFile(await new Promise((res, rej) => en.file(res, rej)));
+    }
+  }
+}
+
+async function runConvert(m, t, ev, progress) {
+  const meta = await convertMatch(
+    { matchBytes: m, trackingBytes: t, eventsBytes: ev }, progress);
+  location.href = `match/?match=${meta.id}`;   // relative: the app may live under /<repo>/
+}
+$('convert').onclick = async () => {
+  $('convert').disabled = true;
+  try {
+    await runConvert(slots.match, slots.tracking, slots.events, () => status('Preparing your match…'));
+  } catch (e) {
+    console.error(e);
+    status('This match could not be opened. Check the three match files and try again.', true);
+    $('convert').disabled = false;
+  }
+};
+
+// cached matches section
+async function renderCached() {
+  const list = await cachedMatches();
+  $('cachedSec').hidden = !list.length;
+  const ul = $('cachedList');
+  ul.textContent = '';
+  for (const m of list) {
+    const li = document.createElement('li');
+    const mk = (cls, text) => {
+      const el = document.createElement('span');
+      el.className = cls;
+      el.textContent = text;
+      return el;
+    };
+    li.append(mk('date', (m.date || '').slice(0, 10)));
+    const teams = mk('teams', '');
+    teams.append(document.createTextNode((m.home ?? '?') + ' '),
+                 mk('score', `${m.hs ?? '?'}\u2013${m.as ?? '?'}`),
+                 document.createTextNode(' ' + (m.away ?? '?')));
+    li.append(teams);
+    const act = mk('act', '');
+    const watch = document.createElement('a');
+    watch.href = `match/?match=${encodeURIComponent(m.id)}`;
+    watch.textContent = 'watch';
+    const dl = document.createElement('a');
+    dl.className = 'x dl'; dl.title = 'download the converted Parquet';
+    dl.href = '#'; dl.textContent = '\u2b07';
+    const rm = document.createElement('a');
+    rm.className = 'x'; rm.title = 'remove from this device';
+    rm.href = '#'; rm.textContent = '\u2715';
+    act.append(watch, ' ', dl, ' ', rm);
+    li.append(act);
+    li.querySelector('.dl').onclick = async e => {
+      e.preventDefault();
+      for (const name of ['frames.parquet', 'players.parquet', 'matches.parquet']) {
+        const bytes = await readCached(m.id, name);
+        if (!bytes) continue;
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([bytes]));
+        a.download = `${m.id}_${name}`;
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }
+    };
+    li.querySelector('.x:not(.dl)').onclick = async e => {
+      e.preventDefault();
+      await deleteCached(m.id);
+      cached.delete(String(m.id));
+      renderCached();
+    };
+    ul.appendChild(li);
+  }
+}
+renderCached();
+
+window.__landing = { takeFile, slots, runConvert };
+</script>
+</body>
+</html>

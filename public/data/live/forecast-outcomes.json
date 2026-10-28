@@ -1,0 +1,2275 @@
+{
+  "schemaVersion": "forecast-outcomes/1.1",
+  "generatedAt": "2026-10-23T21:49:37.953Z",
+  "matchId": "skillcorner_2017461",
+  "outcomes": [
+    {
+      "forecastId": "fc_v1_1_300000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 420000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.4778
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_300000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 600000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.2316
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_300000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 900000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.0907
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 3,
+          "status": "supported",
+          "brier": 0.0689
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 3,
+          "status": "supported",
+          "brier": 0.0721
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_300000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 420000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.6315
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 14,
+          "status": "supported",
+          "brier": 0.0345
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 14,
+          "status": "supported",
+          "brier": 0.1035
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_300000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 600000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.3419
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 22,
+          "status": "supported",
+          "brier": 0.0535
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 22,
+          "status": "supported",
+          "brier": 0.108
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_300000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 900000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1638
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 25,
+          "status": "supported",
+          "brier": 0.0765
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 25,
+          "status": "supported",
+          "brier": 0.1144
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_600000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 720000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1183
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_600000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 900000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.2191
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_600000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1200000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.464
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_600000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 720000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0572
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_600000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 900000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.2775
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 3,
+          "status": "supported",
+          "brier": 0.0671
+        },
+        "zoneRisk": {
+          "actual": "half_space_left",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.1711
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_600000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 1200000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1287
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 8,
+          "status": "supported",
+          "brier": 0.0902
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 8,
+          "status": "supported",
+          "brier": 0.094
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_900000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1020000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.5376
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_900000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1200000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.3105
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_900000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1500000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1697
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_900000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 1020000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0435
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 3,
+          "status": "supported",
+          "brier": 0.0914
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.2149
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_900000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 1200000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.3641
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 5,
+          "status": "supported",
+          "brier": 0.103
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 5,
+          "status": "contradicted",
+          "brier": 0.1923
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_900000_600000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 1500000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.1156
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 7,
+          "status": "contradicted",
+          "brier": 0.1728
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1320000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0409
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1500000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.188
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1800000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3635
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 12,
+          "status": "supported",
+          "brier": 0.1469
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 12,
+          "status": "supported",
+          "brier": 0.1128
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 1320000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0645
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_300000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 1500000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1200000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 1800000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.146
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1500000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1620000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0606
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1500000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1800000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1649
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 10,
+          "status": "supported",
+          "brier": 0.0556
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 10,
+          "status": "supported",
+          "brier": 0.0892
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1500000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1546
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 14,
+          "status": "supported",
+          "brier": 0.0742
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 14,
+          "status": "contradicted",
+          "brier": 0.2055
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 1920000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.5649
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.35
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 4,
+          "status": "contradicted",
+          "brier": 0.2091
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 4,
+          "status": "contradicted",
+          "brier": 0.1548
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1857
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 10,
+          "status": "contradicted",
+          "brier": 0.2125
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 10,
+          "status": "contradicted",
+          "brier": 0.1604
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 1920000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0474
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 4,
+          "status": "contradicted",
+          "brier": 0.2313
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 4,
+          "status": "supported",
+          "brier": 0.1474
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1829
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 4,
+          "status": "contradicted",
+          "brier": 0.2077
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 4,
+          "status": "supported",
+          "brier": 0.1431
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_1800000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1539
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 4,
+          "status": "contradicted",
+          "brier": 0.1871
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 4,
+          "status": "supported",
+          "brier": 0.1389
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2220000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0483
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1962
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 6,
+          "status": "supported",
+          "brier": 0.0792
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 6,
+          "status": "supported",
+          "brier": 0.0551
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3798
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 12,
+          "status": "supported",
+          "brier": 0.1142
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 12,
+          "status": "supported",
+          "brier": 0.0832
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2220000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0363
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.422
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2100000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.292
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2520000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0449
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1383
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 6,
+          "status": "contradicted",
+          "brier": 0.1725
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 6,
+          "status": "contradicted",
+          "brier": 0.1353
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3000000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3233
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 8,
+          "status": "supported",
+          "brier": 0.1572
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 8,
+          "status": "supported",
+          "brier": 0.1208
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2520000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0508
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.3256
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2400000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3000000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.173
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 10,
+          "status": "supported",
+          "brier": 0.1605
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 10,
+          "status": "contradicted",
+          "brier": 0.1444
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 2820000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.037
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3000000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1241
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3300000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.2411
+        },
+        "pressEscape": {
+          "actual": "long",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.2177
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 3,
+          "status": "supported",
+          "brier": 0.089
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 2820000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0921
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3000000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.2186
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 9,
+          "status": "supported",
+          "brier": 0.0498
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 9,
+          "status": "supported",
+          "brier": 0.0442
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_2700000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3300000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3706
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 12,
+          "status": "supported",
+          "brier": 0.0735
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 12,
+          "status": "supported",
+          "brier": 0.0662
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3120000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.558
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3300000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.3446
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_600000_sk_team_868",
+      "status": "unscorable",
+      "resolvedAtMs": 3600000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": "long",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.1893
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 3,
+          "status": "supported",
+          "brier": 0.0865
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3120000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0313
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3300000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1476
+        },
+        "pressEscape": {
+          "actual": "center",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.3183
+        },
+        "zoneRisk": {
+          "actual": "half_space_left",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.2112
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3000000_600000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 3600000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": "center",
+          "sampleSize": 5,
+          "status": "contradicted",
+          "brier": 0.2998
+        },
+        "zoneRisk": {
+          "actual": "center",
+          "sampleSize": 5,
+          "status": "contradicted",
+          "brier": 0.2202
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3420000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0287
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_300000_sk_team_868",
+      "status": "unscorable",
+      "resolvedAtMs": 3600000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 3900000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3205
+        },
+        "pressEscape": {
+          "actual": "long",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.2021
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.1453
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3420000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0225
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_300000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 3600000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 2,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3300000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 3900000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.2343
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.1573
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 7,
+          "status": "contradicted",
+          "brier": 0.1714
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_120000_sk_team_868",
+      "status": "unscorable",
+      "resolvedAtMs": 4020000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_300000_sk_team_868",
+      "status": "unscorable",
+      "resolvedAtMs": 4200000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 6,
+          "status": "contradicted",
+          "brier": 0.2193
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 6,
+          "status": "contradicted",
+          "brier": 0.1809
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 4500000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3823
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 7,
+          "status": "contradicted",
+          "brier": 0.1844
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 7,
+          "status": "contradicted",
+          "brier": 0.147
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_120000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 4020000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_300000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 4200000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_3900000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 4500000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3138
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 4,
+          "status": "supported",
+          "brier": 0.0735
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 4,
+          "status": "supported",
+          "brier": 0.1032
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 4620000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0474
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 4800000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1899
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3743
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 4620000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.062
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.3008
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.223
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 4800000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.218
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 9,
+          "status": "contradicted",
+          "brier": 0.2599
+        },
+        "zoneRisk": {
+          "actual": "wide_right",
+          "sampleSize": 9,
+          "status": "contradicted",
+          "brier": 0.1979
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4500000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.4133
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 22,
+          "status": "supported",
+          "brier": 0.0776
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 22,
+          "status": "supported",
+          "brier": 0.0879
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_120000_sk_team_868",
+      "status": "unscorable",
+      "resolvedAtMs": 4920000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1776
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1479
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_120000_sk_team_4177",
+      "status": "unscorable",
+      "resolvedAtMs": 4920000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": null,
+          "status": "unscorable",
+          "brier": null
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5100000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1794
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 13,
+          "status": "contradicted",
+          "brier": 0.2544
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 13,
+          "status": "contradicted",
+          "brier": 0.2047
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_4800000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.3814
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 20,
+          "status": "contradicted",
+          "brier": 0.2199
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 20,
+          "status": "contradicted",
+          "brier": 0.1824
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5220000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.4191
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.2222
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_600000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "supported",
+          "brier": 0.1063
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.1469
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.1128
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5220000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1132
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 1,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5400000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.2627
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.0705
+        },
+        "zoneRisk": {
+          "actual": "half_space_left",
+          "sampleSize": 7,
+          "status": "contradicted",
+          "brier": 0.1742
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5100000_600000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "contradicted",
+          "brier": 0.4328
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 11,
+          "status": "supported",
+          "brier": 0.0902
+        },
+        "zoneRisk": {
+          "actual": "half_space_right",
+          "sampleSize": 11,
+          "status": "contradicted",
+          "brier": 0.2072
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5520000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0428
+        },
+        "pressEscape": {
+          "actual": "center",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.2206
+        },
+        "zoneRisk": {
+          "actual": "center",
+          "sampleSize": 3,
+          "status": "contradicted",
+          "brier": 0.1726
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_300000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "change",
+          "status": "contradicted",
+          "brier": 0.3126
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.1545
+        },
+        "zoneRisk": {
+          "actual": "wide_left",
+          "sampleSize": 7,
+          "status": "supported",
+          "brier": 0.1221
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_600000_sk_team_868",
+      "status": "pending",
+      "resolvedAtMs": null,
+      "taskOutcomes": null
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5520000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0324
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_300000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5700000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.1439
+        },
+        "pressEscape": {
+          "actual": "right",
+          "sampleSize": 4,
+          "status": "supported",
+          "brier": 0.1251
+        },
+        "zoneRisk": {
+          "actual": "half_space_right",
+          "sampleSize": 4,
+          "status": "contradicted",
+          "brier": 0.1605
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5400000_600000_sk_team_4177",
+      "status": "pending",
+      "resolvedAtMs": null,
+      "taskOutcomes": null
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_120000_sk_team_868",
+      "status": "resolved",
+      "resolvedAtMs": 5820000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0672
+        },
+        "pressEscape": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        },
+        "zoneRisk": {
+          "actual": null,
+          "sampleSize": 0,
+          "status": "unscorable",
+          "brier": null
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_300000_sk_team_868",
+      "status": "pending",
+      "resolvedAtMs": null,
+      "taskOutcomes": null
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_600000_sk_team_868",
+      "status": "pending",
+      "resolvedAtMs": null,
+      "taskOutcomes": null
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_120000_sk_team_4177",
+      "status": "resolved",
+      "resolvedAtMs": 5820000,
+      "taskOutcomes": {
+        "regimePersistence": {
+          "actual": "persist",
+          "status": "supported",
+          "brier": 0.0225
+        },
+        "pressEscape": {
+          "actual": "left",
+          "sampleSize": 11,
+          "status": "contradicted",
+          "brier": 0.1845
+        },
+        "zoneRisk": {
+          "actual": "half_space_left",
+          "sampleSize": 11,
+          "status": "contradicted",
+          "brier": 0.2194
+        }
+      }
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_300000_sk_team_4177",
+      "status": "pending",
+      "resolvedAtMs": null,
+      "taskOutcomes": null
+    },
+    {
+      "forecastId": "fc_v1_1_5700000_600000_sk_team_4177",
+      "status": "pending",
+      "resolvedAtMs": null,
+      "taskOutcomes": null
+    }
+  ]
+}

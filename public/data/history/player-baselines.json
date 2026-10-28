@@ -1,0 +1,995 @@
+[
+  {
+    "playerId": "4322",
+    "teamId": "4177",
+    "name": "H. Sakai",
+    "position": "RB",
+    "number": 2,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 296.16,
+    "metrics": {
+      "passCompletion": 0.8814,
+      "crossCompletion": 1,
+      "passesAttemptedPer90": 35.859,
+      "lineBreakPassesPer90": 7.5972,
+      "crossesPer90": 0.3039,
+      "shotsPer90": 0.3039,
+      "pressureActionsPer90": 12.7634,
+      "offBallRunsPer90": 16.7139,
+      "passEpvPer90": 0.0649
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "285188",
+    "teamId": "4177",
+    "name": "A. Paulsen",
+    "position": "GK",
+    "number": 12,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 296.16,
+    "metrics": {
+      "passCompletion": 0.9149,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 14.2828,
+      "lineBreakPassesPer90": 3.3428,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 0,
+      "offBallRunsPer90": 0,
+      "passEpvPer90": 0.0094
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "38673",
+    "teamId": "4177",
+    "name": "G. May",
+    "position": "CF",
+    "number": 10,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 291.84,
+    "metrics": {
+      "passCompletion": 0.7901,
+      "crossCompletion": 1,
+      "passesAttemptedPer90": 24.9794,
+      "lineBreakPassesPer90": 1.2336,
+      "crossesPer90": 0.3084,
+      "shotsPer90": 3.3923,
+      "pressureActionsPer90": 38.5485,
+      "offBallRunsPer90": 42.5576,
+      "passEpvPer90": 0.0436
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "133501",
+    "teamId": "4177",
+    "name": "L. Rogerson",
+    "position": "RW",
+    "number": 27,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 279.16,
+    "metrics": {
+      "passCompletion": 0.7049,
+      "crossCompletion": 0.4286,
+      "passesAttemptedPer90": 19.6661,
+      "lineBreakPassesPer90": 0.6448,
+      "crossesPer90": 2.2568,
+      "shotsPer90": 1.2896,
+      "pressureActionsPer90": 44.813,
+      "offBallRunsPer90": 31.9172,
+      "passEpvPer90": -0.0094
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "133498",
+    "teamId": "4177",
+    "name": "F. De Vries",
+    "position": "LB",
+    "number": 15,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 244.38,
+    "metrics": {
+      "passCompletion": 0.75,
+      "crossCompletion": 0.7273,
+      "passesAttemptedPer90": 44.1935,
+      "lineBreakPassesPer90": 8.4704,
+      "crossesPer90": 4.0511,
+      "shotsPer90": 0.3683,
+      "pressureActionsPer90": 20.9919,
+      "offBallRunsPer90": 23.9381,
+      "passEpvPer90": 0.1905
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "31147",
+    "teamId": "4177",
+    "name": "T. Smith",
+    "position": "RCB",
+    "number": 5,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 212.66,
+    "metrics": {
+      "passCompletion": 0.898,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 41.4747,
+      "lineBreakPassesPer90": 7.6178,
+      "crossesPer90": 0,
+      "shotsPer90": 0.4232,
+      "pressureActionsPer90": 5.0785,
+      "offBallRunsPer90": 5.5017,
+      "passEpvPer90": 0.0565
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "50951",
+    "teamId": "4177",
+    "name": "J. Brimmer",
+    "position": "LM",
+    "number": 22,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 201.82,
+    "metrics": {
+      "passCompletion": 0.8543,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 67.3372,
+      "lineBreakPassesPer90": 20.5133,
+      "crossesPer90": 0.8919,
+      "shotsPer90": 1.7838,
+      "pressureActionsPer90": 32.5538,
+      "offBallRunsPer90": 32.1078,
+      "passEpvPer90": 0.2258
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "14736",
+    "teamId": "4177",
+    "name": "L. Verstraete",
+    "position": "RM",
+    "number": 6,
+    "matchIds": [
+      "1996436",
+      "2015213"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 200.26,
+    "metrics": {
+      "passCompletion": 0.9241,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 35.5038,
+      "lineBreakPassesPer90": 3.5953,
+      "crossesPer90": 0,
+      "shotsPer90": 0.8988,
+      "pressureActionsPer90": 40.4474,
+      "offBallRunsPer90": 21.572,
+      "passEpvPer90": -0.0151
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "51667",
+    "teamId": "4177",
+    "name": "D. Hall",
+    "position": "RCB",
+    "number": 23,
+    "matchIds": [
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 195.73,
+    "metrics": {
+      "passCompletion": 0.9123,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 52.4191,
+      "lineBreakPassesPer90": 7.3571,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 8.7365,
+      "offBallRunsPer90": 6.4374,
+      "passEpvPer90": 0.0446
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "43829",
+    "teamId": "4177",
+    "name": "N. Moreno",
+    "position": "LW",
+    "number": 25,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 190.06,
+    "metrics": {
+      "passCompletion": 0.8103,
+      "crossCompletion": 0.6667,
+      "passesAttemptedPer90": 27.465,
+      "lineBreakPassesPer90": 2.3677,
+      "crossesPer90": 1.4206,
+      "shotsPer90": 3.7883,
+      "pressureActionsPer90": 39.3034,
+      "offBallRunsPer90": 34.568,
+      "passEpvPer90": 0.17
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "23418",
+    "teamId": "4177",
+    "name": "F. Gallegos",
+    "position": "LM",
+    "number": 28,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 167.95,
+    "metrics": {
+      "passCompletion": 0.8947,
+      "crossCompletion": 0.5,
+      "passesAttemptedPer90": 40.7264,
+      "lineBreakPassesPer90": 5.3587,
+      "crossesPer90": 2.1435,
+      "shotsPer90": 0.5359,
+      "pressureActionsPer90": 49.3004,
+      "offBallRunsPer90": 28.4013,
+      "passEpvPer90": 0.1238
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "51713",
+    "teamId": "4177",
+    "name": "C. Elliott",
+    "position": "RB",
+    "number": 17,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 152.36,
+    "metrics": {
+      "passCompletion": 0.7813,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 18.9026,
+      "lineBreakPassesPer90": 1.7721,
+      "crossesPer90": 1.1814,
+      "shotsPer90": 1.1814,
+      "pressureActionsPer90": 15.3584,
+      "offBallRunsPer90": 14.7677,
+      "passEpvPer90": 0.079
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "163972",
+    "teamId": "4177",
+    "name": "M. Mata",
+    "position": "CF",
+    "number": 9,
+    "matchIds": [
+      "1996436",
+      "2015213"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 148.68,
+    "metrics": {
+      "passCompletion": 0.6364,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 13.3172,
+      "lineBreakPassesPer90": 0.6053,
+      "crossesPer90": 0,
+      "shotsPer90": 1.816,
+      "pressureActionsPer90": 39.9516,
+      "offBallRunsPer90": 29.661,
+      "passEpvPer90": 0.0177
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "624628",
+    "teamId": "4177",
+    "name": "J. Randall",
+    "position": "CF",
+    "number": 21,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 113.43,
+    "metrics": {
+      "passCompletion": 0.7647,
+      "crossCompletion": 0.5,
+      "passesAttemptedPer90": 13.4885,
+      "lineBreakPassesPer90": 0,
+      "crossesPer90": 1.5869,
+      "shotsPer90": 1.5869,
+      "pressureActionsPer90": 60.3015,
+      "offBallRunsPer90": 43.6392,
+      "passEpvPer90": 0.0492
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "582974",
+    "teamId": "4177",
+    "name": "M. Francois",
+    "position": "LW",
+    "number": 11,
+    "matchIds": [
+      "1996436",
+      "2007721",
+      "2015213"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 106.1,
+    "metrics": {
+      "passCompletion": 0.6522,
+      "crossCompletion": 0.5,
+      "passesAttemptedPer90": 19.5099,
+      "lineBreakPassesPer90": 0.8483,
+      "crossesPer90": 1.6965,
+      "shotsPer90": 1.6965,
+      "pressureActionsPer90": 33.9303,
+      "offBallRunsPer90": 38.1715,
+      "passEpvPer90": 0.0594
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "33697",
+    "teamId": "4177",
+    "name": "N. Pijnaker",
+    "position": "LCB",
+    "number": 4,
+    "matchIds": [
+      "1996436",
+      "2015213"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 105.63,
+    "metrics": {
+      "passCompletion": 0.8088,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 57.9381,
+      "lineBreakPassesPer90": 13.6325,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 7.6683,
+      "offBallRunsPer90": 10.2244,
+      "passEpvPer90": 0.0961
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "133495",
+    "teamId": "4177",
+    "name": "C. Howieson",
+    "position": "DM",
+    "number": 7,
+    "matchIds": [
+      "1996436",
+      "2007721"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 46.73,
+    "metrics": {
+      "passCompletion": 0.75,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 30.8153,
+      "lineBreakPassesPer90": 3.8519,
+      "crossesPer90": 0,
+      "shotsPer90": 3.8519,
+      "pressureActionsPer90": 46.223,
+      "offBallRunsPer90": 34.6672,
+      "passEpvPer90": 0.0195
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "965684",
+    "teamId": "4177",
+    "name": "L. Toomey",
+    "position": "RF",
+    "number": 8,
+    "matchIds": [
+      "2007721"
+    ],
+    "matchesPlayed": 1,
+    "minutes": 4.32,
+    "metrics": {
+      "passCompletion": 0,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 0,
+      "lineBreakPassesPer90": 0,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 20.8333,
+      "offBallRunsPer90": 62.5,
+      "passEpvPer90": 0
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "965691",
+    "teamId": "4177",
+    "name": "J. Bidois",
+    "position": "CF",
+    "number": 35,
+    "matchIds": [
+      "2007721"
+    ],
+    "matchesPlayed": 1,
+    "minutes": 4.32,
+    "metrics": {
+      "passCompletion": 0,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 0,
+      "lineBreakPassesPer90": 0,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 62.5,
+      "offBallRunsPer90": 41.6667,
+      "passEpvPer90": 0
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "159688",
+    "teamId": "868",
+    "name": "J. Valadon",
+    "position": "LM",
+    "number": 14,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 294.82,
+    "metrics": {
+      "passCompletion": 0.8974,
+      "crossCompletion": 1,
+      "passesAttemptedPer90": 35.7167,
+      "lineBreakPassesPer90": 3.9685,
+      "crossesPer90": 0.3053,
+      "shotsPer90": 0.9158,
+      "pressureActionsPer90": 37.8536,
+      "offBallRunsPer90": 24.1164,
+      "passEpvPer90": 0.1911
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "157294",
+    "teamId": "868",
+    "name": "R. Teague",
+    "position": "RM",
+    "number": 6,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 255.08,
+    "metrics": {
+      "passCompletion": 0.9254,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 47.2793,
+      "lineBreakPassesPer90": 9.5264,
+      "crossesPer90": 0,
+      "shotsPer90": 1.4113,
+      "pressureActionsPer90": 23.6396,
+      "offBallRunsPer90": 16.9359,
+      "passEpvPer90": 0.2104
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "9175",
+    "teamId": "868",
+    "name": "Roderick Miranda",
+    "position": "LCB",
+    "number": 21,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 232.55,
+    "metrics": {
+      "passCompletion": 0.8976,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 49.1507,
+      "lineBreakPassesPer90": 13.1585,
+      "crossesPer90": 0,
+      "shotsPer90": 0.387,
+      "pressureActionsPer90": 10.4494,
+      "offBallRunsPer90": 8.5143,
+      "passEpvPer90": 0.1088
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "51013",
+    "teamId": "868",
+    "name": "B. Hamill",
+    "position": "RCB",
+    "number": 5,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 226.76,
+    "metrics": {
+      "passCompletion": 0.8626,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 51.9933,
+      "lineBreakPassesPer90": 13.0975,
+      "crossesPer90": 0,
+      "shotsPer90": 0.3969,
+      "pressureActionsPer90": 6.3503,
+      "offBallRunsPer90": 8.7317,
+      "passEpvPer90": 0.1431
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "811820",
+    "teamId": "868",
+    "name": "K. Bos",
+    "position": "LB",
+    "number": 28,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 218.33,
+    "metrics": {
+      "passCompletion": 0.8667,
+      "crossCompletion": 0.4,
+      "passesAttemptedPer90": 43.2831,
+      "lineBreakPassesPer90": 7.0077,
+      "crossesPer90": 2.0611,
+      "shotsPer90": 1.2367,
+      "pressureActionsPer90": 26.7943,
+      "offBallRunsPer90": 28.031,
+      "passEpvPer90": 0.1747
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "11885",
+    "teamId": "868",
+    "name": "D. Arzani",
+    "position": "RW",
+    "number": 7,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 211.48,
+    "metrics": {
+      "passCompletion": 0.7292,
+      "crossCompletion": 0.8,
+      "passesAttemptedPer90": 40.8549,
+      "lineBreakPassesPer90": 3.4046,
+      "crossesPer90": 4.2557,
+      "shotsPer90": 2.1279,
+      "pressureActionsPer90": 35.3225,
+      "offBallRunsPer90": 42.5572,
+      "passEpvPer90": 0.3182
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "11117",
+    "teamId": "868",
+    "name": "Z. Machach",
+    "position": "CF",
+    "number": 8,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 207.6,
+    "metrics": {
+      "passCompletion": 0.7922,
+      "crossCompletion": 0.5,
+      "passesAttemptedPer90": 33.3815,
+      "lineBreakPassesPer90": 2.1676,
+      "crossesPer90": 0.8671,
+      "shotsPer90": 4.3353,
+      "pressureActionsPer90": 29.9133,
+      "offBallRunsPer90": 32.948,
+      "passEpvPer90": 0.3555
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "50977",
+    "teamId": "868",
+    "name": "J. Rawlins",
+    "position": "CB",
+    "number": 22,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 206.99,
+    "metrics": {
+      "passCompletion": 0.8173,
+      "crossCompletion": 0.75,
+      "passesAttemptedPer90": 45.2196,
+      "lineBreakPassesPer90": 6.5221,
+      "crossesPer90": 1.7392,
+      "shotsPer90": 0.8696,
+      "pressureActionsPer90": 21.3054,
+      "offBallRunsPer90": 20.8706,
+      "passEpvPer90": 0.1313
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "50955",
+    "teamId": "868",
+    "name": "N. Velupillay",
+    "position": "LW",
+    "number": 17,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 206.57,
+    "metrics": {
+      "passCompletion": 0.8846,
+      "crossCompletion": 1,
+      "passesAttemptedPer90": 22.6558,
+      "lineBreakPassesPer90": 1.7428,
+      "crossesPer90": 0.4357,
+      "shotsPer90": 2.6141,
+      "pressureActionsPer90": 39.2119,
+      "offBallRunsPer90": 40.519,
+      "passEpvPer90": 0.0592
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "7698",
+    "teamId": "868",
+    "name": "M. Langerak",
+    "position": "GK",
+    "number": 1,
+    "matchIds": [
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 197.27,
+    "metrics": {
+      "passCompletion": 0.8148,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 12.3181,
+      "lineBreakPassesPer90": 1.8249,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 0,
+      "offBallRunsPer90": 0,
+      "passEpvPer90": 0.0283
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "50979",
+    "teamId": "868",
+    "name": "B. Fornaroli",
+    "position": "CF",
+    "number": 10,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 179.63,
+    "metrics": {
+      "passCompletion": 0.931,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 14.5299,
+      "lineBreakPassesPer90": 0.501,
+      "crossesPer90": 0,
+      "shotsPer90": 4.5093,
+      "pressureActionsPer90": 55.6143,
+      "offBallRunsPer90": 23.5484,
+      "passEpvPer90": 0.1236
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "51714",
+    "teamId": "868",
+    "name": "R. Piscopo",
+    "position": "LW",
+    "number": 27,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 168.83,
+    "metrics": {
+      "passCompletion": 0.8431,
+      "crossCompletion": 0.5,
+      "passesAttemptedPer90": 27.1871,
+      "lineBreakPassesPer90": 1.5992,
+      "crossesPer90": 2.1323,
+      "shotsPer90": 4.2646,
+      "pressureActionsPer90": 37.3156,
+      "offBallRunsPer90": 47.9773,
+      "passEpvPer90": 0.1813
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "51685",
+    "teamId": "868",
+    "name": "L. Jackson",
+    "position": "LCB",
+    "number": 4,
+    "matchIds": [
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 130.32,
+    "metrics": {
+      "passCompletion": 0.8727,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 37.9834,
+      "lineBreakPassesPer90": 4.1436,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 8.2873,
+      "offBallRunsPer90": 5.5249,
+      "passEpvPer90": 0.0843
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "29075",
+    "teamId": "868",
+    "name": "N. Vergos",
+    "position": "CF",
+    "number": 9,
+    "matchIds": [
+      "1959846",
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 3,
+    "minutes": 115.18,
+    "metrics": {
+      "passCompletion": 0.8571,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 10.9394,
+      "lineBreakPassesPer90": 0,
+      "crossesPer90": 0,
+      "shotsPer90": 4.6883,
+      "pressureActionsPer90": 38.2879,
+      "offBallRunsPer90": 33.5996,
+      "passEpvPer90": 0.1514
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "23884",
+    "teamId": "868",
+    "name": "J. Geria",
+    "position": "RB",
+    "number": 2,
+    "matchIds": [
+      "1959846"
+    ],
+    "matchesPlayed": 1,
+    "minutes": 97.55,
+    "metrics": {
+      "passCompletion": 0.8571,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 38.7494,
+      "lineBreakPassesPer90": 7.3808,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 19.3747,
+      "offBallRunsPer90": 10.1486,
+      "passEpvPer90": 0.0958
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "51678",
+    "teamId": "868",
+    "name": "J. Duncan",
+    "position": "GK",
+    "number": 25,
+    "matchIds": [
+      "1959846"
+    ],
+    "matchesPlayed": 1,
+    "minutes": 97.55,
+    "metrics": {
+      "passCompletion": 0.7826,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 21.2199,
+      "lineBreakPassesPer90": 7.3808,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 0,
+      "offBallRunsPer90": 0,
+      "passEpvPer90": 0.0411
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "218",
+    "teamId": "868",
+    "name": "A. Traoré",
+    "position": "LB",
+    "number": 3,
+    "matchIds": [
+      "1959846"
+    ],
+    "matchesPlayed": 1,
+    "minutes": 76.48,
+    "metrics": {
+      "passCompletion": 0.871,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 36.4801,
+      "lineBreakPassesPer90": 4.7071,
+      "crossesPer90": 1.1768,
+      "shotsPer90": 1.1768,
+      "pressureActionsPer90": 12.9446,
+      "offBallRunsPer90": 21.182,
+      "passEpvPer90": 0.0374
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "795521",
+    "teamId": "868",
+    "name": "A. Badolato",
+    "position": "RW",
+    "number": 23,
+    "matchIds": [
+      "2006363",
+      "2011166"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 62.26,
+    "metrics": {
+      "passCompletion": 0.7097,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 44.8121,
+      "lineBreakPassesPer90": 1.4456,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 37.5843,
+      "offBallRunsPer90": 43.3665,
+      "passEpvPer90": 0.1797
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "745320",
+    "teamId": "868",
+    "name": "Clarismario Rodrigues",
+    "position": "RW",
+    "number": 11,
+    "matchIds": [
+      "1959846",
+      "2006363"
+    ],
+    "matchesPlayed": 2,
+    "minutes": 42.01,
+    "metrics": {
+      "passCompletion": 0.8182,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 23.5658,
+      "lineBreakPassesPer90": 0,
+      "crossesPer90": 0,
+      "shotsPer90": 4.2847,
+      "pressureActionsPer90": 38.5622,
+      "offBallRunsPer90": 44.9893,
+      "passEpvPer90": 0.0471
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  },
+  {
+    "playerId": "796012",
+    "teamId": "868",
+    "name": "F. Monge",
+    "position": "RDM",
+    "number": 18,
+    "matchIds": [
+      "2011166"
+    ],
+    "matchesPlayed": 1,
+    "minutes": 15.7,
+    "metrics": {
+      "passCompletion": 0.6667,
+      "crossCompletion": 0,
+      "passesAttemptedPer90": 17.1975,
+      "lineBreakPassesPer90": 0,
+      "crossesPer90": 0,
+      "shotsPer90": 0,
+      "pressureActionsPer90": 40.1274,
+      "offBallRunsPer90": 5.7325,
+      "passEpvPer90": 0.0911
+    },
+    "featureVersion": "skillcorner-player-history/1.0"
+  }
+]

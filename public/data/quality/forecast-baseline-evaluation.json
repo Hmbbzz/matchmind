@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "forecast-baseline-evaluation/1.0",
+  "method": {
+    "score": "sum((p[class] - one_hot(actual)[class])^2) / number_of_classes",
+    "probabilityTolerance": 0.001,
+    "comparison": "Paired, identical scored forecasts within each task and horizon; negative forecastMinusBaseline means lower forecast Brier on that cohort.",
+    "missingPolicy": "Invalid or unmatched records fail evaluation; pending and unscorable tasks are counted explicitly and are not treated as negatives.",
+    "baselines": {
+      "uniform": "Equal probability for every class of the same task.",
+      "alwaysPersist": "Probability 1 for persist, 0 for change; regimePersistence only."
+    }
+  },
+  "snapshotCount": 99,
+  "groups": [
+    {
+      "task": "regimePersistence",
+      "horizonMs": 120000,
+      "classCount": 2,
+      "n": 29,
+      "pending": 0,
+      "unscorable": 4,
+      "forecastBrier": 0.1517462548275862,
+      "uniformBrier": 0.25,
+      "forecastMinusUniform": -0.09825374517241381,
+      "alwaysPersistBrier": 0.20689655172413793,
+      "forecastMinusAlwaysPersist": -0.05515029689655174
+    },
+    {
+      "task": "regimePersistence",
+      "horizonMs": 300000,
+      "classCount": 2,
+      "n": 26,
+      "pending": 2,
+      "unscorable": 5,
+      "forecastBrier": 0.24053029461538455,
+      "uniformBrier": 0.25,
+      "forecastMinusUniform": -0.009469705384615446,
+      "alwaysPersistBrier": 0.46153846153846156,
+      "forecastMinusAlwaysPersist": -0.221008166923077
+    },
+    {
+      "task": "regimePersistence",
+      "horizonMs": 600000,
+      "classCount": 2,
+      "n": 26,
+      "pending": 4,
+      "unscorable": 3,
+      "forecastBrier": 0.26566843692307696,
+      "uniformBrier": 0.25,
+      "forecastMinusUniform": 0.015668436923076956,
+      "alwaysPersistBrier": 0.46153846153846156,
+      "forecastMinusAlwaysPersist": -0.1958700246153846
+    },
+    {
+      "task": "pressEscape",
+      "horizonMs": 120000,
+      "classCount": 4,
+      "n": 6,
+      "pending": 0,
+      "unscorable": 27,
+      "forecastBrier": 0.17718311833333336,
+      "uniformBrier": 0.1875,
+      "forecastMinusUniform": -0.010316881666666639
+    },
+    {
+      "task": "pressEscape",
+      "horizonMs": 300000,
+      "classCount": 4,
+      "n": 16,
+      "pending": 2,
+      "unscorable": 15,
+      "forecastBrier": 0.14995469453125004,
+      "uniformBrier": 0.1875,
+      "forecastMinusUniform": -0.03754530546874996
+    },
+    {
+      "task": "pressEscape",
+      "horizonMs": 600000,
+      "classCount": 4,
+      "n": 23,
+      "pending": 4,
+      "unscorable": 6,
+      "forecastBrier": 0.14504198902173912,
+      "uniformBrier": 0.1875,
+      "forecastMinusUniform": -0.04245801097826088
+    },
+    {
+      "task": "zoneRisk",
+      "horizonMs": 120000,
+      "classCount": 5,
+      "n": 6,
+      "pending": 0,
+      "unscorable": 27,
+      "forecastBrier": 0.18013654433333334,
+      "uniformBrier": 0.16000000000000003,
+      "forecastMinusUniform": 0.02013654433333331
+    },
+    {
+      "task": "zoneRisk",
+      "horizonMs": 300000,
+      "classCount": 5,
+      "n": 16,
+      "pending": 2,
+      "unscorable": 15,
+      "forecastBrier": 0.14653947374999998,
+      "uniformBrier": 0.1600000000000001,
+      "forecastMinusUniform": -0.013460526250000104
+    },
+    {
+      "task": "zoneRisk",
+      "horizonMs": 600000,
+      "classCount": 5,
+      "n": 23,
+      "pending": 4,
+      "unscorable": 6,
+      "forecastBrier": 0.13210461599999998,
+      "uniformBrier": 0.16000000000000011,
+      "forecastMinusUniform": -0.027895384000000134
+    }
+  ],
+  "limitations": [
+    "One historical match; overlapping horizons and correlated forecasts are not independent match samples.",
+    "Regime targets come from the same tactical rules; channel and zone targets are completed-pass endpoint proxies, not verified pressure escape or territorial risk.",
+    "These diagnostics do not establish held-out predictive skill, calibrated probabilities, statistical significance, or real-model effectiveness.",
+    "Historical priors and current endpoint channel samples still have different denominators/endpoint definitions; no history-only baseline is evaluated.",
+    "Scores from different tasks/class counts must not be pooled into a model ranking."
+  ],
+  "generatedAt": "2026-10-23T21:49:37.998Z",
+  "matchId": "skillcorner_2017461",
+  "sourceVersions": [
+    {
+      "path": "live/forecast-snapshots.json",
+      "schemaVersion": "transparent-forecast-baseline/1.1",
+      "sha256": "7e4b1f737fd0580598a20f28d2d6fef475c1a1179ed0d756923177eea18a3494"
+    },
+    {
+      "path": "live/forecast-outcomes.json",
+      "schemaVersion": "forecast-outcomes/1.1",
+      "sha256": "23e6405064d4af03efaa73ebdcb3491d77465947d00352325fe1917366a7c858"
+    }
+  ]
+}

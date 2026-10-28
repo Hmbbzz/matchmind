@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "tactical-changes/1.1",
+  "generatedAt": "2026-10-23T21:46:03.192Z",
+  "matchId": "skillcorner_2017461",
+  "changes": [
+    {
+      "changeId": "tc_sk_team_868_340000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 230000,
+      "detectedAtMs": 340000,
+      "fromState": "attacking_third_siege",
+      "toState": "mid_block",
+      "confidence": 0.4343,
+      "coverage": 0.8667,
+      "featureDeltas": [
+        {
+          "metric": "centroid_x_m",
+          "from": 62.8014,
+          "to": 45.7688,
+          "delta": -17.0326,
+          "importance": 1.4194
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 48.992,
+          "to": 34.6157,
+          "delta": -14.3763,
+          "importance": 1.198
+        },
+        {
+          "metric": "possession_share",
+          "from": 0.7576,
+          "to": 0.5249,
+          "delta": -0.2327,
+          "importance": 0.9308
+        },
+        {
+          "metric": "attacking_third_share",
+          "from": 0.2267,
+          "to": 0.0163,
+          "delta": -0.2104,
+          "importance": 0.8416
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_4177_400000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_4177",
+      "effectiveFromMs": 290000,
+      "detectedAtMs": 400000,
+      "fromState": "low_block",
+      "toState": "counter_press",
+      "confidence": 0.5326,
+      "coverage": 0.8667,
+      "featureDeltas": [
+        {
+          "metric": "centroid_x_m",
+          "from": 29.7608,
+          "to": 45.748,
+          "delta": 15.9872,
+          "importance": 1.3323
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 20.8348,
+          "to": 35.3501,
+          "delta": 14.5153,
+          "importance": 1.2096
+        },
+        {
+          "metric": "long_pass_share",
+          "from": 0,
+          "to": 0.125,
+          "delta": 0.125,
+          "importance": 1.0417
+        },
+        {
+          "metric": "pressure_actions_per_minute",
+          "from": 12,
+          "to": 8.2,
+          "delta": -3.8,
+          "importance": 0.95
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_540000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 430000,
+      "detectedAtMs": 540000,
+      "fromState": "mid_block",
+      "toState": "controlled_progression",
+      "confidence": 0.4454,
+      "coverage": 0.8077,
+      "featureDeltas": [
+        {
+          "metric": "centroid_x_m",
+          "from": 55.6929,
+          "to": 69.5345,
+          "delta": 13.8416,
+          "importance": 1.1535
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 45.0437,
+          "to": 58.1316,
+          "delta": 13.0879,
+          "importance": 1.0907
+        },
+        {
+          "metric": "possession_share",
+          "from": 0.3985,
+          "to": 0.649,
+          "delta": 0.2505,
+          "importance": 1.002
+        },
+        {
+          "metric": "attacking_third_share",
+          "from": 0.1739,
+          "to": 0.2444,
+          "delta": 0.0705,
+          "importance": 0.282
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_4177_840000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_4177",
+      "effectiveFromMs": 730000,
+      "detectedAtMs": 840000,
+      "fromState": "counter_press",
+      "toState": "mid_block",
+      "confidence": 0.4603,
+      "coverage": 0.6993,
+      "featureDeltas": [
+        {
+          "metric": "centroid_x_m",
+          "from": 40.3083,
+          "to": 52.6818,
+          "delta": 12.3735,
+          "importance": 1.0311
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 31.191,
+          "to": 41.1136,
+          "delta": 9.9226,
+          "importance": 0.8269
+        },
+        {
+          "metric": "possession_share",
+          "from": 0.4403,
+          "to": 0.2817,
+          "delta": -0.1586,
+          "importance": 0.6344
+        },
+        {
+          "metric": "width_m",
+          "from": 25.821,
+          "to": 30.8338,
+          "delta": 5.0128,
+          "importance": 0.6266
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_870000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 760000,
+      "detectedAtMs": 870000,
+      "fromState": "controlled_progression",
+      "toState": "build_up",
+      "confidence": 0.396,
+      "coverage": 0.7663,
+      "featureDeltas": [
+        {
+          "metric": "possession_share",
+          "from": 0.5597,
+          "to": 0.7786,
+          "delta": 0.2189,
+          "importance": 0.8756
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 58.0488,
+          "to": 50.6396,
+          "delta": -7.4092,
+          "importance": 0.6174
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 46.9998,
+          "to": 39.6659,
+          "delta": -7.3339,
+          "importance": 0.6112
+        },
+        {
+          "metric": "width_m",
+          "from": 26.4263,
+          "to": 30.3777,
+          "delta": 3.9514,
+          "importance": 0.4939
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_990000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 880000,
+      "detectedAtMs": 990000,
+      "fromState": "build_up",
+      "toState": "controlled_progression",
+      "confidence": 0.5672,
+      "coverage": 0.878,
+      "featureDeltas": [
+        {
+          "metric": "possession_share",
+          "from": 0.7786,
+          "to": 0.9253,
+          "delta": 0.1467,
+          "importance": 0.5868
+        },
+        {
+          "metric": "pressure_actions_per_minute",
+          "from": 4.2,
+          "to": 2.6,
+          "delta": -1.6,
+          "importance": 0.4
+        },
+        {
+          "metric": "long_pass_share",
+          "from": 0,
+          "to": 0.0377,
+          "delta": 0.0377,
+          "importance": 0.3142
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 50.6396,
+          "to": 53.9846,
+          "delta": 3.345,
+          "importance": 0.2787
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_4177_1090000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_4177",
+      "effectiveFromMs": 980000,
+      "detectedAtMs": 1090000,
+      "fromState": "mid_block",
+      "toState": "recover_shape",
+      "confidence": 0.4761,
+      "coverage": 0.8487,
+      "featureDeltas": [
+        {
+          "metric": "centroid_x_m",
+          "from": 46.3805,
+          "to": 39.2522,
+          "delta": -7.1283,
+          "importance": 0.594
+        },
+        {
+          "metric": "forward_pass_share",
+          "from": 0.2222,
+          "to": 0.3333,
+          "delta": 0.1111,
+          "importance": 0.5555
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 36.4651,
+          "to": 30.205,
+          "delta": -6.2601,
+          "importance": 0.5217
+        },
+        {
+          "metric": "long_pass_share",
+          "from": 0.1111,
+          "to": 0.1667,
+          "delta": 0.0556,
+          "importance": 0.4633
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_4177_1330000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_4177",
+      "effectiveFromMs": 1220000,
+      "detectedAtMs": 1330000,
+      "fromState": "recover_shape",
+      "toState": "mid_block",
+      "confidence": 0.4028,
+      "coverage": 0.703,
+      "featureDeltas": [
+        {
+          "metric": "possession_share",
+          "from": 0.2133,
+          "to": 0.5753,
+          "delta": 0.362,
+          "importance": 1.448
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 40.9942,
+          "to": 55.2517,
+          "delta": 14.2575,
+          "importance": 1.1881
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 31.733,
+          "to": 44.1242,
+          "delta": 12.3912,
+          "importance": 1.0326
+        },
+        {
+          "metric": "forward_pass_share",
+          "from": 0.6,
+          "to": 0.5,
+          "delta": -0.1,
+          "importance": 0.5
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_1860000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 1750000,
+      "detectedAtMs": 1860000,
+      "fromState": "controlled_progression",
+      "toState": "build_up",
+      "confidence": 0.4037,
+      "coverage": 0.6503,
+      "featureDeltas": [
+        {
+          "metric": "long_pass_share",
+          "from": 0.087,
+          "to": 0.3333,
+          "delta": 0.2463,
+          "importance": 2.0525
+        },
+        {
+          "metric": "possession_share",
+          "from": 0.753,
+          "to": 0.2575,
+          "delta": -0.4955,
+          "importance": 1.982
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 54.3412,
+          "to": 38.1143,
+          "delta": -16.2269,
+          "importance": 1.3522
+        },
+        {
+          "metric": "pressure_actions_per_minute",
+          "from": 1.6,
+          "to": 6,
+          "delta": 4.4,
+          "importance": 1.1
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_4177_2300000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_4177",
+      "effectiveFromMs": 2190000,
+      "detectedAtMs": 2300000,
+      "fromState": "mid_block",
+      "toState": "controlled_progression",
+      "confidence": 0.4431,
+      "coverage": 0.7623,
+      "featureDeltas": [
+        {
+          "metric": "possession_share",
+          "from": 0.4051,
+          "to": 0.7317,
+          "delta": 0.3266,
+          "importance": 1.3064
+        },
+        {
+          "metric": "attacking_third_share",
+          "from": 0.0211,
+          "to": 0.2194,
+          "delta": 0.1983,
+          "importance": 0.7932
+        },
+        {
+          "metric": "forward_pass_share",
+          "from": 0.3333,
+          "to": 0.1818,
+          "delta": -0.1515,
+          "importance": 0.7575
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 49.7741,
+          "to": 58.7563,
+          "delta": 8.9822,
+          "importance": 0.7485
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_4177_2700000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_4177",
+      "effectiveFromMs": 2590000,
+      "detectedAtMs": 2700000,
+      "fromState": "controlled_progression",
+      "toState": "mid_block",
+      "confidence": 0.4421,
+      "coverage": 0.6637,
+      "featureDeltas": [
+        {
+          "metric": "possession_share",
+          "from": 0.9218,
+          "to": 0.3736,
+          "delta": -0.5482,
+          "importance": 2.1928
+        },
+        {
+          "metric": "attacking_third_share",
+          "from": 0.262,
+          "to": 0.7647,
+          "delta": 0.5027,
+          "importance": 2.0108
+        },
+        {
+          "metric": "width_m",
+          "from": 29.7061,
+          "to": 25.4381,
+          "delta": -4.268,
+          "importance": 0.5335
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 60.6893,
+          "to": 56.2005,
+          "delta": -4.4888,
+          "importance": 0.3741
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_3060000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 2950000,
+      "detectedAtMs": 3060000,
+      "fromState": "build_up",
+      "toState": "controlled_progression",
+      "confidence": 0.5143,
+      "coverage": 0.8403,
+      "featureDeltas": [
+        {
+          "metric": "centroid_x_m",
+          "from": 37.5184,
+          "to": 54.8237,
+          "delta": 17.3053,
+          "importance": 1.4421
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 27.863,
+          "to": 42.9554,
+          "delta": 15.0924,
+          "importance": 1.2577
+        },
+        {
+          "metric": "attacking_third_share",
+          "from": 0.2299,
+          "to": 0.496,
+          "delta": 0.2661,
+          "importance": 1.0644
+        },
+        {
+          "metric": "width_m",
+          "from": 26.8835,
+          "to": 33.4945,
+          "delta": 6.611,
+          "importance": 0.8264
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_5200000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 5090000,
+      "detectedAtMs": 5200000,
+      "fromState": "controlled_progression",
+      "toState": "attacking_third_siege",
+      "confidence": 0.4624,
+      "coverage": 0.698,
+      "featureDeltas": [
+        {
+          "metric": "attacking_third_share",
+          "from": 0.2222,
+          "to": 0.5898,
+          "delta": 0.3676,
+          "importance": 1.4704
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 45.827,
+          "to": 61.1281,
+          "delta": 15.3011,
+          "importance": 1.2751
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 57.6307,
+          "to": 72.1603,
+          "delta": 14.5296,
+          "importance": 1.2108
+        },
+        {
+          "metric": "possession_share",
+          "from": 0.6,
+          "to": 0.7853,
+          "delta": 0.1853,
+          "importance": 0.7412
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    },
+    {
+      "changeId": "tc_sk_team_868_5550000",
+      "matchId": "skillcorner_2017461",
+      "teamId": "sk_team_868",
+      "effectiveFromMs": 5440000,
+      "detectedAtMs": 5550000,
+      "fromState": "attacking_third_siege",
+      "toState": "build_up",
+      "confidence": 0.5587,
+      "coverage": 0.8403,
+      "featureDeltas": [
+        {
+          "metric": "attacking_third_share",
+          "from": 0.6769,
+          "to": 0.0497,
+          "delta": -0.6272,
+          "importance": 2.5088
+        },
+        {
+          "metric": "centroid_x_m",
+          "from": 62.6922,
+          "to": 42.9372,
+          "delta": -19.755,
+          "importance": 1.6463
+        },
+        {
+          "metric": "defensive_line_x_m",
+          "from": 51.9013,
+          "to": 32.7555,
+          "delta": -19.1458,
+          "importance": 1.5955
+        },
+        {
+          "metric": "pressure_actions_per_minute",
+          "from": 2,
+          "to": 4.8,
+          "delta": 2.8,
+          "importance": 0.7
+        }
+      ],
+      "modelVersion": "transparent-tactical-baseline/1.1"
+    }
+  ]
+}

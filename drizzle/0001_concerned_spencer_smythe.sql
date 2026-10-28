@@ -1,0 +1,1 @@
+ALTER TABLE `mm_sessions` ADD `clock_policy` text DEFAULT 'historical-gap-clock/1.0' NOT NULL;

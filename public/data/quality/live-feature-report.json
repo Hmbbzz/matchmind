@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "skillcorner-live-feature-quality/1.1",
+  "generatedAt": "2026-10-23T21:46:00.099Z",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "source frame count matches converter",
+      "passed": true,
+      "detail": "58452"
+    },
+    {
+      "name": "tracked frame count matches converter",
+      "passed": true,
+      "detail": "40404"
+    },
+    {
+      "name": "feature row count",
+      "passed": true,
+      "detail": "4672"
+    },
+    {
+      "name": "two teams only",
+      "passed": true,
+      "detail": "sk_team_868, sk_team_4177"
+    },
+    {
+      "name": "coverage is bounded",
+      "passed": true,
+      "detail": "0..1"
+    },
+    {
+      "name": "windows never read beyond cutoff",
+      "passed": true,
+      "detail": "valid time bounds"
+    },
+    {
+      "name": "provider phase labels excluded",
+      "passed": true,
+      "detail": "no phase or attackPattern keys"
+    },
+    {
+      "name": "nonzero structure samples",
+      "passed": true,
+      "detail": "width and length"
+    },
+    {
+      "name": "finite feature values",
+      "passed": true,
+      "detail": "serialized output contains no null numeric values"
+    },
+    {
+      "name": "both teams have events",
+      "passed": true,
+      "detail": "passes and pressure"
+    },
+    {
+      "name": "pass spatial source fields are known",
+      "passed": true,
+      "detail": "654 passes joined by source event ID"
+    },
+    {
+      "name": "event directions agree with period directions",
+      "passed": true,
+      "detail": "raw event attacking_side vs raw phase direction only"
+    }
+  ],
+  "stats": {
+    "sourceFrames": 58452,
+    "trackedFrames": 40404,
+    "overallCoverage": 0.6912,
+    "featureRows": 4672
+  }
+}

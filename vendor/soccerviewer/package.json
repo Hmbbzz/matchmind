@@ -1,0 +1,23 @@
+{
+  "name": "soccerviewer",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Watch football tracking data in your browser as a 3D match replay",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite build && vite preview",
+    "postinstall": "node scripts/fetch_duckdb_extensions.mjs"
+  },
+  "dependencies": {
+    "@duckdb/duckdb-wasm": "1.29.0",
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "@duckdb/node-api": "2.0.0-r.1",
+    "vite": "^6.0.0"
+  }
+}

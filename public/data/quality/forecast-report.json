@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "forecast-quality/1.1",
+  "generatedAt": "2026-10-23T21:49:37.953Z",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "at least twenty immutable snapshots",
+      "passed": true,
+      "detail": "99 snapshots"
+    },
+    {
+      "name": "all probabilities sum to one",
+      "passed": true,
+      "detail": "tolerance 0.001"
+    },
+    {
+      "name": "all inputs end at cutoff",
+      "passed": true,
+      "detail": "causal cutoff"
+    },
+    {
+      "name": "immutable hashes verify",
+      "passed": true,
+      "detail": "99 hashes"
+    },
+    {
+      "name": "provider labels excluded",
+      "passed": true,
+      "detail": "no provider phase fields"
+    },
+    {
+      "name": "both supported and contradicted outcomes exist",
+      "passed": true,
+      "detail": "supported=99, contradicted=72"
+    },
+    {
+      "name": "at least twenty scored persistence forecasts",
+      "passed": true,
+      "detail": "81"
+    },
+    {
+      "name": "Brier scores are bounded",
+      "passed": true,
+      "detail": "171 scored tasks"
+    }
+  ],
+  "metrics": {
+    "snapshots": 99,
+    "resolvedTasks": 171,
+    "supported": 99,
+    "contradicted": 72,
+    "meanBrier": 0.1803,
+    "persistenceForecasts": 81,
+    "persistenceBrier": 0.2168
+  },
+  "caveat": "Scores are an in-sample demonstration on one historical match. State targets come from the same rules; channel targets are completed-pass proxies. Task/horizon-matched uniform and always-persist comparisons are recorded separately in forecast-baseline-evaluation.json; this aggregate report is not a baseline comparison. No independent held-out performance, pressure-escape truth, or probability calibration is established. Historical long-pass prior denominators remain different from future attacking-third channel denominators."
+}

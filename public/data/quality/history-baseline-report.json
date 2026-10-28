@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "skillcorner-history-quality/1.0",
+  "generatedAt": "2026-10-21T21:11:22.627Z",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "six team-match feature rows",
+      "passed": true,
+      "detail": "6 rows"
+    },
+    {
+      "name": "three matches per main team",
+      "passed": true,
+      "detail": "868:3, 4177:3"
+    },
+    {
+      "name": "main match excluded from history",
+      "passed": true,
+      "detail": "2017461"
+    },
+    {
+      "name": "all history kickoffs precede main match",
+      "passed": true,
+      "detail": "2025-05-17T09:35:00Z"
+    },
+    {
+      "name": "ratios are bounded",
+      "passed": true,
+      "detail": "pass/cross/possession ratios"
+    },
+    {
+      "name": "metadata score retained as source of truth",
+      "passed": true,
+      "detail": "integer goals"
+    },
+    {
+      "name": "player baselines have positive minutes",
+      "passed": true,
+      "detail": "39 players"
+    },
+    {
+      "name": "no season aggregate input",
+      "passed": true,
+      "detail": "only six match metadata, dynamic events and phases were read"
+    }
+  ],
+  "warnings": [],
+  "notes": [
+    "Metadata score is authoritative because lead_to_goal can tag a shot in a sequence differently from the official scoreboard.",
+    "Phase labels are used for historical baselines and offline evaluation; current-match online tactical inference must not read future or provider phase labels.",
+    "Three-match baselines report median/min/max and sample size. They are not a training dataset."
+  ]
+}

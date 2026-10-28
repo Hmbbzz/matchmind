@@ -1,0 +1,536 @@
+{
+  "schemaVersion": "skillcorner-demo-manifest/1.0",
+  "generatedAt": "2026-10-21T21:11:21.263Z",
+  "source": {
+    "name": "SkillCorner Open Data",
+    "url": "https://github.com/SkillCorner/opendata",
+    "license": "MIT"
+  },
+  "policy": {
+    "mainMatchId": "2017461",
+    "cutoffRule": "Historical matches must have kickoff earlier than the main match.",
+    "currentMatchPhaseLabels": "evaluation_only",
+    "seasonAggregates": "context_only_not_recent_three_baseline"
+  },
+  "mainTeams": [
+    {
+      "id": "868",
+      "historyMatchIds": [
+        "1959846",
+        "2006363",
+        "2011166"
+      ]
+    },
+    {
+      "id": "4177",
+      "historyMatchIds": [
+        "1996436",
+        "2007721",
+        "2015213"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "matchId": "2017461",
+      "role": "live",
+      "historicalForTeamId": null,
+      "kickoff": "2025-05-17T09:35:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "868",
+        "name": "Lumen Vale FC",
+        "score": 0
+      },
+      "away": {
+        "id": "4177",
+        "name": "Ember Coast United",
+        "score": 1
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 3957366,
+          "rows": 4142,
+          "groups": {
+            "player_possession": 805,
+            "off_ball_run": 466,
+            "passing_option": 2036,
+            "on_ball_engagement": 835
+          }
+        },
+        "phases": {
+          "bytes": 118313,
+          "rows": 433,
+          "groups": {
+            "create": 125,
+            "direct": 44,
+            "chaotic": 112,
+            "finish": 73,
+            "set_play": 22,
+            "build_up": 36,
+            "transition": 17,
+            "quick_break": 4
+          }
+        },
+        "tracking": {
+          "materialized": true,
+          "bytes": 89543442,
+          "sha256": "59cfa5588efee041da439f44df5b5b92f2b7305571dc831164e3d05f7415787a",
+          "rows": 71451,
+          "nullClockRows": 12999,
+          "timedRows": 58452,
+          "trackedRows": 40404,
+          "emptyRows": 18048,
+          "trackedCoverageOfTimedFrames": 0.6912338328885239,
+          "firstTracked": {
+            "frame": 2510,
+            "timestamp": "00:00:00.00",
+            "period": 1
+          },
+          "lastTracked": {
+            "frame": 70407,
+            "timestamp": "01:36:13.70",
+            "period": 2
+          },
+          "nonMonotonicFrames": 0
+        }
+      }
+    },
+    {
+      "matchId": "1959846",
+      "role": "history",
+      "historicalForTeamId": "868",
+      "kickoff": "2025-01-10T08:35:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "868",
+        "name": "Lumen Vale FC",
+        "score": 3
+      },
+      "away": {
+        "id": "1803",
+        "name": "Western United",
+        "score": 4
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 4499680,
+          "rows": 4669,
+          "groups": {
+            "player_possession": 946,
+            "passing_option": 2362,
+            "off_ball_run": 491,
+            "on_ball_engagement": 870
+          }
+        },
+        "phases": {
+          "bytes": 128571,
+          "rows": 468,
+          "groups": {
+            "create": 145,
+            "build_up": 69,
+            "chaotic": 95,
+            "direct": 26,
+            "finish": 96,
+            "quick_break": 6,
+            "set_play": 17,
+            "transition": 14
+          }
+        },
+        "tracking": {
+          "materialized": true,
+          "bytes": 87710167
+        }
+      }
+    },
+    {
+      "matchId": "2006363",
+      "role": "history",
+      "historicalForTeamId": "868",
+      "kickoff": "2025-03-08T08:35:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "868",
+        "name": "Lumen Vale FC",
+        "score": 3
+      },
+      "away": {
+        "id": "870",
+        "name": "Central Coast Mariners Football Club",
+        "score": 0
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 4794999,
+          "rows": 4979,
+          "groups": {
+            "player_possession": 976,
+            "off_ball_run": 536,
+            "passing_option": 2535,
+            "on_ball_engagement": 932
+          }
+        },
+        "phases": {
+          "bytes": 119862,
+          "rows": 439,
+          "groups": {
+            "create": 141,
+            "direct": 25,
+            "finish": 95,
+            "build_up": 69,
+            "chaotic": 72,
+            "transition": 12,
+            "set_play": 20,
+            "quick_break": 5
+          }
+        },
+        "tracking": {
+          "materialized": false,
+          "bytes": 133
+        }
+      }
+    },
+    {
+      "matchId": "2011166",
+      "role": "history",
+      "historicalForTeamId": "868",
+      "kickoff": "2025-04-12T05:00:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "867",
+        "name": "Wellington Phoenix FC",
+        "score": 2
+      },
+      "away": {
+        "id": "868",
+        "name": "Lumen Vale FC",
+        "score": 3
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 3846412,
+          "rows": 4034,
+          "groups": {
+            "player_possession": 757,
+            "passing_option": 2012,
+            "off_ball_run": 457,
+            "on_ball_engagement": 808
+          }
+        },
+        "phases": {
+          "bytes": 121175,
+          "rows": 441,
+          "groups": {
+            "create": 127,
+            "build_up": 51,
+            "direct": 36,
+            "finish": 81,
+            "set_play": 22,
+            "chaotic": 107,
+            "transition": 8,
+            "quick_break": 9
+          }
+        },
+        "tracking": {
+          "materialized": false,
+          "bytes": 133
+        }
+      }
+    },
+    {
+      "matchId": "1996436",
+      "role": "history",
+      "historicalForTeamId": "4177",
+      "kickoff": "2025-02-01T04:00:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "4177",
+        "name": "Ember Coast United",
+        "score": 2
+      },
+      "away": {
+        "id": "1804",
+        "name": "Macarthur FC",
+        "score": 1
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 3760511,
+          "rows": 3923,
+          "groups": {
+            "player_possession": 786,
+            "on_ball_engagement": 754,
+            "passing_option": 1954,
+            "off_ball_run": 429
+          }
+        },
+        "phases": {
+          "bytes": 104584,
+          "rows": 383,
+          "groups": {
+            "create": 113,
+            "finish": 76,
+            "chaotic": 90,
+            "set_play": 28,
+            "build_up": 36,
+            "direct": 28,
+            "transition": 9,
+            "quick_break": 3
+          }
+        },
+        "tracking": {
+          "materialized": false,
+          "bytes": 133
+        }
+      }
+    },
+    {
+      "matchId": "2007721",
+      "role": "history",
+      "historicalForTeamId": "4177",
+      "kickoff": "2025-03-16T04:00:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "4177",
+        "name": "Ember Coast United",
+        "score": 2
+      },
+      "away": {
+        "id": "870",
+        "name": "Central Coast Mariners Football Club",
+        "score": 2
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 4653039,
+          "rows": 4831,
+          "groups": {
+            "player_possession": 959,
+            "passing_option": 2542,
+            "off_ball_run": 520,
+            "on_ball_engagement": 810
+          }
+        },
+        "phases": {
+          "bytes": 116997,
+          "rows": 430,
+          "groups": {
+            "create": 143,
+            "direct": 42,
+            "build_up": 40,
+            "chaotic": 84,
+            "finish": 88,
+            "quick_break": 2,
+            "set_play": 16,
+            "transition": 15
+          }
+        },
+        "tracking": {
+          "materialized": false,
+          "bytes": 133
+        }
+      }
+    },
+    {
+      "matchId": "2015213",
+      "role": "history",
+      "historicalForTeamId": "4177",
+      "kickoff": "2025-05-03T08:00:00Z",
+      "competition": "AUS - A-League - 2024/2025",
+      "home": {
+        "id": "1803",
+        "name": "Western United",
+        "score": 4
+      },
+      "away": {
+        "id": "4177",
+        "name": "Ember Coast United",
+        "score": 2
+      },
+      "files": {
+        "dynamicEvents": {
+          "bytes": 4417152,
+          "rows": 4613,
+          "groups": {
+            "player_possession": 883,
+            "on_ball_engagement": 866,
+            "passing_option": 2309,
+            "off_ball_run": 555
+          }
+        },
+        "phases": {
+          "bytes": 134493,
+          "rows": 490,
+          "groups": {
+            "create": 163,
+            "direct": 42,
+            "build_up": 76,
+            "chaotic": 121,
+            "finish": 60,
+            "transition": 9,
+            "quick_break": 7,
+            "set_play": 12
+          }
+        },
+        "tracking": {
+          "materialized": false,
+          "bytes": 134
+        }
+      }
+    }
+  ],
+  "mainTrackingQuality": {
+    "timedFrameCoverage": 0.6912338328885239,
+    "eventStartCoverage": 0.9980685659101883,
+    "eventsByTrackingState": {
+      "tracked": 4134,
+      "empty": 8
+    },
+    "handling": "Exclude empty frames from analytics; hold the last trusted visual frame and expose quality state in the player."
+  },
+  "validation": {
+    "passed": true,
+    "assertions": [
+      {
+        "name": "seven distinct matches",
+        "passed": true,
+        "detail": "found 7"
+      },
+      {
+        "name": "history configured for both main teams",
+        "passed": true,
+        "detail": "868, 4177"
+      },
+      {
+        "name": "team 868 has three earlier matches",
+        "passed": true,
+        "detail": "1959846, 2006363, 2011166"
+      },
+      {
+        "name": "team 868 history is chronological",
+        "passed": true,
+        "detail": "1959846, 2006363, 2011166"
+      },
+      {
+        "name": "team 868 appears in every history match",
+        "passed": true,
+        "detail": "1959846, 2006363, 2011166"
+      },
+      {
+        "name": "team 4177 has three earlier matches",
+        "passed": true,
+        "detail": "1996436, 2007721, 2015213"
+      },
+      {
+        "name": "team 4177 history is chronological",
+        "passed": true,
+        "detail": "1996436, 2007721, 2015213"
+      },
+      {
+        "name": "team 4177 appears in every history match",
+        "passed": true,
+        "detail": "1996436, 2007721, 2015213"
+      },
+      {
+        "name": "main tracking materialized",
+        "passed": true,
+        "detail": "89543442 bytes"
+      },
+      {
+        "name": "main tracking size matches LFS pointer",
+        "passed": true,
+        "detail": "89543442 bytes"
+      },
+      {
+        "name": "main tracking hash matches LFS pointer",
+        "passed": true,
+        "detail": "59cfa5588efee041da439f44df5b5b92f2b7305571dc831164e3d05f7415787a"
+      },
+      {
+        "name": "main tracking frame order is monotonic",
+        "passed": true,
+        "detail": "0 violations"
+      },
+      {
+        "name": "main dynamic events contain all four event families",
+        "passed": true,
+        "detail": "four event families required"
+      },
+      {
+        "name": "at least 99% of main events have tracked start frames",
+        "passed": true,
+        "detail": "99.81%"
+      },
+      {
+        "name": "match 2017461 dynamic events available",
+        "passed": true,
+        "detail": "4142 rows"
+      },
+      {
+        "name": "match 2017461 phases available",
+        "passed": true,
+        "detail": "433 rows"
+      },
+      {
+        "name": "match 1959846 dynamic events available",
+        "passed": true,
+        "detail": "4669 rows"
+      },
+      {
+        "name": "match 1959846 phases available",
+        "passed": true,
+        "detail": "468 rows"
+      },
+      {
+        "name": "match 2006363 dynamic events available",
+        "passed": true,
+        "detail": "4979 rows"
+      },
+      {
+        "name": "match 2006363 phases available",
+        "passed": true,
+        "detail": "439 rows"
+      },
+      {
+        "name": "match 2011166 dynamic events available",
+        "passed": true,
+        "detail": "4034 rows"
+      },
+      {
+        "name": "match 2011166 phases available",
+        "passed": true,
+        "detail": "441 rows"
+      },
+      {
+        "name": "match 1996436 dynamic events available",
+        "passed": true,
+        "detail": "3923 rows"
+      },
+      {
+        "name": "match 1996436 phases available",
+        "passed": true,
+        "detail": "383 rows"
+      },
+      {
+        "name": "match 2007721 dynamic events available",
+        "passed": true,
+        "detail": "4831 rows"
+      },
+      {
+        "name": "match 2007721 phases available",
+        "passed": true,
+        "detail": "430 rows"
+      },
+      {
+        "name": "match 2015213 dynamic events available",
+        "passed": true,
+        "detail": "4613 rows"
+      },
+      {
+        "name": "match 2015213 phases available",
+        "passed": true,
+        "detail": "490 rows"
+      }
+    ]
+  }
+}

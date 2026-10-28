@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scope_type",
+    "scope",
+    "summary_key",
+    "focus_candidate_id",
+    "focus_claim_ids",
+    "steps",
+    "receipt_ids",
+    "limitation_ids"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "matchmind-attack-answer/1.0"
+      ]
+    },
+    "scope_type": {
+      "type": "string",
+      "enum": [
+        "attack"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "match_id",
+        "team_id",
+        "chain_id",
+        "cutoff_ms",
+        "mode"
+      ],
+      "properties": {
+        "match_id": {
+          "type": "string"
+        },
+        "team_id": {
+          "type": "string"
+        },
+        "chain_id": {
+          "type": "string"
+        },
+        "cutoff_ms": {
+          "type": "integer"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "casual",
+            "analyst"
+          ]
+        }
+      }
+    },
+    "summary_key": {
+      "type": "string",
+      "enum": [
+        "recorded_sequence",
+        "recorded_progression",
+        "recorded_finish",
+        "observed_movement"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "role"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "start",
+              "progression",
+              "finish",
+              "observed_support"
+            ]
+          }
+        }
+      }
+    },
+    "receipt_ids": {
+      "type": "array",
+      "maxItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitation_ids": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "focus_candidate_id": {
+      "type": "string"
+    },
+    "focus_claim_ids": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

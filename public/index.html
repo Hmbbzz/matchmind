@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f7f1" />
+    <meta name="description" content="Watch the match replay, ask about key moments and follow the evidence." />
+    <title>Matchmind — Evidence beside the game</title>
+    <link rel="stylesheet" href="./styles.css?v=2026-10-27-X2" />
+  </head>
+  <body>
+    <div id="loading" class="loading-screen" role="status" aria-live="polite">
+      <div class="loading-mark"><span></span><span></span><span></span></div>
+      <p>Preparing the match…</p>
+    </div>
+    <div class="app-shell" id="app" hidden>
+      <header class="workspace-toolbar"><div class="workspace-brand" role="img" aria-label="Matchmind"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span class="brand-name" aria-hidden="true">Matchmind</span></div><div class="workspace-actions"><button id="demo-open">Help</button><button id="history-open">Previous matches</button></div></header>
+      <main>
+        <div class="workspace-grid">
+          <section class="viewer-column" aria-label="Historical match viewer">
+            <article class="pitch-card" id="match-viewer">
+              <div class="workspace-match match-frame-header" role="group" aria-label="Historical match information"><div class="compact-score" aria-label="Historical match score">
+                  <span class="compact-team"><span id="home-code">LUM</span><span id="home-name" class="sr-only">Lumen Vale FC</span><span id="home-crest" hidden aria-hidden="true">L</span></span>
+                  <strong class="compact-score-value"><span id="home-score">0</span><span class="score-divider">–</span><span id="away-score">0</span></strong>
+                  <span class="compact-team"><span id="away-code">ECU</span><span id="away-name" class="sr-only">Ember Coast United</span><span id="away-crest" hidden aria-hidden="true">E</span></span>
+                </div><span class="workspace-source">Match replay</span></div>
+              <section id="attack-replay-bar" class="attack-replay-bar" aria-label="Attack replay controls" hidden>
+                <div class="attack-replay-copy"><span id="attack-replay-phase" class="replay-phase" hidden></span><strong id="attack-replay-title">Attack replay</strong><span id="attack-replay-range"></span><span id="attack-replay-status" role="status"></span></div>
+                <div class="attack-replay-actions"><button id="attack-replay-toggle">Pause</button><button id="attack-replay-next" hidden>Next chapter</button><button id="attack-replay-again" hidden>Play again</button><button id="attack-replay-return">Return to match</button></div>
+              </section>
+              <div class="pitch-header" hidden aria-hidden="true">
+                <div><span class="eyebrow">HISTORICAL REPLAY</span><strong>3D touchline view</strong></div>
+                <div class="pitch-tools">
+                  <div class="view-switch" role="group" aria-label="Match view">
+                    <button id="view-3d" class="active" aria-pressed="true">3D touchline</button>
+                    <button id="view-2d" aria-pressed="false">2D tracking</button>
+                  </div>
+                  <div class="pitch-legend"><span><i class="legend-dot home"></i><span id="legend-home">LUM</span></span><span><i class="legend-dot away"></i><span id="legend-away">ECU</span></span><span id="tracking-label" class="tracking-label">10 Hz tracking</span></div>
+                </div>
+              </div>
+              <div class="pitch-wrap" id="pitch-wrap">
+                <div class="match-render-surface">
+                <iframe id="viewer3d-frame" class="viewer3d-frame" title="3D match replay"
+                  data-src="./viewer3d/match/?match=2017461&amp;embed=1&amp;v=2026-10-27-U1" hidden></iframe>
+                <div id="viewer3d-loading" class="viewer3d-loading" role="status">
+                  <span></span><strong>Preparing the 3D replay</strong><small>Loading player animations and the touchline camera</small>
+                </div>
+                <svg id="pitch" class="pitch pitch-2d" viewBox="0 0 1050 680" role="img" aria-label="2D historical match tracking">
+                  <defs>
+                    <linearGradient id="grass" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#2c9b61" />
+                      <stop offset="1" stop-color="#197548" />
+                    </linearGradient>
+                    <filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-opacity=".28" /></filter>
+                  </defs>
+                  <rect width="1050" height="680" rx="18" fill="url(#grass)" />
+                  <g class="mow-lines" opacity=".16">
+                    <rect x="0" y="0" width="131.25" height="680" /><rect x="262.5" y="0" width="131.25" height="680" />
+                    <rect x="525" y="0" width="131.25" height="680" /><rect x="787.5" y="0" width="131.25" height="680" />
+                  </g>
+                  <g class="pitch-lines" fill="none" stroke="rgba(247,255,250,.82)" stroke-width="3">
+                    <rect x="20" y="20" width="1010" height="640" rx="3" />
+                    <line x1="525" y1="20" x2="525" y2="660" />
+                    <circle cx="525" cy="340" r="91.5" />
+                    <circle cx="525" cy="340" r="4" fill="rgba(239,255,247,.7)" />
+                    <rect x="20" y="138" width="165" height="404" />
+                    <rect x="865" y="138" width="165" height="404" />
+                    <rect x="20" y="248" width="55" height="184" />
+                    <rect x="975" y="248" width="55" height="184" />
+                    <path d="M185 258 A91.5 91.5 0 0 1 185 422" />
+                    <path d="M865 258 A91.5 91.5 0 0 0 865 422" />
+                    <circle cx="130" cy="340" r="4" fill="rgba(239,255,247,.7)" />
+                    <circle cx="920" cy="340" r="4" fill="rgba(239,255,247,.7)" />
+                  </g>
+                  <g id="event-layer"></g>
+                  <g id="players-layer"></g>
+                  <g id="ball-layer"></g>
+                </svg>
+                </div>
+
+                <div id="stream-cut-badge" class="stream-cut-badge" hidden>Skipped an interval without tracking</div>
+
+                <div id="player-tooltip" class="player-tooltip" hidden></div>
+
+                <aside id="replay-panel" class="replay-panel" hidden>
+                  <header id="replay-drag-handle" aria-label="Drag the evidence replay window">
+                    <div><span class="eyebrow">EVIDENCE REPLAY</span><strong id="replay-title">Evidence clip</strong></div>
+                    <button id="offball-toggle" class="offball-toggle" aria-pressed="true" hidden>Observed movement</button><button id="close-replay" class="icon-button" aria-label="Close evidence replay">×</button>
+                  </header>
+                  <svg id="replay-pitch" viewBox="0 0 525 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Independent 2D evidence replay">
+                    <rect width="525" height="340" rx="10" fill="#12382a" />
+                    <g fill="none" stroke="rgba(239,255,247,.48)" stroke-width="1.5">
+                      <rect x="10" y="10" width="505" height="320" />
+                      <line x1="262.5" y1="10" x2="262.5" y2="330" />
+                      <circle cx="262.5" cy="170" r="45.75" />
+                      <rect x="10" y="69" width="82.5" height="202" />
+                      <rect x="432.5" y="69" width="82.5" height="202" />
+                    </g>
+                    <defs><marker id="offball-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#dcff70" /></marker></defs><g id="replay-offball"></g><g id="replay-players"></g><g id="replay-ball"></g>
+                  </svg>
+                  <footer><span id="replay-clock">0:00</span><span id="replay-evidence">Evidence · EVT</span><button id="evidence-play-again" hidden>Replay clip</button><select id="offball-observation" aria-label="Observed movement interval" hidden></select><span id="offball-note" class="offball-note" hidden></span></footer>
+                </aside>
+              </div>
+
+              <div class="player-controls">
+                <button id="play-toggle" class="play-button" aria-label="Pause historical replay"><span id="play-icon">❚❚</span></button>
+                <span id="control-clock" class="control-clock">0:00</span>
+                <div class="playback-return-actions" role="group" aria-label="Replay and return controls"><button id="away-toggle" aria-pressed="false">Step away</button><button id="live-button" class="live-button"><span></span> Replay edge</button></div>
+                <button id="chat-shortcut" class="chat-shortcut" aria-label="Jump to Matchmind and focus the question input">Ask Matchmind</button>
+                <div class="playback-meta"><span class="live-label" id="live-state-label">REPLAY</span><span>Historical replay</span><span id="scope-time" class="control-scope">Through 0:00</span><span id="live-lag" class="live-lag">At replay edge</span><span id="period-label" class="sr-only">FIRST HALF · HISTORICAL REPLAY</span><span id="match-clock" class="sr-only">0:00</span></div>
+              </div>
+            </article>
+            <article class="timeline-card" aria-labelledby="story-title">
+              <div class="section-heading"><h2 id="story-title">Match story</h2><div class="story-heading-actions"><button id="player-story-open">My Player Story</button><button id="story-filters-open" aria-haspopup="dialog" aria-controls="story-filters-dialog" aria-label="Filter match story. All types, both teams."><span>Filters</span><span id="story-filter-count" hidden>0</span><span id="story-filter-selection">All · Both teams</span></button></div></div>
+              <div class="story-status"><strong id="story-count">0 published stories</strong><span id="story-through">Known interval 0:00 → 0:00</span><span id="story-away-status" hidden></span></div>
+              <div id="timeline-empty" class="story-empty">No completed moment is published at this viewing time.</div>
+              <p id="story-keyboard-help" class="sr-only">Oldest stories are on the left, newest on the right. Use Left and Right to browse, Home or End to reach either end, and Enter to replay. New stories follow the right edge by default. Scrolling back or browsing with the keyboard holds your place; changing a filter shows its latest match.</p>
+              <div id="timeline-track" class="story-feed" role="region" tabindex="0" aria-label="Published match story navigation" aria-describedby="story-keyboard-help" hidden><div id="timeline-entries" class="story-groups"></div></div>
+
+            </article>
+          </section>
+          <div id="assistant-home" class="assistant-home"><aside id="assistant-column" class="assistant-column" aria-label="Matchmind conversation and player context">
+            <section class="assistant-panel" id="assistant-panel" aria-label="Matchmind evidence assistant">
+              <div class="assistant-heading"><div class="assistant-orb"><i></i></div><div><span class="eyebrow">MATCHMIND</span><strong>Ask about the game</strong></div><button id="catch-up-button" class="assistant-catchup">Catch me up</button><span class="cutoff-chip" id="cutoff-chip">Through 0:00</span></div>
+              <p class="demo-mode" id="assistant-mode" role="status" data-mode="checking">Match facts are available</p>
+              <div class="audience-toolbar"><div id="audience-mode" class="audience-mode" role="group" aria-label="Explanation style"><button data-audience-mode="casual" aria-pressed="true">Casual</button><button data-audience-mode="analyst" aria-pressed="false">Analyst</button></div><span id="away-status" role="status">Same facts. Your level of detail.</span></div>
+              <section class="player-panel" aria-label="Selected player context">
+                <div class="selected-header"><div id="selected-avatar" class="selected-avatar">5</div><div class="selected-copy"><span id="selected-team">PLAYER CONTEXT</span><h1 id="selected-name">Selected player</h1><p><span id="selected-status">Position unavailable</span></p></div><div class="player-context-actions"><button id="player-chooser-open" class="player-chooser-open" aria-haspopup="dialog" aria-controls="player-chooser-dialog">Choose player</button><button id="follow-button" class="follow-button" aria-pressed="false">＋ Follow</button></div></div>
+
+              </section>
+              <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversation with Matchmind"></div>
+              <div class="assistant-compose">
+                <div class="compose-actions"><button id="suggestions-open">Suggested questions</button><button id="player-details-open">Player details</button></div>
+                <form id="question-form" class="question-form"><label class="sr-only" for="question-input">Ask Matchmind a question about the replay</label><textarea id="question-input" rows="2" maxlength="4000" placeholder="Ask about the player, a moment, or what changed…"></textarea><button type="submit" aria-label="Send question">↑</button></form>
+                <p class="assistant-note">Player, viewing time and evidence freeze when you send.</p>
+              </div>
+            </section>
+
+          </aside></div>
+        </div>
+      </main>
+
+    </div>
+
+    <dialog id="chat-dialog" class="app-dialog chat-dialog" aria-labelledby="chat-dialog-title"><header class="dialog-heading"><h2 id="chat-dialog-title">Matchmind</h2><button id="chat-close" data-dialog-close="chat-dialog">Back to match</button></header><div id="chat-host"></div></dialog>
+    <dialog id="history-dialog" class="app-dialog" aria-labelledby="history-dialog-title"><header class="dialog-heading"><h2 id="history-dialog-title">Previous matches</h2><button id="history-close" data-dialog-close="history-dialog">Close</button></header><div class="dialog-body">            <section class="history-panel" id="comparison-card"><h3>Previous matches &amp; estimates</h3><div class="comparison-content">
+              <div class="comparison-top"><span class="eyebrow">SELECTED PLAYER · PASSING</span><strong id="comparison-badge">0 recorded passes</strong></div>
+              <div class="comparison-metric"><div><span>Current recorded pass completion</span><strong id="current-cross-rate">No valid sample</strong></div><div class="comparison-bar"><i id="current-cross-bar"></i><em id="baseline-marker"></em></div><div class="comparison-scale"><span>0</span><span id="baseline-label">Selected earlier matches</span><span>100%</span></div></div>
+              <p class="metric-note">Descriptive samples, not a judgement of ability. Early zero events can be normal; a completion rate needs at least one attempt.</p>
+              <details class="history-samples" id="history-samples"><summary>View the selected earlier matches</summary><div id="history-sample-list"></div><p>Three selected earlier matches per team, not a full season or complete recent schedule. Player appearances and valid observations may vary.</p></details>
+              <p class="metric-note">xG is a position-only estimate. Shot outcomes come from goal tags and subsequent interruptions, not verified saves, accuracy or blocks. Some positions are estimated; gaps are excluded.</p>
+              <p class="metric-note">Answers and evidence keep the match time at which you asked.</p>
+            </div></section>      <footer class="site-footer"><span>Match replay · no broadcast footage</span><span>Observed and estimated positions</span></footer></div></dialog>
+    <dialog id="story-filters-dialog" class="app-dialog story-filters-dialog" aria-labelledby="story-filters-title"><header class="dialog-heading"><h2 id="story-filters-title">Filter match story</h2><button id="story-filters-close" data-dialog-close="story-filters-dialog">Done</button></header><div class="dialog-body"><fieldset><legend>Story type</legend><div class="timeline-filters" role="group" aria-label="Story type"><button class="active" data-filter="all" aria-pressed="true">All</button><button data-filter="chances" aria-pressed="false" aria-describedby="story-chance-method">Good chances (est.)</button><button data-filter="goals" aria-pressed="false">Goals</button><button data-filter="shots" aria-pressed="false">Shots</button><button data-filter="attacks" aria-pressed="false">Complete attacks</button><button data-filter="changes" aria-pressed="false">Turning points</button><button data-filter="player" aria-pressed="false">Selected player</button></div></fieldset><fieldset><legend>Team</legend><div class="story-team-filters" role="group" aria-label="Story team"><button data-team-filter="all" aria-pressed="true">Both teams</button><button id="story-filter-home" data-team-filter="home" aria-pressed="false">Home · Lumen Vale FC</button><button id="story-filter-away" data-team-filter="away" aria-pressed="false">Away · Ember Coast United</button></div></fieldset><p id="story-filter-summary">All types · Both teams</p><p id="story-chance-method">Published shots with position-only estimated xG ≥ 0.20. This estimate is uncalibrated, not an official chance rating.</p><p class="story-filter-note">Oldest on the left, newest on the right. New stories follow the right edge while you are there. Scroll back or browse with the keyboard to hold your place; switching a filter shows its latest match.</p></div></dialog>
+    <dialog id="moment-dialog" class="app-dialog moment-dialog" aria-labelledby="moment-dialog-title"><header class="dialog-heading"><h2 id="moment-dialog-title">Moment details</h2><button id="moment-close" data-dialog-close="moment-dialog">Close</button></header><div class="dialog-body">              <div class="timeline-detail" id="timeline-detail" hidden><span class="detail-time">0:00</span><div><strong>Evidence details</strong><p>Select a published story.</p></div><button id="timeline-replay" disabled>Replay evidence</button></div></div></dialog>
+    <dialog id="player-chooser-dialog" class="app-dialog player-chooser-dialog" aria-labelledby="player-chooser-title" aria-describedby="player-chooser-note"><header class="dialog-heading"><h2 id="player-chooser-title">Choose a player</h2><button id="player-chooser-close" data-dialog-close="player-chooser-dialog">Cancel</button></header><div class="dialog-body"><p id="player-chooser-note" class="player-chooser-note">Select the player for your next question. Following and observed stories stay separate.</p><div class="player-chooser-controls"><label for="player-chooser-search">Search players<input id="player-chooser-search" type="search" placeholder="Name, number or position" autocomplete="off" /></label><label for="player-chooser-team">Team<select id="player-chooser-team"><option value="">Both teams</option></select></label></div><p id="player-chooser-count" role="status" aria-live="polite"></p><div id="player-chooser-results" aria-label="Players in this match"></div></div></dialog>
+    <dialog id="player-dialog" class="app-dialog" aria-labelledby="player-dialog-title"><header class="dialog-heading"><h2 id="player-dialog-title">Selected player evidence</h2><button id="player-details-close" data-dialog-close="player-dialog">Close</button></header><div class="dialog-body">                <div class="context-banner"><strong id="context-label">Select a player</strong><span class="context-hint">Use Change player or select on the pitch</span></div>
+                <div class="stats-grid" id="stats-grid" aria-label="Recorded events through the viewing time"></div><p class="metric-note">Recorded events through the current viewing time. Missing rates need a valid sample; xG is estimated from position.</p></div></dialog>
+    <dialog id="suggestions-dialog" class="app-dialog" aria-labelledby="suggestions-dialog-title"><header class="dialog-heading"><h2 id="suggestions-dialog-title">Suggested questions</h2><button id="suggestions-close" data-dialog-close="suggestions-dialog">Close</button></header><div class="dialog-body">                <div class="suggestions" id="suggestions" aria-label="Suggested questions"><button>How is he playing?</button><button>Recorded passes</button><button>Explain this attack</button><button>How good was this shot?</button><button>Team history</button><button>What is the tactical phase?</button></div></div></dialog>
+    <dialog id="demo-dialog" class="app-dialog" aria-labelledby="demo-dialog-title"><header class="dialog-heading"><h2 id="demo-dialog-title">How to watch</h2><button id="demo-close" data-dialog-close="demo-dialog">Close</button></header><div class="dialog-body demo-guide"><p id="demo-readiness">Changes appear after their evidence is complete.</p><ol><li><strong>Choose a player or moment.</strong> Ask about recorded actions or a completed attack.</li><li><strong>Check the evidence.</strong> Replay a linked clip. Estimated positions and unknown details are identified.</li><li><strong>Make the return personal.</strong> Follow a player, use Step away, then I’m back and Catch me up.</li></ol><p>Casual keeps answers brief. Analyst adds a few key details. Earlier answers keep their original match time and evidence.</p><button id="demo-find-turning" disabled>Find an observed change</button></div></dialog>
+    <dialog id="player-story-dialog" class="app-dialog player-story-dialog" aria-labelledby="player-story-title">
+      <header class="dialog-heading"><h2 id="player-story-title">My Player Story</h2><button id="player-story-close" data-dialog-close="player-story-dialog">Close</button></header>
+      <div class="dialog-body player-story-body">
+        <nav class="player-story-tabs" aria-label="Player story views"><button id="player-story-live" aria-pressed="true">Observed players</button><button id="player-story-saved" aria-pressed="false">Saved stories</button></nav>
+        <div class="player-story-notice"><p id="player-story-status" class="player-story-status" role="status" aria-live="polite"></p><button id="player-story-retry" hidden>Try again</button></div>
+        <section id="player-story-menu" aria-label="Observed players for this match">
+          <p id="player-story-device" class="player-story-device">Your observation list stays on this device for this match.</p>
+          <section id="player-story-followed" hidden aria-label="Followed player"></section>
+          <h3>Your observed players</h3><div id="player-story-observed"></div>
+          <h3>Add players</h3><div class="player-story-search-controls"><label for="player-story-search">Name or shirt number<input id="player-story-search" type="search" placeholder="Search this match" autocomplete="off" /></label><label for="player-story-team">Team<select id="player-story-team"><option value="">Both teams</option></select></label></div>
+          <div id="player-story-results" aria-label="Players in this match"></div>
+        </section>
+        <section id="player-story-main" hidden>
+          <div class="player-story-identity"><span id="player-story-state" class="eyebrow">Current story</span><h3 id="player-story-player"></h3><p><span id="player-story-mode"></span> · <span id="player-story-cutoff"></span></p><p id="player-story-source">From match records</p></div>
+          <h3 id="player-story-heading"></h3><p id="player-story-summary"></p>
+          <div class="player-story-actions"><button id="player-story-replay">Replay story</button><button id="player-story-save">Save story</button><button id="player-story-export">Export story</button><button id="player-story-share">Share saved story</button></div>
+          <p id="player-story-binding">Each player keeps an independent story and style.</p><div class="player-story-new-controls"><button id="player-story-resume" hidden>Current story</button><label for="player-story-style">New story style<select id="player-story-style"><option value="casual">Casual</option><option value="analyst">Analyst</option></select></label><button id="player-story-start">Start new story</button></div>
+          <p id="player-story-empty">No completed evidence is recorded for this story at its viewing time.</p><ol id="player-story-chapters" class="player-story-chapters"></ol>
+          <details class="player-story-limits"><summary>Evidence &amp; limits</summary><ul id="player-story-limitations"></ul></details>
+          <section id="player-story-share-panel" class="player-story-share-panel" hidden aria-label="Read-only story sharing"><h3>Read-only story link</h3><p>Recipients still need access to this Matchmind site. This link opens only this frozen story and its clips; it does not change their match or question time.</p><label for="player-story-share-link">Link created by your Share action</label><div class="player-story-link-row"><input id="player-story-share-link" type="text" readonly /><button id="player-story-copy">Copy link</button></div><div id="player-story-shares"></div></section>
+        </section>
+        <section id="player-story-library" hidden aria-label="Saved player stories"><p>Private saved stories. Opening one keeps its original player, style and match time.</p><div id="player-story-list"></div><button id="player-story-more" hidden>Load more</button><button id="player-story-refresh">Refresh saved stories</button></section>
+      </div>
+    </dialog>
+    <script type="module" src="./app.js?v=2026-10-27-W1"></script>
+  </body>
+</html>

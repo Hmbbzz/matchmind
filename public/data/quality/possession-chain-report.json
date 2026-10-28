@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-21T21:11:23.830Z",
+    "matchId": "skillcorner_2017461",
+    "method": "event-led possession segmentation with tracking quality evidence",
+    "source": "SkillCorner Open Data",
+    "continuationGapMs": 8000,
+    "reboundGapMs": 6000,
+    "providerPhaseLabelsUsed": false,
+    "temporalPolicy": "Every row is available only at or after endMs; no future events are used."
+  },
+  "input": {
+    "convertedPlayerPossessionActions": 798,
+    "supportEvents": 3337,
+    "trackingFrames": 58452,
+    "trackedFrames": 40404
+  },
+  "output": {
+    "possessions": 303,
+    "multiActionPossessions": 161,
+    "chanceChains": 39,
+    "shotChains": 27,
+    "goalChains": 1,
+    "evidenceRows": 4001,
+    "attackPatterns": {
+      "central_combination": 4,
+      "counter_attack": 10,
+      "direct_attack": 2,
+      "high_regain_attack": 6,
+      "second_ball_attack": 2,
+      "set_piece": 8,
+      "sustained_possession": 4,
+      "wing_attack": 3
+    }
+  },
+  "distributions": {
+    "medianPossessionDurationSeconds": 3.6,
+    "lowTrackingCoveragePossessions": 0
+  },
+  "checks": [
+    {
+      "name": "all converted possession actions mapped exactly once",
+      "passed": true
+    },
+    {
+      "name": "possession times are valid",
+      "passed": true
+    },
+    {
+      "name": "possession teams are valid",
+      "passed": true
+    },
+    {
+      "name": "event references are valid",
+      "passed": true
+    },
+    {
+      "name": "primary event belongs to only one possession",
+      "passed": true
+    },
+    {
+      "name": "all shots have one chance chain",
+      "passed": true
+    },
+    {
+      "name": "all goals have one goal chain",
+      "passed": true
+    },
+    {
+      "name": "replay bounds are valid",
+      "passed": true
+    },
+    {
+      "name": "chains expose no provider phase labels",
+      "passed": true
+    },
+    {
+      "name": "chronological order is monotonic",
+      "passed": true
+    },
+    {
+      "name": "every chance has a transparent pattern result",
+      "passed": true
+    },
+    {
+      "name": "pattern confidence stays in range",
+      "passed": true
+    },
+    {
+      "name": "pattern output is not collapsed to one class",
+      "passed": true
+    }
+  ],
+  "status": "passed"
+}
