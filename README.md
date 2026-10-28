@@ -30,7 +30,7 @@ Start the replay and pause near its beginning before choosing a player. Add the 
 
 Open the first completed attack, ask how it developed, and inspect the answer's evidence. Then open My Player Story and select Replay story. The exact available chapters and recap totals follow the current viewing time and marked interval.
 
-Default local operation uses **Match facts**, without a cloud model call. The repository's Sites development sign-in is a controlled local fixture identity; it is not production Sign in with ChatGPT verification. The built Worker launched by `npm start` does not include this development sign-in middleware and returns 401 for anonymous protected API calls. Saved stories and shares in development require local database setup and that local identity. These conditions are documented separately from any hosted deployment.
+Questions work without signing in, using a separate browser session for each visitor. Default local operation uses **Match facts** without a cloud model call; configure a server-side provider to enable model answers. Saved and shared stories still require an account. The local development sign-in is a fixture for those account features, rather than production identity verification.
 
 ## Build and check
 

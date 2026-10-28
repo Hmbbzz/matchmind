@@ -1171,7 +1171,7 @@ main { flex: 1 1 auto; min-height: 0; padding: 0; }
 
 /* W: one clear path from player context to explanation, evidence and stories. */
 :root { --forest: #173f32; --forest-soft: #e9efe8; --warm-surface: #fbfaf6; --warm-line: #dce1d7; }
-.assistant-panel { border-top-color: var(--forest); background: var(--warm-surface); }
+.assistant-panel { border-top: 0; background: var(--warm-surface); }
 .assistant-heading { background: var(--forest); }
 .assistant-heading .cutoff-chip { font-size: 11px; }
 .assistant-catchup { min-height: 34px; border-radius: 8px; border-color: #bbdc80; background: var(--acid); color: #1c3519; font-size: 11px; }
@@ -1293,7 +1293,7 @@ main { flex: 1 1 auto; min-height: 0; padding: 0; }
 /* X: fit the normal match into a true 16:9 render surface, keeping controls outside. */
 :root { --story-slot-height: 136px; }
 .app-shell { max-width: 1920px; gap: 6px; }
-.workspace-toolbar { flex-basis: 30px; justify-content: space-between; }
+.workspace-toolbar { flex-basis: 30px; justify-content: space-between; width: min(100%, calc(max(0px, var(--workspace-height) - 304px) * 16 / 9 + 504px)); margin-inline: auto; }
 .workspace-brand { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; }
 .workspace-brand .brand-mark { display: block; width: 28px; height: 24px; }
 .workspace-brand .brand-mark i { width: 16px; height: 24px; border-radius: 3px 13px 13px 3px; }
@@ -1338,6 +1338,7 @@ main { flex: 1 1 auto; min-height: 0; padding: 0; }
 .story-details { bottom: 5px; min-height: 26px; padding: 4px 7px; font-size: 11px; line-height: 16px; }
 .story-latest { top: 5px; right: 8px; font-size: 10px; line-height: 13px; }
 .chat-on-demand .workspace-grid { width: 100%; grid-template-columns: minmax(0, 1fr); }
+.chat-on-demand .workspace-toolbar { width: 100%; }
 @media (max-width: 760px) {
   .workspace-toolbar { flex-basis: 30px; }
   #match-viewer:not(.is-attack-replay) > .player-controls { padding-block: 5px; }

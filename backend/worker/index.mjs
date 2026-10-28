@@ -8,9 +8,10 @@ import { createD1Store, normalizePolicy } from './d1-store.mjs';
 import { STORY_ROUTES, handleStoryRoute } from './story-routes.mjs';
 import { createTeamIdentityStore, requireTeamIdentityAdmin, TEAM_IDENTITY_ADMIN_PATH } from './team-identity-store.mjs';
 import { TEAM_IDENTITY_VERSION } from '../team-identity-policy.mjs';
+import { requestIdentity, withIdentityCookie } from './anonymous-identity.mjs';
 import { fixture as builtFixture, promptBundle as builtPrompt, attackPromptBundle as builtAttackPrompt, inputManifest } from './generated-inputs.mjs';
 
-export const WORKER_API_VERSION = 'matchmind-worker-api/1.2';
+export const WORKER_API_VERSION = 'matchmind-worker-api/1.3';
 const bytes = (value) => new TextEncoder().encode(value).byteLength;
 const error = (status, code, message) => { throw new ApiError(status, code, message); };
 const validId = (value, name) => { if (typeof value !== 'string' || !value.trim() || value.length > 160) error(400, 'INVALID_REQUEST', `${name} must be a bounded non-empty string.`); return value; };
@@ -63,7 +64,7 @@ export function createWorkerApi({ fixture = builtFixture, promptBundle = builtPr
   const promptReady = promptBundle?.version === PROMPT_VERSION && typeof promptBundle.systemPrompt === 'string' && promptBundle.schema && /^[a-f0-9]{64}$/.test(promptBundle.sha256);
   const attackPromptReady = attackPromptBundle?.version === ATTACK_PROMPT_VERSION && typeof attackPromptBundle.systemPrompt === 'string' && attackPromptBundle.schema && /^[a-f0-9]{64}$/.test(attackPromptBundle.sha256);
   const clock = () => { const value = now(); if (!Number.isSafeInteger(value) || value < 0) throw new TypeError('Invalid trusted clock.'); return value; };
-  const sessionView = (row) => ({ session_id: row.id, match_id: row.match_id, visible_cutoff_ms: row.released_cutoff, expires_at_ms: row.expires_at, provider: 'rules', cloud_connected: false, authentication: 'siwc-owner', clock_policy: CLOCK_POLICY_VERSION });
+  const sessionView = (row, identity) => ({ session_id: row.id, match_id: row.match_id, visible_cutoff_ms: row.released_cutoff, expires_at_ms: row.expires_at, provider: 'rules', cloud_connected: false, authentication: identity.authentication, clock_policy: CLOCK_POLICY_VERSION });
   function configuredProvider(env) {
     try {
       let config = readProviderConfig(env);
@@ -74,16 +75,13 @@ export function createWorkerApi({ fixture = builtFixture, promptBundle = builtPr
       return { provider: providerFactory ? providerFactory({ env, config }) : createResponsesProvider({ config }), config, configurationError: false };
     } catch { return { provider: null, configurationError: true }; }
   }
-  async function handle(request, env = {}) {
+  async function handleAuthorized(request, env, identity) {
     try {
       const url = new URL(request.url);
-      // These headers are trusted ONLY behind Sites dispatch; no standalone public Worker is supported.
-      const owner = request.headers.get('oai-authenticated-user-id');
-      if (!owner || owner.length > 256 || /[\x00-\x20\x7f]/.test(owner)) error(401, 'AUTH_REQUIRED', 'Sign in with ChatGPT to use this API.');
+      const owner = identity.owner;
       if (url.search) error(400, 'INVALID_REQUEST', 'Query parameters are not supported.');
-      const origin = request.headers.get('origin');
-      if ((request.method === 'POST' || request.method === 'OPTIONS') && origin !== url.origin || origin && origin !== url.origin || request.headers.get('sec-fetch-site') === 'cross-site') error(403, 'ORIGIN_NOT_ALLOWED', 'Use the same-origin signed-in API.');
-      if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
+      // Public AI does not grant access to account-owned stories or admin data.
+      if (!identity.signedIn && (STORY_ROUTES.includes(url.pathname) || url.pathname === TEAM_IDENTITY_ADMIN_PATH)) error(401, 'AUTH_REQUIRED', 'Sign in to manage saved or shared stories.');
       const store = createD1Store(env.DB, policy);
       const current = clock();
       if (url.pathname === TEAM_IDENTITY_ADMIN_PATH && request.method === 'POST') {
@@ -95,8 +93,8 @@ export function createWorkerApi({ fixture = builtFixture, promptBundle = builtPr
       }
       if (url.pathname === '/api/health' && request.method === 'GET') {
         await store.checkReady();
-        const state = configuredProvider(env); const identity = getProviderIdentity(state.provider);
-        return json(200, { status: 'ok', schema_version: API_VERSION, api_version: WORKER_API_VERSION, provider: 'rules', provider_status: state.configurationError ? 'invalid_configuration' : state.provider ? 'ready_not_called' : 'deterministic_fallback', cloud_connected: false, prompt_ready: Boolean(promptReady), prompt_version: promptReady ? promptBundle.version : null, attack_prompt_ready: Boolean(attackPromptReady), attack_prompt_version: attackPromptReady ? attackPromptBundle.version : null, model_configured: Boolean(state.provider), model_profile: state.provider ? identity.modelProfile ?? state.config.modelProfile : null, reasoning_effort: state.provider ? identity.reasoningEffort ?? state.config.reasoningEffort : null, authentication: 'siwc-owner', storage: 'd1', model_call_limits: 'unlimited', simulation_start_ms: initialCutoffMs, simulation_mode: CLOCK_POLICY_VERSION, source_version: fixture.sourceVersion, team_identity_version: TEAM_IDENTITY_VERSION, input_projection_sha256: inputManifest.projection_sha256, scope: 'Finite completed-action facts; full-match browser files still remain downloadable.' });
+        const state = configuredProvider(env); const providerIdentity = getProviderIdentity(state.provider);
+        return json(200, { status: 'ok', schema_version: API_VERSION, api_version: WORKER_API_VERSION, provider: 'rules', provider_status: state.configurationError ? 'invalid_configuration' : state.provider ? 'ready_not_called' : 'deterministic_fallback', cloud_connected: false, prompt_ready: Boolean(promptReady), prompt_version: promptReady ? promptBundle.version : null, attack_prompt_ready: Boolean(attackPromptReady), attack_prompt_version: attackPromptReady ? attackPromptBundle.version : null, model_configured: Boolean(state.provider), model_profile: state.provider ? providerIdentity.modelProfile ?? state.config.modelProfile : null, reasoning_effort: state.provider ? providerIdentity.reasoningEffort ?? state.config.reasoningEffort : null, authentication: identity.authentication, storage: 'd1', model_call_limits: 'unlimited', simulation_start_ms: initialCutoffMs, simulation_mode: CLOCK_POLICY_VERSION, source_version: fixture.sourceVersion, team_identity_version: TEAM_IDENTITY_VERSION, input_projection_sha256: inputManifest.projection_sha256, scope: 'Finite completed-action facts; full-match browser files still remain downloadable.' });
       }
       const getSession = async (id) => {
         validId(id, 'session_id');
@@ -118,11 +116,11 @@ export function createWorkerApi({ fixture = builtFixture, promptBundle = builtPr
         if (body.match_id !== fixture.demo.match.match_id) error(404, 'NOT_FOUND', 'Match not found.');
         const id = `session_${validId(idFactory(), 'generated ID')}`;
         const row = await store.createSession({ owner, id, matchId: body.match_id, sourceVersion: fixture.sourceVersion, now: current, initialCutoff: initialCutoffMs });
-        return json(201, sessionView(row));
+        return json(201, sessionView(row, identity));
       }
       if (url.pathname.startsWith('/api/sessions/') && request.method === 'GET') {
         let id; try { id = decodeURIComponent(url.pathname.slice('/api/sessions/'.length)); } catch { error(400, 'INVALID_REQUEST', 'Invalid session path.'); }
-        return json(200, sessionView(await getSession(id)));
+        return json(200, sessionView(await getSession(id), identity));
       }
       if (url.pathname === '/api/replay/resolve' && request.method === 'POST') {
         const body = await readBody(request); onlyKeys(body, ['session_id', 'receipt_id']); validId(body.receipt_id, 'receipt_id');
@@ -204,6 +202,19 @@ export function createWorkerApi({ fixture = builtFixture, promptBundle = builtPr
     } catch (caught) {
       if (caught instanceof ApiError) return json(caught.status, { error: { code: caught.code, message: caught.message } });
       return json(503, { error: { code: 'SERVICE_UNAVAILABLE', message: 'The API could not complete this request safely.' } });
+    }
+  }
+  async function handle(request, env = {}) {
+    try {
+      const url = new URL(request.url);
+      const origin = request.headers.get('origin');
+      if ((request.method === 'POST' || request.method === 'OPTIONS') && origin !== url.origin || origin && origin !== url.origin || request.headers.get('sec-fetch-site') === 'cross-site') error(403, 'ORIGIN_NOT_ALLOWED', 'Use the same-origin API.');
+      if (request.method === 'OPTIONS') return new Response(null, { status:204, headers:{ 'cache-control':'no-store' } });
+      const identity = await requestIdentity(request);
+      return withIdentityCookie(await handleAuthorized(request, env, identity), identity);
+    } catch (caught) {
+      if (caught instanceof ApiError) return json(caught.status, { error:{ code:caught.code, message:caught.message } });
+      return json(503, { error:{ code:'SERVICE_UNAVAILABLE', message:'The API could not complete this request safely.' } });
     }
   }
   return Object.freeze({ handle });

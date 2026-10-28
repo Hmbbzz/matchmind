@@ -183,8 +183,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 25617,
-      "sha256": "4b9d5da37e59a1fb1bec4e7301a2a199873ad278250d9c7672adb4a152eb2de2"
+      "bytes": 25621,
+      "sha256": "319789f69467ce630aee0dae6bbc24e17bd042ac6d84419bc34219f0fccaeeb1"
     },
     {
       "path": "licenses/SkillCorner-LICENSE",
@@ -213,8 +213,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 92860,
-      "sha256": "16dc4a19b27a0b98d7c97b23f8d916e65235c95e881b999aca2ebad0c3cce9e5"
+      "bytes": 92999,
+      "sha256": "93e16e9be7e0baf54cb9b4509df08509bb4678d09a4691f29585867f972351a2"
     },
     {
       "path": "team-identities.js",
